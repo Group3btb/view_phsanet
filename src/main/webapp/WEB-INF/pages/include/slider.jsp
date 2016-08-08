@@ -1,5 +1,5 @@
 
-<div class="col-sm-10 col-lg-10">
+<div class="col-sm-10 col-md-10 col-lg-10">
 	<div class="silder">
 		<div id="jssor_1"
 			style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1300px; height: 520px; overflow: hidden; visibility: hidden;">

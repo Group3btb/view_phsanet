@@ -1,15 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%> 
-    <head>
-    <link rel="stylesheet" type="text/css" href="/resources/views/css/style.css">
-    </head>
-
 <div class="container">
 	<div class="row">
 		<div class="items">`
 		
 			<div class="col-md-12">
-				<span ​​ class=" span">ផលិតផលថ្មីៗ</span>
+				<span ​​ class="text-primary span">ផលិតផលថ្មីៗ</span>
 				<div class="border"></div>
 			</div>
 

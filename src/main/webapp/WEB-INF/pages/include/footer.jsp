@@ -1,19 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%> 
+	pageEncoding="UTF-8"%>
 
 <div id="re-title​">
-<div class="container">
-	<span class="span  text-primary">ប្រភពមកពី</span>
+	<div class="container">
+		<span class="span  text-primary">ប្រភពមកពី</span>
+	</div>
 </div>
-</did>
 
 <div id="resource" class="bg-success">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-2 col-sm-4">
 				<a href="#" class="thumbnail img"><img
-					src="/resources/views/resourceimg/amazone.jpg">
-				</a>
+					src="/resources/views/resourceimg/amazone.jpg"> </a>
 			</div>
 
 			<div class="col-md-2 col-sm-4">
@@ -52,7 +51,7 @@
 	</div>
 </div>
 <div id="footer" class="bg-primary">
-	<div class="container" style="height:50px;">
+	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-sm-6">
 				<span class="footer-span font">Copyrights &#169;

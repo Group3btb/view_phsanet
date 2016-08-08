@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Phsanet | Homepage</title>
-<%@ include file="include/head.jsp" %>
+ <%@ include file="include/head.jsp"  %>
 </head>
 <body>
       <div id="body">
-           <%@ include file="include/header.jsp" %>
+          <%@ include file="include/header.jsp" %>
              
              
           <div id="content">
@@ -26,12 +26,9 @@
              <%@ include file="include/index.jsp" %>
          </div>   
            
+         <%@ include file="include/footer.jsp" %>  
            
-           
-           
-           <%@ include file="include/footer.jsp" %>
-      </div>
-  
-
+        
+</div>
 </body>
 </html>

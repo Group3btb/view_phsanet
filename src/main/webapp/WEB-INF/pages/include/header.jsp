@@ -15,16 +15,16 @@
 
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<form class="navbar-form navbar-left" role="search">
-					<div class="form-group" style="margin-left: 70px;">
-						<select class="btn-primary">
+					<div class="form-group">
+						<select class="form-control">
 							<option>ប្រភេទពេញនិយម</option>
 							<option>សំលៀកបំពាក់</option>
 							<option>អេឡិត្រូនិច</option>
 							<option>ទូរស័ព្ទ</option>
 							<option>កុំព្យូទ័រ</option>
-						</select> <input type="text" ​​ style="width: 490px; height: 32px;"
-							placeholder="ស្វែងរក">
-						<button type="submit" style="height: 32px;" class="btn-primary">
+						</select> 
+						<input type="text" class="form-control"​​ placeholder="ស្វែងរក">
+						<button type="submit"  class="btn btn-primary">
 							<i class="fa fa-search"></i>ស្វែងរក
 						</button>
 					</div>
