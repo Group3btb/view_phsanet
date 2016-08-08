@@ -9,19 +9,19 @@
 		<meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
 		<meta name="author" content="Coderthemes">
 
-		<link rel="shortcut icon" href="/resources/images/favicon_1.ico">
+		<link rel="shortcut icon" href="/resources/admins/images/favicon_1.ico">
 
 		<title>PhsarNet</title>
 		<!--Footable-->
-		<link href="/resources/plugins/footable/css/footable.core.css" rel="stylesheet">
-		<link href="/resources/plugins/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" />
+		<link href="/resources/admins/plugins/footable/css/footable.core.css" rel="stylesheet">
+		<link href="/resources/admins/plugins/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" />
 
-		<link href="/resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="/resources/css/core.css" rel="stylesheet" type="text/css" />
-        <link href="/resources/css/components.css" rel="stylesheet" type="text/css" />
-        <link href="/resources/css/icons.css" rel="stylesheet" type="text/css" />
-        <link href="/resources/css/pages.css" rel="stylesheet" type="text/css" />
-        <link href="/resources/css/responsive.css" rel="stylesheet" type="text/css" />
+		<link href="/resources/admins/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="/resources/admins/css/core.css" rel="stylesheet" type="text/css" />
+        <link href="/resources/admins/css/components.css" rel="stylesheet" type="text/css" />
+        <link href="/resources/admins/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="/resources/admins/css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="/resources/admins/css/responsive.css" rel="stylesheet" type="text/css" />
 
         <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,7 +30,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
 
-        <script src="/resources/js/modernizr.min.js"></script>
+        <script src="/resources/admins/js/modernizr.min.js"></script>
 
 	</head>
 
@@ -139,7 +139,7 @@
                     </div>
                     <tbody>
                       <tr>
-                         <td><img src="/resources/images/products/iphone.jpg" class="thumb-sm pull-left m-r-10" alt=""></td>
+                         <td><img src="/resources/admins/images/products/iphone.jpg" class="thumb-sm pull-left m-r-10" alt=""></td>
                         <td>Boudreaux</td>
                         <td>Traffic Court Referee</td>
                         <td>22 Jun 1972</td>
@@ -478,28 +478,28 @@
         </script>
 
         <!-- jQuery  -->
-        <script src="/resources/js/jquery.min.js"></script>
-        <script src="/resources/js/bootstrap.min.js"></script>
-        <script src="/resources/js/detect.js"></script>
-        <script src="/resources/js/fastclick.js"></script>
-        <script src="/resources/js/jquery.slimscroll.js"></script>
-        <script src="/resources/js/jquery.blockUI.js"></script>
-        <script src="/resources/js/waves.js"></script>
-        <script src="/resources/js/wow.min.js"></script>
-        <script src="/resources/js/jquery.nicescroll.js"></script>
-        <script src="/resources/js/jquery.scrollTo.min.js"></script>
+        <script src="/resources/admins/js/jquery.min.js"></script>
+        <script src="/resources/admins/js/bootstrap.min.js"></script>
+        <script src="/resources/admins/js/detect.js"></script>
+        <script src="/resources/admins/js/fastclick.js"></script>
+        <script src="/resources/admins/js/jquery.slimscroll.js"></script>
+        <script src="/resources/admins/js/jquery.blockUI.js"></script>
+        <script src="/resources/admins/js/waves.js"></script>
+        <script src="/resources/admins/js/wow.min.js"></script>
+        <script src="/resources/admins/js/jquery.nicescroll.js"></script>
+        <script src="/resources/admins/js/jquery.scrollTo.min.js"></script>
 
 
-        <script src="/resources/js/jquery.core.js"></script>
-        <script src="/resources/js/jquery.app.js"></script>
+        <script src="/resources/admins/js/jquery.core.js"></script>
+        <script src="/resources/admins/js/jquery.app.js"></script>
         
         <!--FooTable-->
-		<script src="/resources/plugins/footable/js/footable.all.min.js"></script>
+		<script src="/resources/admins/plugins/footable/js/footable.all.min.js"></script>
 		
-		<script src="/resources/plugins/bootstrap-select/dist/js/bootstrap-select.min.js" type="text/javascript"></script>
+		<script src="/resources/admins/plugins/bootstrap-select/dist/js/bootstrap-select.min.js" type="text/javascript"></script>
 
 		<!--FooTable Example-->
-		<script src="/resources/pages/jquery.footable.js"></script>
+		<script src="/resources/admins/pages/jquery.footable.js"></script>
 	
 	</body>
 </html>

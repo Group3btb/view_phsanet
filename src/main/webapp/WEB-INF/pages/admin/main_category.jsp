@@ -8,35 +8,19 @@
 		<meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
 		<meta name="author" content="Coderthemes">
 
-		<link rel="shortcut icon" href="/resources/images/favicon_1.ico">
+		
 
 		<title>aUbold - Responsive Admin Dashboard Template</title>
-		<!--Footable-->
-		<link href="/resources/plugins/footable/css/footable.core.css" rel="stylesheet">
-		<link href="/resources/plugins/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" />
 		
-		<link href="/resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="/resources/css/core.css" rel="stylesheet" type="text/css" />
-        <link href="/resources/css/components.css" rel="stylesheet" type="text/css" />
-        <link href="/resources/css/icons.css" rel="stylesheet" type="text/css" />
-        <link href="/resources/css/pages.css" rel="stylesheet" type="text/css" />
-        <link href="/resources/css/responsive.css" rel="stylesheet" type="text/css" />
-
-        <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
-
-        <script src="/resources/js/modernizr.min.js"></script>
-		<script src="/resources/js/angular.min.js"></script>
-		<script src="/resources/javascripts/main_category.js"></script>
-		
+		<jsp:include page="/WEB-INF/pages/admin/include/head.jsp"></jsp:include>
 	</head>
 
 	<body class="fixed-left">
-
+	
+		<!-- include model update maincategory -->
+		
+		<jsp:include page="/WEB-INF/pages/admin/include/model_update_maincategory.jsp"></jsp:include>
+		
 		<!-- Begin page -->
 		<div id="wrapper" ng-controller="controller_maincategory">
 
@@ -136,7 +120,8 @@
 							<td>{{main_cate.category_name}}</td>
 							<td>{{main_cate.description}}</td>
 							<td class="actions">
-                          	<a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
+							
+                          	 <a href="#" data-toggle="modal"   data-overlaySpeed="200" data-overlayColor="#36404a" data-animation="fadein" data-plugin="custommodal" data-target="#custom-modal" class="on-default edit-row"><i class="fa fa-pencil"></i></a> &nbsp;&nbsp;
                           	<a href="#" ng-click="delete_main_category(main_cate.maincategory_id)" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
                         	</td>
                         </tr>
@@ -155,9 +140,6 @@
 								</div>
 							</div>
 						</div>
-
-
-
 
                     </div> <!-- container -->
                                
@@ -180,29 +162,7 @@
             var resizefunc = [];
         </script>
 
-        <!-- jQuery  -->
-        <script src="/resources/js/jquery.min.js"></script>
-        <script src="/resources/js/bootstrap.min.js"></script>
-        <script src="/resources/js/detect.js"></script>
-        <script src="/resources/js/fastclick.js"></script>
-        <script src="/resources/js/jquery.slimscroll.js"></script>
-        <script src="/resources/js/jquery.blockUI.js"></script>
-        <script src="/resources/js/waves.js"></script>
-        <script src="/resources/js/wow.min.js"></script>
-        <script src="/resources/js/jquery.nicescroll.js"></script>
-        <script src="/resources/js/jquery.scrollTo.min.js"></script>
-
-
-        <script src="/resources/js/jquery.core.js"></script>
-        <script src="/resources/js/jquery.app.js"></script>
-        
-        <!--FooTable-->
-		<script src="/resources/plugins/footable/js/footable.all.min.js"></script>
-		
-		<script src="/resources/plugins/bootstrap-select/dist/js/bootstrap-select.min.js" type="text/javascript"></script>
-
-		<!--FooTable Example-->
-		<script src="/resources/pages/jquery.footable.js"></script>
+       <!-- script -->
 	
 	</body>
 </html>
