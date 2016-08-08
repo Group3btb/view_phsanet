@@ -8,35 +8,19 @@
 		<meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
 		<meta name="author" content="Coderthemes">
 
-		<link rel="shortcut icon" href="/resources/images/favicon_1.ico">
-
-		<title>Ubold - Responsive Admin Dashboard Template</title>
-		<!--Footable-->
-		<link href="/resources/plugins/footable/css/footable.core.css" rel="stylesheet">
-		<link href="/resources/plugins/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" />
 		
-		<link href="/resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="/resources/css/core.css" rel="stylesheet" type="text/css" />
-        <link href="/resources/css/components.css" rel="stylesheet" type="text/css" />
-        <link href="/resources/css/icons.css" rel="stylesheet" type="text/css" />
-        <link href="/resources/css/pages.css" rel="stylesheet" type="text/css" />
-        <link href="/resources/css/responsive.css" rel="stylesheet" type="text/css" />
 
-        <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
-
-        <script src="/resources/js/modernizr.min.js"></script>
-		<script src="/resources/js/angular.min.js"></script>
-		<script src="/resources/javascripts/main_category.js"></script>
+		<title>aUbold - Responsive Admin Dashboard Template</title>
 		
+		<jsp:include page="/WEB-INF/pages/admin/include/head.jsp"></jsp:include>
 	</head>
 
 	<body class="fixed-left">
-
+	
+		<!-- include model update maincategory -->
+		
+		<jsp:include page="/WEB-INF/pages/admin/include/model_update_maincategory.jsp"></jsp:include>
+		
 		<!-- Begin page -->
 		<div id="wrapper" ng-controller="controller_maincategory">
 
@@ -87,27 +71,27 @@
                     <div class="form-group clearfix">
                       <label class="col-lg-2 control-label " for="mainCategory">Main category</label>
                       <div class="col-lg-10">
-                        <input class="form-control required" id="main_category" name="mainCategory" type="text">
+                        <input class="form-control required" ng-model="category_name" id="main_category" name="mainCategory" type="text">
                       </div>
                     </div>
                     <div class="form-group clearfix">
                       <label class="col-lg-2 control-label " for="password"> Description</label>
                       <div class="col-lg-10">
-                        <textarea id="main_description" name="main_description" class="required form-control"></textarea> 
+                        <textarea id="main_description" ng-model="descriptions" name="main_description" class="required form-control"></textarea> 
                       </div>
                     </div>
                     <div class="form-group text-right m-b-0">
-                      <button ng_click="findAll_main_category()" class="btn btn-primary waves-effect waves-light" type="button" id="main_save" >Save</button>
+                      <button ng-click="save_main_category()" class="btn btn-primary waves-effect waves-light" type="button" id="main_save" >Save</button>
                       <button type="reset" class="btn btn-default waves-effect waves-light m-l-5" id="main_cancel">Cancel</button>
                     </div>
                   </form><br>
 									<table id="demo-foo-pagination" class="table m-b-0 toggle-arrow-tiny" data-page-size="10">
 										<thead>
 											<tr>
-												<th data-toggle="true">Main Category Id</th>
+												<th>Main Category Id</th>
 												<th>Main Category Name</th>
 												<th data-hide="phone">Describe</th>
-												<th data-hide="phone">Action</th>
+												<th>Action</th>
 											</tr>
 										</thead>
                     <div class="pad-btm form-inline">
@@ -129,29 +113,20 @@
                         </div>
                       </div>
                     </div>
-										<tbody>
-											<tr>
-												<td>Isidra</td>
-												<td>Boudreaux</td>
-												<td>Traffic Court Referee</td>
-												<td>22 Jun 1972</td>
-												 <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
-								</tr>
-						<tr>
-												<td>Shona</td>
-												<td>Woldt</td>
-												<td>Airline Transport Pilot</td>
-												<td>3 Oct 1981</td>
-						<td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
+						<tbody>
+											
+						<tr ng-repeat="main_cate in meain_category">
+							<td>{{main_cate.maincategory_id}}</td>
+							<td>{{main_cate.category_name}}</td>
+							<td>{{main_cate.description}}</td>
+							<td class="actions">
+							
+                          	 <a href="#" data-toggle="modal"   data-overlaySpeed="200" data-overlayColor="#36404a" data-animation="fadein" data-plugin="custommodal" data-target="#custom-modal" class="on-default edit-row"><i class="fa fa-pencil"></i></a> &nbsp;&nbsp;
+                          	<a href="#" ng-click="delete_main_category(main_cate.maincategory_id)" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
+                        	</td>
                         </tr>
 					
-										</tbody>
+						</tbody>
 										<tfoot>
 											<tr>
 												<td colspan="5">
@@ -165,9 +140,6 @@
 								</div>
 							</div>
 						</div>
-
-
-
 
                     </div> <!-- container -->
                                
@@ -188,32 +160,9 @@
     
         <script>
             var resizefunc = [];
-           
         </script>
 
-        <!-- jQuery  -->
-        <script src="/resources/js/jquery.min.js"></script>
-        <script src="/resources/js/bootstrap.min.js"></script>
-        <script src="/resources/js/detect.js"></script>
-        <script src="/resources/js/fastclick.js"></script>
-        <script src="/resources/js/jquery.slimscroll.js"></script>
-        <script src="/resources/js/jquery.blockUI.js"></script>
-        <script src="/resources/js/waves.js"></script>
-        <script src="/resources/js/wow.min.js"></script>
-        <script src="/resources/js/jquery.nicescroll.js"></script>
-        <script src="/resources/js/jquery.scrollTo.min.js"></script>
-
-
-        <script src="/resources/js/jquery.core.js"></script>
-        <script src="/resources/js/jquery.app.js"></script>
-        
-        <!--FooTable-->
-		<script src="/resources/plugins/footable/js/footable.all.min.js"></script>
-		
-		<script src="/resources/plugins/bootstrap-select/dist/js/bootstrap-select.min.js" type="text/javascript"></script>
-
-		<!--FooTable Example-->
-		<script src="/resources/pages/jquery.footable.js"></script>
+       <!-- script -->
 	
 	</body>
 </html>
