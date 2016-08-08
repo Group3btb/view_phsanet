@@ -87,27 +87,27 @@
                     <div class="form-group clearfix">
                       <label class="col-lg-2 control-label " for="mainCategory">Main category</label>
                       <div class="col-lg-10">
-                        <input class="form-control required" id="main_category" name="mainCategory" type="text">
+                        <input class="form-control required" ng_model="maincategory_name" id="main_category" name="mainCategory" type="text">
                       </div>
                     </div>
                     <div class="form-group clearfix">
                       <label class="col-lg-2 control-label " for="password"> Description</label>
                       <div class="col-lg-10">
-                        <textarea id="main_description" name="main_description" class="required form-control"></textarea> 
+                        <textarea id="main_description" ng_model="description" name="main_description" class="required form-control"></textarea> 
                       </div>
                     </div>
                     <div class="form-group text-right m-b-0">
-                      <button ng_click="findAll_main_category()" class="btn btn-primary waves-effect waves-light" type="button" id="main_save" >Save</button>
+                      <button ng_click="save_main_category()" class="btn btn-primary waves-effect waves-light" type="button" id="main_save" >Save</button>
                       <button type="reset" class="btn btn-default waves-effect waves-light m-l-5" id="main_cancel">Cancel</button>
                     </div>
                   </form><br>
 									<table id="demo-foo-pagination" class="table m-b-0 toggle-arrow-tiny" data-page-size="10">
 										<thead>
 											<tr>
-												<th data-toggle="true">Main Category Id</th>
+												<th>Main Category Id</th>
 												<th>Main Category Name</th>
 												<th data-hide="phone">Describe</th>
-												<th data-hide="phone">Action</th>
+												<th>Action</th>
 											</tr>
 										</thead>
                     <div class="pad-btm form-inline">
@@ -129,29 +129,19 @@
                         </div>
                       </div>
                     </div>
-										<tbody>
-											<tr>
-												<td>Isidra</td>
-												<td>Boudreaux</td>
-												<td>Traffic Court Referee</td>
-												<td>22 Jun 1972</td>
-												 <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
-								</tr>
-						<tr>
-												<td>Shona</td>
-												<td>Woldt</td>
-												<td>Airline Transport Pilot</td>
-												<td>3 Oct 1981</td>
-						<td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
+						<tbody>
+											
+						<tr ng-repeat="main_cate in meain_category">
+							<td>{{main_cate.maincategory_id}}</td>
+							<td>{{main_cate.category_name}}</td>
+							<td>{{main_cate.description}}</td>
+							<td class="actions">
+                          	<a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
+                          	<a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
+                        	</td>
                         </tr>
 					
-										</tbody>
+						</tbody>
 										<tfoot>
 											<tr>
 												<td colspan="5">
@@ -188,7 +178,6 @@
     
         <script>
             var resizefunc = [];
-           
         </script>
 
         <!-- jQuery  -->
