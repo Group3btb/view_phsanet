@@ -28,7 +28,7 @@ app.controller("controller_maincategory", function($scope, $http) {
 			url:'/maincategories',
 			method:'POST',
 			data:{
-				maincatename:$scope.maincategory_name,
+				category_name:$scope.category_name,
 				description: $scope.descriptions
 			}
 		}).then(function(respone){
@@ -37,7 +37,20 @@ app.controller("controller_maincategory", function($scope, $http) {
 			console.log(respone.data)
 			alert("Error");
 		});
-	}
+	} /// end method save main category
+
+	$scope.delete_main_category = function(id){
+		alert(id);
+		$http({
+			url:'/maincategories/'+id,
+			method:'delete'
+		}).then(function(respone){
+			alert("SUCCESS");
+		},function(respone){
+			alert("Error");
+		});
+	}/// end method delete_main_category
+
 
 
 });// end controller

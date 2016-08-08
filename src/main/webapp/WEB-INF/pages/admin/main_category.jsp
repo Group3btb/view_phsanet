@@ -87,7 +87,7 @@
                     <div class="form-group clearfix">
                       <label class="col-lg-2 control-label " for="mainCategory">Main category</label>
                       <div class="col-lg-10">
-                        <input class="form-control required" ng-model="maincategory_name" id="main_category" name="mainCategory" type="text">
+                        <input class="form-control required" ng-model="category_name" id="main_category" name="mainCategory" type="text">
                       </div>
                     </div>
                     <div class="form-group clearfix">
@@ -137,7 +137,7 @@
 							<td>{{main_cate.description}}</td>
 							<td class="actions">
                           	<a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          	<a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
+                          	<a href="#" ng-click="delete_main_category(main_cate.maincategory_id)" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
                         	</td>
                         </tr>
 					
