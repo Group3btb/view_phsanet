@@ -43,16 +43,16 @@
         .jssora22r.jssora22rdn { background-position: -310px -31px; }
 
 /*end Silder */
+.title{margin-bottom:20px;}
 .list-itmes{width:100%;margin-top: -10px;}
 .items{width:100%;}
-.border{border-bottom: 1px solid #ccc;margin-bottom: -10px;}
-.span{margin-left:5px; font-size:20px;}
+.border{border-bottom: 1px solid red;}
+.span{margin-left:5px; font-size:20px; color:red;}
 .productbox {
     background-color:#ffffff;
     padding:10px;
     margin-bottom:10px;
 }
-
 .productbox img{ margin: 0 auto; width: 200px; height: 200px;}
 .item-box{margin:0 auto; width:200px; border:solid 1px #dadada;}
 .item-box:hover{border:solid 1px #5BC0DE}
@@ -85,7 +85,7 @@
 }
 #re-title​{width:100%;}
 #resource{width:100%;}
-.img{margin-top:20px;}
+.img{margin-top:50px;}
 .img img{height:100px;}
 #footer{width: 100%;}
 .font{color:#fff;}
@@ -95,7 +95,7 @@
     line-height:50px;
 }
 .foot-ul li{display: inline;}
-.foot-ul li a{ color: #fff; line-height:50px;}
+.foot-ul li a{ color: #fff;height:50px; line-height:50px;}
 #scrolltop{
     width:50px;
     height:50px;    
