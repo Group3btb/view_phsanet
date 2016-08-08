@@ -54,7 +54,7 @@ public class MainCategory {
 	
 	@RequestMapping(value={"/maincategories"} , method = RequestMethod.POST)
 	@ResponseBody
-	public ResponseEntity<Map<String,Object>> save_Categories(@RequestBody phsanet.entitys.MainCategory maincategory){
+	public ResponseEntity<Map<String,Object>> save_Categories(@RequestBody phsanet.entitys.Main_Category maincategory){
 		
 		RestTemplate restTemplate = new RestTemplate();
 		HttpEntity<Object> request = new HttpEntity<Object>(maincategory,new HttpHeaders());
@@ -70,7 +70,7 @@ public class MainCategory {
 	
 	@RequestMapping(value={"/maincategories"} , method = RequestMethod.PUT)
 	@ResponseBody
-	public ResponseEntity<Map<String,Object>> update_Categories(@RequestBody phsanet.entitys.MainCategory maincategory){
+	public ResponseEntity<Map<String,Object>> update_Categories(@RequestBody phsanet.entitys.Main_Category maincategory){
 		
 		RestTemplate restTemplate = new RestTemplate();
 		HttpEntity<Object> request = new HttpEntity<Object>(maincategory,new HttpHeaders());

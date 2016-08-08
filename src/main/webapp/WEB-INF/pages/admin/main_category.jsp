@@ -10,7 +10,7 @@
 
 		<link rel="shortcut icon" href="/resources/images/favicon_1.ico">
 
-		<title>Ubold - Responsive Admin Dashboard Template</title>
+		<title>aUbold - Responsive Admin Dashboard Template</title>
 		<!--Footable-->
 		<link href="/resources/plugins/footable/css/footable.core.css" rel="stylesheet">
 		<link href="/resources/plugins/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" />
@@ -87,17 +87,17 @@
                     <div class="form-group clearfix">
                       <label class="col-lg-2 control-label " for="mainCategory">Main category</label>
                       <div class="col-lg-10">
-                        <input class="form-control required" ng_model="maincategory_name" id="main_category" name="mainCategory" type="text">
+                        <input class="form-control required" ng-model="maincategory_name" id="main_category" name="mainCategory" type="text">
                       </div>
                     </div>
                     <div class="form-group clearfix">
                       <label class="col-lg-2 control-label " for="password"> Description</label>
                       <div class="col-lg-10">
-                        <textarea id="main_description" ng_model="description" name="main_description" class="required form-control"></textarea> 
+                        <textarea id="main_description" ng-model="descriptions" name="main_description" class="required form-control"></textarea> 
                       </div>
                     </div>
                     <div class="form-group text-right m-b-0">
-                      <button ng_click="save_main_category()" class="btn btn-primary waves-effect waves-light" type="button" id="main_save" >Save</button>
+                      <button ng-click="save_main_category()" class="btn btn-primary waves-effect waves-light" type="button" id="main_save" >Save</button>
                       <button type="reset" class="btn btn-default waves-effect waves-light m-l-5" id="main_cancel">Cancel</button>
                     </div>
                   </form><br>
