@@ -116,7 +116,7 @@
 				<span ​​ class="text-primary span">សំលៀកបំពាក់</span>
 				<div class="border"></div>
 			</div>
-			<div class="col-md-3 col-sm-3 column productbox">
+			<div class="col-xs-15 col-md-3 col-sm-3 column productbox">
 				<div class="item-box">
 					<div class="product-source">
 						<span class="source-img"> <a href=""> <img
@@ -136,7 +136,7 @@
 				</div>
 			</div>
 
-			<div class="col-md-3 col-sm-3 column productbox">
+			<div class="col-xs-15 col-md-3 col-sm-3 column productbox">
 				<div class="item-box">
 					<div class="product-source">
 						<span class="source-img"> <a href=""> <img
@@ -156,7 +156,7 @@
 				</div>
 
 			</div>
-			<div class="col-md-3 col-sm-3 column productbox">
+			<div class="col-xs-15 col-md-3 col-sm-3 column productbox">
 				<div class="item-box">
 					<div class="product-source">
 						<span class="source-img"> <a href=""> <img
@@ -175,7 +175,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-3 col-sm-3 column productbox">
+			<div class="col-xs-15 col-md-3 col-sm-3 column productbox">
 				<div class="item-box">
 					<div class="product-source">
 						<span class="source-img"> <a href=""> <img
@@ -195,7 +195,7 @@
 				</div>
 
 			</div>
-			<div class="col-md-3 col-sm-3 column productbox">
+			<div class="col-xs-15 col-md-3 col-sm-3 column productbox">
 				<div class="item-box">
 					<div class="product-source">
 						<span class="source-img"> <a href=""> <img
@@ -216,7 +216,7 @@
 
 			</div>
 
-			<div class="col-md-3 col-sm-3 column productbox">
+			<div class="col-xs-15 col-md-3 col-sm-3 column productbox">
 				<div class="item-box">
 					<div class="product-source">
 						<span class="source-img"> <a href=""> <img
@@ -237,7 +237,7 @@
 
 			</div>
 
-			<div class="col-md-3 col-sm-3 column productbox">
+			<div class="col-xs-15 col-md-3 col-sm-3 column productbox">
 				<div class="item-box">
 					<div class="product-source">
 						<span class="source-img"> <a href=""> <img
@@ -258,7 +258,7 @@
 
 			</div>
 
-			<div class="col-md-3 col-sm-3 column productbox">
+			<div class="col-xs-15 col-md-3 col-sm-3 column productbox">
 				<div class="item-box">
 					<div class="product-source">
 						<span class="source-img"> <a href=""> <img
@@ -278,13 +278,55 @@
 				</div>
 
 			</div>
+			
+			<div class="col-xs-15 col-md-3 col-sm-3 column productbox">
+				<div class="item-box">
+					<div class="product-source">
+						<span class="source-img"> <a href=""> <img
+								class="img-circle" src="/resources/views/resourceimg/khbuy.png">
+						</a>
+						</span> <span></span>
+					</div>
+					<a href=""><img src="/resources/views/fashion/9.jpg" class="img-responsive"></a>
+					<div class="producttitle">Product 2</div>
+					<div class="productprice">
+						<div class="pull-right">
+							<a href="#" title="រក្សាទុក" class="pricetext"> <i
+								class="fa fa-bookmark-o"></i></a>
+						</div>
+						<div class="pricetext">£8.95</div>
+					</div>
+				</div>
+
+			</div>
+			
+			<div class="col-xs-15 col-md-3 col-sm-3 column productbox">
+				<div class="item-box">
+					<div class="product-source">
+						<span class="source-img"> <a href=""> <img
+								class="img-circle" src="/resources/views/resourceimg/khbuy.png">
+						</a>
+						</span> <span></span>
+					</div>
+					<a href=""><img src="/resources/views/fashion/10.jpg" class="img-responsive"></a>
+					<div class="producttitle">Product 2</div>
+					<div class="productprice">
+						<div class="pull-right">
+							<a href="#" title="រក្សាទុក" class="pricetext"> <i
+								class="fa fa-bookmark-o"></i></a>
+						</div>
+						<div class="pricetext">£8.95</div>
+					</div>
+				</div>
+
+			</div>
 
 
 			<div class="col-sm-12 title">
 				<span ​​ class="text-primary span">គ្រឿងអេឡិចត្រូនិច</span>
 				<div class="border"></div>
 			</div>
-			<div class="col-sm-3 column productbox">
+			<div class="col-xs-15 col-sm-3 column productbox">
 				<div class="item-box">
 					<div class="product-source">
 						<span class="source-img"> <a href=""> <img
@@ -304,7 +346,7 @@
 				</div>
 			</div>
 
-			<div class="col-sm-3 column productbox">
+			<div class="col-xs-15 col-sm-3 column productbox">
 				<div class="item-box">
 					<div class="product-source">
 						<span class="source-img"> <a href=""> <img
@@ -324,7 +366,7 @@
 				</div>
 
 			</div>
-			<div class="col-sm-3 column productbox">
+			<div class="col-xs-15 col-sm-3 column productbox">
 				<div class="item-box">
 					<div class="product-source">
 						<span class="source-img"> <a href=""> <img
@@ -343,7 +385,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-3 column productbox">
+			<div class="col-xs-15 col-sm-3 column productbox">
 				<div class="item-box">
 					<div class="product-source">
 						<span class="source-img"> <a href=""> <img
@@ -362,7 +404,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-3 column productbox">
+			<div class="col-xs-15 col-sm-3 column productbox">
 				<div class="item-box">
 					<div class="product-source">
 						<span class="source-img"> <a href=""> <img
@@ -383,7 +425,7 @@
 
 			</div>
 
-			<div class="col-sm-3 column productbox">
+			<div class="col-xs-15 col-sm-3 column productbox">
 				<div class="item-box">
 					<div class="product-source">
 						<span class="source-img"> <a href=""> <img
@@ -404,7 +446,7 @@
 
 			</div>
 
-			<div class="col-sm-3 column productbox">
+			<div class="col-xs-15 col-sm-3 column productbox">
 				<div class="item-box">
 					<div class="product-source">
 						<span class="source-img"> <a href=""> <img
@@ -425,7 +467,7 @@
 
 			</div>
 
-			<div class="col-sm-3 column productbox">
+			<div class="col-xs-15 col-sm-3 column productbox">
 				<div class="item-box">
 					<div class="product-source">
 						<span class="source-img"> <a href=""> <img
@@ -434,6 +476,48 @@
 						</span> <span></span>
 					</div>
 					<a href=""><img src="/resources/views/electronic/8.jpg" class="img-responsive"></a>
+					<div class="producttitle">Product 2</div>
+					<div class="productprice">
+						<div class="pull-right">
+							<a href="#" title="រក្សាទុក" class="pricetext"> <i
+								class="fa fa-bookmark-o"></i></a>
+						</div>
+						<div class="pricetext">£8.95</div>
+					</div>
+				</div>
+
+			</div>
+			
+			<div class="col-xs-15 col-sm-3 column productbox">
+				<div class="item-box">
+					<div class="product-source">
+						<span class="source-img"> <a href=""> <img
+								class="img-circle" src="/resources/views/resourceimg/khbuy.png">
+						</a>
+						</span> <span></span>
+					</div>
+					<a href=""><img src="/resources/views/electronic/9.jpg" class="img-responsive"></a>
+					<div class="producttitle">Product 2</div>
+					<div class="productprice">
+						<div class="pull-right">
+							<a href="#" title="រក្សាទុក" class="pricetext"> <i
+								class="fa fa-bookmark-o"></i></a>
+						</div>
+						<div class="pricetext">£8.95</div>
+					</div>
+				</div>
+
+			</div>
+			
+			<div class="col-xs-15 col-sm-3 column productbox">
+				<div class="item-box">
+					<div class="product-source">
+						<span class="source-img"> <a href=""> <img
+								class="img-circle" src="/resources/views/resourceimg/khbuy.png">
+						</a>
+						</span> <span></span>
+					</div>
+					<a href=""><img src="/resources/views/electronic/10.jpg" class="img-responsive"></a>
 					<div class="producttitle">Product 2</div>
 					<div class="productprice">
 						<div class="pull-right">

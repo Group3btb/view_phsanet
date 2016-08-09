@@ -14,7 +14,7 @@
 			</div>
 
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
-				<form class="navbar-form navbar-left" role="search">
+				<form class="navbar-form navbar-left" style="margin-left:70px;" role="search">
 					<div class="form-group">
 						<select class="form-control">
 							<option>ប្រភេទពេញនិយម</option>
@@ -23,7 +23,7 @@
 							<option>ទូរស័ព្ទ</option>
 							<option>កុំព្យូទ័រ</option>
 						</select> 
-						<input type="text" class="form-control"​​ placeholder="ស្វែងរក">
+						<input type="text" class="form-control" style="width:440px;" placeholder="ស្វែងរក">
 						<button type="submit"  class="btn btn-primary">
 							<i class="fa fa-search"></i>ស្វែងរក
 						</button>
