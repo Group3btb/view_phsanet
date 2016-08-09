@@ -19,11 +19,11 @@
 	
 		<!-- include model update maincategory -->
 		
-		<jsp:include page="/WEB-INF/pages/admin/include/model_update_maincategory.jsp"></jsp:include>
+		
 		
 		<!-- Begin page -->
 		<div id="wrapper" ng-controller="controller_maincategory">
-
+			<jsp:include page="/WEB-INF/pages/admin/include/model_update_maincategory.jsp"></jsp:include>
           <!--  input top bar -->
 			
 		  <jsp:include page="/WEB-INF/pages/admin/menu/top_bar.jsp"></jsp:include>
@@ -85,15 +85,15 @@
                       <button type="reset" class="btn btn-default waves-effect waves-light m-l-5" id="main_cancel">Cancel</button>
                     </div>
                   </form><br>
-									<table id="demo-foo-pagination" class="table m-b-0 toggle-arrow-tiny" data-page-size="10">
-										<thead>
-											<tr>
-												<th>Main Category Id</th>
-												<th>Main Category Name</th>
-												<th data-hide="phone">Describe</th>
-												<th>Action</th>
-											</tr>
-										</thead>
+					<table id="demo-foo-pagination" class="table m-b-0 toggle-arrow-tiny" data-page-size="10">
+						<thead>
+								<tr>
+									<th>Main Category Id</th>
+									<th>Main Category Name</th>
+									<th data-hide="Describe">Description</th>
+									<th>Action</th>
+								</tr>
+						</thead>
                     <div class="pad-btm form-inline">
                       <div class="row">
                         <div class="col-sm-6 text-xs-center">
@@ -103,7 +103,7 @@
                               <option value="15">15</option>
                               <option value="20">20</option>
                             </select>
-                          entries
+                        
                         </label>
                         </div>
                         <div class="col-sm-6 text-xs-center text-right">
@@ -121,13 +121,13 @@
 							<td>{{main_cate.description}}</td>
 							<td class="actions">
 							
-                          	 <a href="#" data-toggle="modal"   data-overlaySpeed="200" data-overlayColor="#36404a" data-animation="fadein" data-plugin="custommodal" data-target="#custom-modal" class="on-default edit-row"><i class="fa fa-pencil"></i></a> &nbsp;&nbsp;
+                          	 <a href="#" ng-click="getAllData(this)" data-toggle="modal"   data-overlaySpeed="200" data-overlayColor="#36404a" data-animation="fadein" data-plugin="custommodal" data-target="#custom-modal" class="on-default edit-row"><i class="fa fa-pencil"></i></a> &nbsp;&nbsp;
                           	<a href="#" ng-click="delete_main_category(main_cate.maincategory_id)" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
                         	</td>
                         </tr>
 					
 						</tbody>
-										<tfoot>
+								<tfoot>
 											<tr>
 												<td colspan="5">
 													<div class="text-right">
@@ -152,13 +152,14 @@
             </div>
             <!-- ============================================================== -->
             <!-- End Right content here -->
-            <!-- ============================================================== -->
-
-
+            <!-- ============================================================== --
         </div>
         <!-- END wrapper -->
     
         <script>
+        	$(document).ready(function(){
+
+        	});
             var resizefunc = [];
         </script>
 

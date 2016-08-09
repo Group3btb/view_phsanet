@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-<html>
+<html ng-app="Myapp">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,32 +12,15 @@
 		<link rel="shortcut icon" href="/resources/admins/images/favicon_1.ico">
 
 		<title>PhsarNet</title>
-		<!--Footable-->
-		<link href="/resources/admins/plugins/footable/css/footable.core.css" rel="stylesheet">
-		<link href="/resources/admins/plugins/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" />
-
-		<link href="/resources/admins/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="/resources/admins/css/core.css" rel="stylesheet" type="text/css" />
-        <link href="/resources/admins/css/components.css" rel="stylesheet" type="text/css" />
-        <link href="/resources/admins/css/icons.css" rel="stylesheet" type="text/css" />
-        <link href="/resources/admins/css/pages.css" rel="stylesheet" type="text/css" />
-        <link href="/resources/admins/css/responsive.css" rel="stylesheet" type="text/css" />
-
-        <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
-
-        <script src="/resources/admins/js/modernizr.min.js"></script>
+		
+    <jsp:include page="/WEB-INF/pages/admin/include/head.jsp"></jsp:include>
 
 	</head>
 
 	<body class="fixed-left">
 
 		<!-- Begin page -->
-		<div id="wrapper">
+		<div id="wrapper"  ng-controller="controller_category">
 
           <!--  input top bar -->
 			
@@ -103,7 +86,7 @@
                     </div>
                   </div>
                   <div class="form-group text-right m-b-0">
-                    <button class="btn btn-primary waves-effect waves-light" type="button" id="category_save">Save</button>
+                    <button ng-click="findAll_category()" class="btn btn-primary waves-effect waves-light" type="button" id="category_save">Save</button>
                     <button type="reset" class="btn btn-default waves-effect waves-light m-l-5" id="category_cancel">Cancel</button>
                   </div>
                   </form><br>
@@ -111,11 +94,11 @@
 									<table id="demo-foo-pagination" class="table m-b-0 toggle-arrow-tiny" data-page-size="5">
                     <thead>
                       <tr>
-                        <th data-toggle="true">First Name</th>
-                        <th>Last Name</th>
-                        <th data-hide="phone">Job Title</th>
-                        <th data-hide="phone, tablet">DOB</th>
-                        <th data-hide="phone, tablet">Action</th>
+                        <th data-toggle="true">Category ID</th>
+                        <th>Category Name</th>
+                        <th data-hide="phone">Description</th>
+                        <th data-hide="phone">Maincategory Name</th>
+                        <th data-hide="phone">Action</th>
                       </tr>
                     </thead>
                     <div class="pad-btm form-inline">
@@ -138,306 +121,17 @@
                       </div>
                     </div>
                     <tbody>
-                      <tr>
-                         <td><img src="/resources/admins/images/products/iphone.jpg" class="thumb-sm pull-left m-r-10" alt=""></td>
-                        <td>Boudreaux</td>
-                        <td>Traffic Court Referee</td>
-                        <td>22 Jun 1972</td>
+                      <tr ng-repeat="cate in category">
+                        <td>{{cate.category_id}}</td>
+                        <td>{{cate.category_name}}</td>
+                        <td>{{cate.description}}</td>
+                        <td>{{cate.main_category.category_name}}</td>
                          <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
+                          <a href="#" on-click=" " class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
+                          <a href="#" on-click="delete_category(cate.category_id)" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
                         </td>
                       </tr>
-                      <tr>
-                        <td>Shona</td>
-                        <td>Woldt</td>
-                        <td>Airline Transport Pilot</td>
-                        <td>3 Oct 1981</td>
-                         <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Granville</td>
-                        <td>Leonardo</td>
-                        <td>Business Services Sales Representative</td>
-                        <td>19 Apr 1969</td>
-                         <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Easer</td>
-                        <td>Dragoo</td>
-                        <td>Drywall Stripper</td>
-                        <td>13 Dec 1977</td>
-                         <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Maple</td>
-                        <td>Halladay</td>
-                        <td>Aviation Tactical Readiness Officer</td>
-                        <td>30 Dec 1991</td>
-                         <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Maxine</td>
-                        <td><a href="#">Woldt</a></td>
-                        <td><a href="#">Business Services Sales Representative</a></td>
-                        <td>17 Oct 1987</td>
-                         <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Lorraine</td>
-                        <td>Mcgaughy</td>
-                        <td>Hemodialysis Technician</td>
-                        <td>11 Nov 1983</td>
-                         <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Lizzee</td>
-                        <td><a href="#">Goodlow</a></td>
-                        <td>Technical Services Librarian</td>
-                        <td>1 Nov 1961</td>
-                         <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Judi</td>
-                        <td>Badgett</td>
-                        <td>Electrical Lineworker</td>
-                        <td>23 Jun 1981</td>
-                         <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Lauri</td>
-                        <td>Hyland</td>
-                        <td>Blackjack Supervisor</td>
-                        <td>15 Nov 1985</td>
-                         <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Isidra</td>
-                        <td>Boudreaux</td>
-                        <td>Traffic Court Referee</td>
-                        <td>22 Jun 1972</td>
-                         <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Shona</td>
-                        <td>Woldt</td>
-                        <td>Airline Transport Pilot</td>
-                        <td>3 Oct 1981</td>
-                         <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Granville</td>
-                        <td>Leonardo</td>
-                        <td>Business Services Sales Representative</td>
-                        <td>19 Apr 1969</td>
-                         <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Easer</td>
-                        <td>Dragoo</td>
-                        <td>Drywall Stripper</td>
-                        <td>13 Dec 1977</td>
-                         <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Maple</td>
-                        <td>Halladay</td>
-                        <td>Aviation Tactical Readiness Officer</td>
-                        <td>30 Dec 1991</td>
-                         <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Maxine</td>
-                        <td><a href="#">Woldt</a></td>
-                        <td><a href="#">Business Services Sales Representative</a></td>
-                        <td>17 Oct 1987</td>
-                         <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Lorraine</td>
-                        <td>Mcgaughy</td>
-                        <td>Hemodialysis Technician</td>
-                        <td>11 Nov 1983</td>
-                         <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Lizzee</td>
-                        <td><a href="#">Goodlow</a></td>
-                        <td>Technical Services Librarian</td>
-                        <td>1 Nov 1961</td>
-                         <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Judi</td>
-                        <td>Badgett</td>
-                        <td>Electrical Lineworker</td>
-                        <td>23 Jun 1981</td>
-                         <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Lauri</td>
-                        <td>Hyland</td>
-                        <td>Blackjack Supervisor</td>
-                        <td>15 Nov 1985</td>
-                         <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Isidra</td>
-                        <td>Boudreaux</td>
-                        <td>Traffic Court Referee</td>
-                        <td>22 Jun 1972</td>
-                         <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Shona</td>
-                        <td>Woldt</td>
-                        <td>Airline Transport Pilot</td>
-                        <td>3 Oct 1981</td>
-                         <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Granville</td>
-                        <td>Leonardo</td>
-                        <td>Business Services Sales Representative</td>
-                        <td>19 Apr 1969</td>
-                         <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Easer</td>
-                        <td>Dragoo</td>
-                        <td>Drywall Stripper</td>
-                        <td>13 Dec 1977</td>
-                         <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Maple</td>
-                        <td>Halladay</td>
-                        <td>Aviation Tactical Readiness Officer</td>
-                        <td>30 Dec 1991</td>
-                         <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Maxine</td>
-                        <td><a href="#">Woldt</a></td>
-                        <td><a href="#">Business Services Sales Representative</a></td>
-                        <td>17 Oct 1987</td>
-                         <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Lorraine</td>
-                        <td>Mcgaughy</td>
-                        <td>Hemodialysis Technician</td>
-                        <td>11 Nov 1983</td>
-                         <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Lizzee</td>
-                        <td><a href="#">Goodlow</a></td>
-                        <td>Technical Services Librarian</td>
-                        <td>1 Nov 1961</td>
-                         <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Judi</td>
-                        <td>Badgett</td>
-                        <td>Electrical Lineworker</td>
-                        <td>23 Jun 1981</td>
-                         <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Lauri</td>
-                        <td>Hyland</td>
-                        <td>Blackjack Supervisor</td>
-                        <td>15 Nov 1985</td>
-                         <td class="actions">
-                          <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
-                          <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
+                      
                     </tbody>
                     <tfoot>
                       <tr>
@@ -477,29 +171,7 @@
             var resizefunc = [];
         </script>
 
-        <!-- jQuery  -->
-        <script src="/resources/admins/js/jquery.min.js"></script>
-        <script src="/resources/admins/js/bootstrap.min.js"></script>
-        <script src="/resources/admins/js/detect.js"></script>
-        <script src="/resources/admins/js/fastclick.js"></script>
-        <script src="/resources/admins/js/jquery.slimscroll.js"></script>
-        <script src="/resources/admins/js/jquery.blockUI.js"></script>
-        <script src="/resources/admins/js/waves.js"></script>
-        <script src="/resources/admins/js/wow.min.js"></script>
-        <script src="/resources/admins/js/jquery.nicescroll.js"></script>
-        <script src="/resources/admins/js/jquery.scrollTo.min.js"></script>
-
-
-        <script src="/resources/admins/js/jquery.core.js"></script>
-        <script src="/resources/admins/js/jquery.app.js"></script>
-        
-        <!--FooTable-->
-		<script src="/resources/admins/plugins/footable/js/footable.all.min.js"></script>
-		
-		<script src="/resources/admins/plugins/bootstrap-select/dist/js/bootstrap-select.min.js" type="text/javascript"></script>
-
-		<!--FooTable Example-->
-		<script src="/resources/admins/pages/jquery.footable.js"></script>
+       
 	
 	</body>
 </html>
