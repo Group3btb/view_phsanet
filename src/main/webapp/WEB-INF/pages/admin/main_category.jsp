@@ -155,7 +155,7 @@
             <!-- ============================================================== --
         </div>
         <!-- END wrapper -->
-    
+    	<jsp:include page="/WEB-INF/pages/admin/include/headscript.jsp"></jsp:include>
         <script>
         	$(document).ready(function(){
 
