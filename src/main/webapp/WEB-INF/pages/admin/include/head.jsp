@@ -16,7 +16,7 @@
         <link href="/resources/admins/css/pages.css" rel="stylesheet" type="text/css" />
         <link href="/resources/admins/css/responsive.css" rel="stylesheet" type="text/css" />
         <script src="/resources/admins/js/modernizr.min.js"></script>
-        <script src="/resources/admins/pages/jquery-1.12.4.js"></script>
+       <!--  <script src="/resources/admins/pages/jquery-1.12.4.js"></script> -->
          <script src="/resources/admins/js/angular.min.js"></script>
         
 
@@ -27,6 +27,8 @@
 		<!-- script category -->
 		<script src="/resources/admins/javascripts/category.js"></script>
 		<script src="/resources/admins/javascripts/main_category.js"></script>
+		<script src="/resources/admins/javascripts/web_source.js"></script>
+		
 		
 		
 

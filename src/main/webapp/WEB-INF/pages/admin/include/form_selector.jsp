@@ -2,34 +2,36 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
+
  <!-- Model -->
-        <div id="custom-modal" class="modal-demo">
+        <div id="custom-selector" class="modal-demo">
           <button type="button" class="close" onclick="Custombox.close();">
               <span>&times;</span><span class="sr-only">Close</span>
           </button>
-          <h4 class="custom-modal-title">Add New</h4>
+          <h4 class="custom-modal-title">UPDATE</h4>
           <div class="custom-modal-text text-left">
                <form role="form">
+               
                         <div class="form-group">
-                            <label for="name">Name</label>
-                            <input ng-model="site_name" type="text" class="form-control" id="searchcategory" placeholder="Enter site name">
+                            <label for="name">ROW SELECTOR</label>
+                            <input ng-model="row_selector" type="text" class="form-control" id="searchcategory" placeholder="Enter site name">
                         </div> 
                         
                         <div class="form-group">
-                            <label for="name">URL</label>
-                            <input ng-model="site_url" type="text" class="form-control" id="categoryid" placeholder="Enter site url">
+                            <label for="name">PRODUCT NAME SELECTOR</label>
+                            <input ng-model="product_name_selector" type="text" class="form-control" id="categoryid" placeholder="Enter site url">
                         </div>   
                          <div class="form-group">
-                            <label for="name">Prefix Path(image)</label>
-                            <input ng-model="path_image" type="text" class="form-control" id="categoryid" placeholder="Enter site basepath">
+                            <label for="name">PRICE SELECTOR</label>
+                            <input ng-model="price_selector" type="text" class="form-control" id="categoryid" placeholder="Enter site basepath">
                         </div>  
                          <div class="form-group">
-                            <label for="name">Prefix Attribute(image)</label>
-                            <input ng-model="attribute_image" type="text" class="form-control" id="categoryid" placeholder="Enter site prefix img attribute">
+                            <label for="name">IAMGE SELECTOR</label>
+                            <input ng-model="image_selector" type="text" class="form-control" id="categoryid" placeholder="Enter site prefix img attribute">
                         </div>    
                         <div class="form-group">
-                            <label for="name">Prefix Path(link)</label>
-                            <input ng-model="prefix_link" type="text" class="form-control" id="categoryid" placeholder="Enter site prefix link">
+                            <label for="name">DESCRIPTION SELECTOR</label>
+                            <input ng-model="description_selector" type="text" class="form-control" id="categoryid" placeholder="Enter site prefix link">
                         </div>  
                   
                         <button type="button" class="btn btn-default waves-effect waves-light"  onclick="Custombox.close();" id="btnokay">Okay</button>
@@ -37,6 +39,4 @@
                     </form>
           </div>
       </div>
-      
-      
       

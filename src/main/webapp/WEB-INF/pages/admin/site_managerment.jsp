@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-<html>
+<html an-app="Myapp">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,9 +17,9 @@
 
        
         <jsp:include page="/WEB-INF/pages/admin/include/add_site.jsp"></jsp:include>
-         
+        <jsp:include page="/WEB-INF/pages/admin/include/form_selector.jsp"></jsp:include>
         <!-- Begin page -->
-        <div id="wrapper">
+        <div id="wrapper" ng-controller="controller_web_source">
 
             <!-- Top Bar Start -->
            	<jsp:include page="/WEB-INF/pages/admin/menu/top_bar.jsp"></jsp:include>
@@ -78,30 +78,21 @@
                                             <tbody>
                                              
                                              
-                                                <tr>
-        											<td>61</td>                                           
+                                                <tr ng-repeat="web in webs">
+        											<td>1</td>                                           
                                                     <td>Integration Specialist</td>
                                                     <td>New York</td>
                                                     <td><img src="/resources/admins/images/products/iphone.jpg" class="thumb-sm pull-left m-r-10" alt=""></td>
                                                     
                                                     <td>
-                                                    	<button type="button" class="btn btn-info waves-effect waves-light">
-                                                    		<i class="glyphicon glyphicon-eye-open"></i>
-                                                    	</button>
-                                                    	<button type="button" class="btn btn-warning waves-effect waves-light">
-                                                    		<i class="glyphicon glyphicon-edit"></i>
-                                                    	</button>
-                                                    	<button type="button" class="btn btn-primary waves-effect waves-light">
-                                                    		<i class="glyphicon glyphicon-pencil"></i>
-                                                    	</button>
-                                                    	<button type="button" class="btn btn-danger waves-effect waves-light">
-                                                    		<i class="glyphicon glyphicon-trash"></i>
-                                                    	</button>
+                                                    
+                                                    	<a href="#" class="btn btn-info btn-md waves-effect waves-light" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="200" data-overlaycolor="#36404a"><i class="glyphicon glyphicon-eye-open"></i></a>
+                                                    	<a href="#custom-selector" class="btn btn-warning btn-md waves-effect waves-light" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="200" data-overlaycolor="#36404a"><i class="glyphicon glyphicon-edit"></i></a>
+                                                    	<a href="#" class="btn btn-primary btn-md waves-effect waves-light" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="200" data-overlaycolor="#36404a"><i class="glyphicon glyphicon-pencil"></i></a>
+                                                    	<a href="#" class="btn btn-danger btn-md waves-effect "><i class="glyphicon glyphicon-trash"></i></a>
+                                                    
                                                     </td>
-                                                </tr>
-                                               
-                                               
-                                                
+                                                </tr>         
                                         </table>
                                      <!--  </div>   -->            
                                       <div class="form-group text-right m-b-0" style="margin-top: 5px">
