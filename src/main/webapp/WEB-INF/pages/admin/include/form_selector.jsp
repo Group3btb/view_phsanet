@@ -8,7 +8,7 @@
           <button type="button" class="close" onclick="Custombox.close();">
               <span>&times;</span><span class="sr-only">Close</span>
           </button>
-          <h4 class="custom-modal-title">UPDATE</h4>
+          <h4 class="custom-modal-title" ng-bind="title"></h4>
           <div class="custom-modal-text text-left">
                <form role="form">
                
@@ -34,8 +34,8 @@
                             <input ng-model="description_selector" type="text" class="form-control" id="categoryid" placeholder="Enter site prefix link">
                         </div>  
                   
-                        <button type="button" class="btn btn-default waves-effect waves-light"  onclick="Custombox.close();" id="btnokay">Okay</button>
-                        <button type="button" class="btn btn-danger waves-effect waves-light m-l-10">Cancel</button>
+                        <button ng-bind="btn" ng-click="selector_web_source()" type="button" class="btn btn-default waves-effect waves-light"  onclick="Custombox.close();" id="btnokay"></button>
+                        <button type="button"  onclick="Custombox.close();" class="btn btn-danger waves-effect waves-light m-l-10">Close</button>
                     </form>
           </div>
       </div>
