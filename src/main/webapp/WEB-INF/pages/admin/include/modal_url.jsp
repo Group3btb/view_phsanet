@@ -7,29 +7,25 @@
           <button type="button" class="close" onclick="Custombox.close();">
               <span>&times;</span><span class="sr-only">Close</span>
           </button>
-          <h4 class="custom-modal-title" ng-bind="title_scrap"></h4>
+          <h4 class="custom-modal-title" ng-bind="title"></h4>
           <div class="custom-modal-text text-left">
                <form role="form">
                         <div class="form-group">
                             <label for="name">SITE NAME</label>                    
-                            <select ng-modal="select_site" class="form-control">   
-                            	<option>---selected site---</option>
-                            	<optgroup class="form-group"></optgroup>
-                            	<option ng-repeat="web in webs">
+                            <select ng-change="webSiteChange(web)" ng-model="web" class="form-control">   
+                            	<option >---selected site---</option>
+                            	<option ng-repeat="web in webs" ng-value="web.web_source_id">
                             		{{web.website}}
                             	</option>
-                            	                                      
-                            	
                             </select>
                         </div> 
                         
                         <div class="form-group">
                             <label for="name">SUB CATEGORY</label>                    
-                            <select ng-modal="select_category" class="form-control">  
+                            <select ng-change="subcategoryChange(sub)" ng-model="sub" class="form-control">  
                             	<option>---selected subcategory---</option>
-                            	<optgroup class="form-group"></optgroup>
-                            	<option >
-                            		
+                            	<option ng-repeat="sub in subs" ng-value="sub.subcategory_id">
+                            		{{sub.subcategory_name}}
                             	</option>
                             	                                        
                             	
@@ -42,7 +38,7 @@
                         </div>   
                          
                   
-                        <button ng-click="test()"  ng-bind="" type="button" class="btn btn-default waves-effect waves-light"  onclick="Custombox.close();" id="btnokay">Okay</button>
+                        <button ng-click="operation()"  ng-bind="btn" type="button" class="btn btn-default waves-effect waves-light"  onclick="Custombox.close();" id="btnokay">Okay</button>
                         <button type="button"  onclick="Custombox.close();" class="btn btn-danger waves-effect waves-light m-l-10">Close</button>
                     </form>
           </div>
