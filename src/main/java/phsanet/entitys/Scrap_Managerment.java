@@ -2,6 +2,7 @@ package phsanet.entitys;
 
 public class Scrap_Managerment {
 	
+	private int scrap_id;
 	private Web_Source web_source;
 	private SubCategory subcategory;
 	private String url;
@@ -22,5 +23,11 @@ public class Scrap_Managerment {
 	}
 	public void setUrl(String url) {
 		this.url = url;
+	}
+	public int getScrap_id() {
+		return scrap_id;
+	}
+	public void setScrap_id(int scrap_id) {
+		this.scrap_id = scrap_id;
 	}
 }

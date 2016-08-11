@@ -14,7 +14,7 @@
                             <label for="name">SITE NAME</label>                    
                             <select ng-change="webSiteChange(web)" ng-model="web" class="form-control">   
                             	<option >---selected site---</option>
-                            	<option ng-repeat="web in webs" ng-value="web">
+                            	<option ng-repeat="web in webs" ng-value="web.web_source_id">
                             		{{web.website}}
                             	</option>
                             </select>
@@ -24,7 +24,7 @@
                             <label for="name">SUB CATEGORY</label>                    
                             <select ng-change="subcategoryChange(sub)" ng-model="sub" class="form-control">  
                             	<option>---selected subcategory---</option>
-                            	<option ng-repeat="sub in subs" ng-value="sub">
+                            	<option ng-repeat="sub in subs" ng-value="sub.subcategory_id">
                             		{{sub.subcategory_name}}
                             	</option>
                             	                                        
@@ -38,7 +38,7 @@
                         </div>   
                          
                   
-                        <button ng-click="test()"  ng-bind="btn" type="button" class="btn btn-default waves-effect waves-light"  onclick="Custombox.close();" id="btnokay">Okay</button>
+                        <button ng-click="operation()"  ng-bind="btn" type="button" class="btn btn-default waves-effect waves-light"  onclick="Custombox.close();" id="btnokay">Okay</button>
                         <button type="button"  onclick="Custombox.close();" class="btn btn-danger waves-effect waves-light m-l-10">Close</button>
                     </form>
           </div>
