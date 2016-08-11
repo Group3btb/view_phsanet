@@ -57,7 +57,7 @@
  			method : 'PUT',
  			data : {
  				category_name : $scope.cate_name_update,
- 				desciption : $scope.cate_desc_update,
+ 				description : $scope.cate_desc_update,
  				main_category:{maincategory_id : $scope.main_cate_update}
  			}
  		}).then(function(){
