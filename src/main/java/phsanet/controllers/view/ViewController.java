@@ -10,4 +10,9 @@ public class ViewController {
 	public String index(){
 	return "index";	
 	}
+	
+	@RequestMapping(value={"/cat"})
+	public String allcat(){
+		return "category";
+	}
 }
