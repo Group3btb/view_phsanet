@@ -9,7 +9,7 @@
   <script src="/resources/views/js/jssor.slider.min.js"></script>
   <script src="/resources/views/js/slider.js"></script>
   <link rel="stylesheet" type="text/css" href="/resources/views/css/style.css">
- <script src="/resources/views/js/script.js"></script>
+  <script src="/resources/views/js/script.js"></script>
   <script src="/resources/views/js/jquery.nicescroll.min.js"></script>
   <script src="/resources/views/js/jquery.nicescroll.plus.js"></script>
   <link rel="stylesheet" type="text/css" href="/resources/views/css/base.css">

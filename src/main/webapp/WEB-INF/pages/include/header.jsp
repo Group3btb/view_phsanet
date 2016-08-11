@@ -10,11 +10,11 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#" style="font-size: 18px;">ប្រជុំផ្សារខ្មែរ</a>
+				<a class="navbar-brand" href="#" style="font-size: 18px;">PhsarNet</a>
 			</div>
 
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
-				<form class="navbar-form navbar-left" style="margin-left:70px;" role="search">
+				<form class="navbar-form navbar-left" style="margin-left:90px;" role="search">
 					<div class="form-group">
 						<select class="form-control">
 							<option>ប្រភេទពេញនិយម</option>
