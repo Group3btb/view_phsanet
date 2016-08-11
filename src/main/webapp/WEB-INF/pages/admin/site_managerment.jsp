@@ -21,8 +21,8 @@
         <!-- Begin page -->	
         <div id="wrapper" ng-controller="controller_web_source">
 
-            <jsp:include page="/WEB-INF/pages/admin/include/add_site.jsp"></jsp:include>
-            <jsp:include page="/WEB-INF/pages/admin/include/form_selector.jsp"></jsp:include>
+            <jsp:include page="/WEB-INF/pages/admin/include/modal_site.jsp"></jsp:include>
+            <jsp:include page="/WEB-INF/pages/admin/include/modal_selector.jsp"></jsp:include>
 
             <!-- Top Bar Start -->
            	<jsp:include page="/WEB-INF/pages/admin/menu/top_bar.jsp"></jsp:include>
