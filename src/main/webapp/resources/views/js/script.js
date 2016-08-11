@@ -6,4 +6,16 @@ $(document).ready(function() {
     
      } else{$("#scrolltop").fadeOut(300);}
      });
+     
+     $('#media').carousel({
+    	    pause: true,
+    	  });
+    	  
+    	$('#media').carousel('cycle');
+    	
+    $('#product').carousel({
+	    pause: true,
+	 });	
+    $('#product').carousel('cycle');
+     
 });

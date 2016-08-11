@@ -5,7 +5,7 @@
  * Copyright 2013 bootstrap-select
  * Licensed under the MIT license
  */
-
+    
 !function($) {
 
     'use strict';
