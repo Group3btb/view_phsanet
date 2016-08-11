@@ -22,10 +22,9 @@
                         
                         <div class="form-group">
                             <label for="name">SUB CATEGORY</label>                    
-                            <select  class="form-control">  
+                            <select ng-change="subcategoryChange(sub)" ng-model="sub" class="form-control">  
                             	<option>---selected subcategory---</option>
-                            	<optgroup class="form-group"></optgroup>
-                            	<option ng-repeat="sub in subs">
+                            	<option ng-repeat="sub in subs" ng-value="sub">
                             		{{sub.subcategory_name}}
                             	</option>
                             	                                        

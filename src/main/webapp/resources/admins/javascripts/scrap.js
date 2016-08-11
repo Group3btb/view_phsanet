@@ -54,8 +54,8 @@ app.controller("controller_scrap",function($http,$scope){
 	  	alert(record);
 	  }
 	  
-	  $scope.getWeb_source_ID = function(record){
-	  	alert(record.web.getWeb_source_id);
+	  $scope.subcategoryChange = function(record){
+	  	alert(record);
 	  }
 
  });//end controller
