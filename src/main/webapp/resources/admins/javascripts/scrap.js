@@ -49,6 +49,21 @@ app.controller("controller_scrap",function($http,$scope){
 	  		}
 	  }
 	  
+	  $scope.save_web_scrap = function(){
+
+	  		$http({
+	  			url:'',
+	  			method:'POST',
+	  			data:{
+	  				
+	  			}
+	  		}).then(function(respone){
+
+	  		},function(respone){
+
+	  		});
+	  }
+
 	  //getid subcategory
 	  $scope.webSiteChange = function(record){
 	  	alert(record);
