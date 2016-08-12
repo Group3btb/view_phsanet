@@ -2,8 +2,8 @@
  * 
  */
            
-var app = angular.module("myApp", []);
-app.controller("controller_maincategory", function($scope, $http) {
+/*var app = angular.module("myApp", []);*/
+angular.module("myApp", []).controller("controller_maincategory", function($scope, $http) {
 	
 	$scope.findAll_main_category = function(){
 
@@ -96,4 +96,15 @@ app.controller("controller_maincategory", function($scope, $http) {
 
 
 
-});// end controller
+})// end controller
+
+.filter('highlight', function($sce) {
+    return function(t, phrase) {
+        
+    	if (phrase) t = t.replace(new RegExp('('+phrase+')', 'gi'),
+        '<span class="highlighted">$1</span>')
+
+        return $sce.trustAsHtml(t)
+        
+      }
+    })

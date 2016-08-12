@@ -19,6 +19,12 @@
 			  min-height: .01%;
 			  overflow-x: visible;
 			}
+			.highlighted{ background: yellow }
+			
+			/* .colNum{
+				width:4%
+			} */
+			
 		
 		</style>
 		
@@ -127,13 +133,17 @@
 						<tbody>
 											
 						<tr ng-repeat="main_cate in meain_category| filter:search:strict">
-							<td>{{main_cate.maincategory_id}}</td>
-							<td>{{main_cate.category_name}}</td>
-							<td>{{main_cate.description}}</td>
-							<td class="actions">
 							
-                          	 <a href="#" ng-click="getAllData(this)" data-toggle="modal"   data-overlaySpeed="200" data-overlayColor="#36404a" data-animation="fadein" data-plugin="custommodal" data-target="#custom-modal" class="on-default edit-row"><i class="fa fa-pencil"></i></a> &nbsp;&nbsp;
-                          	<a href="#" ng-click="delete_main_category(main_cate.maincategory_id)" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
+												
+							<!-- <td class="col-md-1"​​​ ng-bind-html="main_cate.maincategory_id | highlight:search.$"></td> -->
+							
+							<td class="col-md-1" ng-bind-html="main_cate.maincategory_id | highlight:search.$">{{main_cate.maincategory_id}}</td>
+							<td class="col-md-3" ng-bind-html="main_cate.category_name | highlight:search.$"></td>
+							<td  class="col-md-7" ng-bind-html="main_cate.description | highlight:search.$"></td>
+									
+							<td class="actions col-md-1">							
+	                          	 <a href="#" ng-click="getAllData(this)" data-toggle="modal"   data-overlaySpeed="200" data-overlayColor="#36404a" data-animation="fadein" data-plugin="custommodal" data-target="#custom-modal" class="on-default edit-row"><i class="fa fa-pencil"></i></a> &nbsp;&nbsp;
+	                          	<a href="#" ng-click="delete_main_category(main_cate.maincategory_id)" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
                         	</td>
                         </tr>
 					
@@ -169,11 +179,13 @@
         <!-- END wrapper -->
     	<jsp:include page="/WEB-INF/pages/admin/include/headscript.jsp"></jsp:include>
         <script>
+        	
         	$(document).ready(function(){
 
         	});
-            var resizefunc = [];
-    
+            var resizefunc = [];  
+            
+                      
         </script>
 
        <!-- script -->
