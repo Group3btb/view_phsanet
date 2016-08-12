@@ -14,7 +14,7 @@
  		},function(respone){
  			alert("Error");
  		});
- 	}//end findall category
+ 	};//end findall category
  	
  	$scope.findAllMainCate = function(){
  		$http({
@@ -40,43 +40,86 @@
  			$scope.findAll_category();
  			$socpe.cate_name = "";
  			$scope.cate_desc = "";
- 		}, function(response){});
+ 			alert("Add Success!");
+ 		}, function(response){
+ 			alert("Add failed!");
+ 		});
  	};//end add category
  	
  	$scope.getData = function(record){
  		$scope.cate_name_update = record.cate.category_name;
- 		$scope.main_cate_upeate = record.cate.main_category.main_category_id;
+ 		/*$scope.main_cate_upeate = record.cate.main_category.maincategory_id;*/
  		$scope.cate_desc_update = record.cate.description;
+ 		$scope.cate_id_update = record.cate.category_id;
  		$scope.findAllMainCate();
+ 		/*alert($scope.cate_id_update);*/
  		//$scope.selected = "selected";
- 	};
+ 	};//end function getData per record
  	
  	$scope.UpdateCate = function(){
- 		$http({
- 			url : '/categories',
- 			method : 'PUT',
- 			data : {
- 				category_name : $scope.cate_name_update,
- 				description : $scope.cate_desc_update,
- 				main_category:{maincategory_id : $scope.main_cate_update}
- 			}
- 		}).then(function(){
- 			$scope.findAll_category();
- 		},function(){
- 			
- 		});
+ 		swal({   
+			title: "Are you sure to update this record?",   
+			text: "You will not be able to roll back!",   
+			type: "warning",   
+			showCancelButton: true,   
+			confirmButtonColor: "#E98106",   
+			confirmButtonText: "Yes",   
+			cancelButtonText: "No",   
+			closeOnConfirm: false,   
+			closeOnCancel: false }, 
+		function(isConfirm){   
+			if (isConfirm) {     
+				$http({
+					url : '/categories',
+		 			method : 'PUT',
+		 			data : {
+		 				category_id : $scope.cate_id_update,
+		 				category_name : $scope.cate_name_update,
+		 				description : $scope.cate_desc_update,
+		 				main_category:{
+		 					maincategory_id : $scope.main_cate
+		 				}
+		 			}
+				}).then(function(response){
+					swal("Updated!", "Your record updated!", "success"); 
+					$('#btnclose').trigger('click');
+					$scope.findAll_category();
+			},function(response){
+
+			});	  
+			}else {     
+				swal("Cancelled", "Your record has not been updated:)", "error");   
+			} 
+		});
  	};//end update category
  	
- 	$scope.delete_category = function(id){
-		$http({
-				url:'/category/'+id,
-				method:'DELETE'
-			}).then(function(respone){
-				alert(respone.data.DATA);
-			},function(respone){
-				alert("Error");
-			});
- 	}// end delete category
+ 	$scope.deleteCate = function(id){
+		swal({   
+			title: "Are you sure to delete this record?",   
+			text: "You will not be able to recover this record!",   
+			type: "warning",   
+			showCancelButton: true,   
+			confirmButtonColor: "#ED0909",   
+			confirmButtonText: "Yes",   
+			cancelButtonText: "No",   
+			closeOnConfirm: false,   
+			closeOnCancel: false }, 
+		function(isConfirm){   
+			if (isConfirm) {     
+					$http({
+						url:'/categories/'+id,
+						method:'DELETE'
+				}).then(function(response){
+					swal("Deleted!", "Your record deleted!", "success");  
+					$scope.findAll_category();
+				},function(response){
+
+				}); 
+			} else {     
+				swal("Cancelled", "Your record has not been deleted:)", "error");   
+			} 
+		});
+ 	};// end delete category
 
  	$scope.findAll_category();
 
