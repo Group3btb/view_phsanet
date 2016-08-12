@@ -1,15 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%> 
+	pageEncoding="UTF-8"%>
 <div class="container">
 	<div class="row">
-		<div class="items">`
-		
-			<div class="col-md-12">
-				<span ​​ class="text-primary span">ផលិតផលថ្មីៗ</span>
-				<div class="border"></div>
+		<div class="items">
+			<div class="row">
+				<div class="col-md-12">
+					<span ​​ class="text-primary span">ផលិតផលថ្មីៗ</span>
+					<div class="border"></div>
+				</div>
 			</div>
-
-			<div class="col-xs-15 col-md-3 col-sm-3 column productbox">
+			
+			<div class="row">
+				<div class="col-xs-15 col-md-3 col-sm-3 column productbox">
 
 				<div class="item-box">
 					<div class="product-source">
@@ -112,11 +114,17 @@
 				</div>
 
 			</div>
-			<div class="col-sm-12">
-				<span ​​ class="text-primary span">សំលៀកបំពាក់</span>
-				<div class="border"></div>
 			</div>
-			<div class="col-xs-15 col-md-3 col-sm-3 column productbox">
+			
+			<div class="row">
+				<div class="col-sm-12">
+					<span ​​ class="text-primary span">សំលៀកបំពាក់</span>
+					<div class="border"></div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-xs-15 col-md-3 col-sm-3 column productbox">
 				<div class="item-box">
 					<div class="product-source">
 						<span class="source-img"> <a href=""> <img
@@ -318,15 +326,18 @@
 						<div class="pricetext">£8.95</div>
 					</div>
 				</div>
-
 			</div>
-
-
-			<div class="col-sm-12 title">
-				<span ​​ class="text-primary span">គ្រឿងអេឡិចត្រូនិច</span>
-				<div class="border"></div>
 			</div>
-			<div class="col-xs-15 col-sm-3 column productbox">
+			
+			<div class="row">
+				<div class="col-sm-12 title">
+					<span ​​ class="text-primary span">គ្រឿងអេឡិចត្រូនិច</span>
+					<div class="border"></div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-xs-15 col-sm-3 column productbox">
 				<div class="item-box">
 					<div class="product-source">
 						<span class="source-img"> <a href=""> <img
@@ -528,7 +539,9 @@
 					</div>
 				</div>
 
+				</div>
 			</div>
+			
 		</div>
 	</div>
 </div>

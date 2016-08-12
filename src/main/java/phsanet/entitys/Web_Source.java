@@ -11,6 +11,7 @@ public class Web_Source {
 	private String 		selector_price;
 	private String 		selector_image;
 	private String 		selector_description;
+	
 	public int getWeb_source_id() {
 		return web_source_id;
 	}

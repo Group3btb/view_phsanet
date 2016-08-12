@@ -23,7 +23,7 @@
 		
 		<!-- Begin page -->
 		<div id="wrapper" ng-controller="controller_maincategory">
-			<jsp:include page="/WEB-INF/pages/admin/include/model_update_maincategory.jsp"></jsp:include>
+			<jsp:include page="/WEB-INF/pages/admin/include/modal_update_maincategory.jsp"></jsp:include>
           <!--  input top bar -->
 			
 		  <jsp:include page="/WEB-INF/pages/admin/menu/top_bar.jsp"></jsp:include>

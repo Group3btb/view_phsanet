@@ -24,7 +24,7 @@
 .home-nav-layout .category .class span.ico img { max-width: 16px; max-height: 16px; -webkit-filter: grayscale(100%)/*Webkit*/; -o-filter: grayscale(100%); filter: gray;}
 .home-nav-layout .category .menu li.hover .ico img { -webkit-filter: grayscale(0)/*Webkit*/; -o-filter: grayscale(0); filter: none;}
 .home-nav-layout .category .class h4 { line-height: 16px; color: #333; height: 16px; float: left;}
-.home-nav-layout .category .class h4 a { color:#428BCA;}
+.home-nav-layout .category .class h4 a { color:#000;}
 .home-nav-layout .category .class h4 img { height: 18px;display: inline;float: left;margin-top: -3px}
 .home-nav-layout .category .menu li.hover .class h4 a { color:#428BCA;}
 .home-nav-layout .category .menu li.hover .class .recommend-class a {color: #666;}
