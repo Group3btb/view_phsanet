@@ -47,7 +47,7 @@
 							<div class="col-sm-12">
 								<div class="card-box">
 								      <h4 class="m-t-0 header-title"><b>Site Managerment</b></h4><br>
-                  						<a href="#custom-url" ng-click = "getData({"id":0})" class="btn btn-default btn-md waves-effect waves-light m-b-30" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="200" data-overlaycolor="#36404a"><i class="md md-add"></i>Add Site</a>
+                  						<a href="#custom-url" ng-click = "getData('new')" class="btn btn-default btn-md waves-effect waves-light m-b-30" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="200" data-overlaycolor="#36404a"><i class="md md-add"></i>Add Site</a>
 								</div>
 							</div>
 						</div>

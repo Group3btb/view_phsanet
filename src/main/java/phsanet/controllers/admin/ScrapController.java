@@ -1,11 +1,6 @@
 package phsanet.controllers.admin;
-import java.io.IOException;
-import java.util.Map;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
+import java.util.Map;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -80,7 +75,7 @@ public class ScrapController {
 	@RequestMapping(value={"/scrapmanagerment"} , method = RequestMethod.PUT)
 	@ResponseBody
 	public ResponseEntity<Map<String,Object>> update_scrap(@RequestBody Scrap_Managerment scrap){
-		System.out.println(scrap.getScrap_id()+"  "+scrap.getUrl());
+		
 		RestTemplate restTemplate = new RestTemplate();
 		HttpEntity<Object> request = new HttpEntity<Object>(scrap,new HttpHeaders());
 		@SuppressWarnings("rawtypes")
@@ -115,22 +110,5 @@ public class ScrapController {
 	
 	
 	
-	
-	public void s() throws IOException{
-		Document doc = Jsoup.connect("http://www.kaymu.com.kh/men-polos/").get();
-		Elements elements = doc.select(".product");
-		//System.out.println(elements);
-		
-		for(Element e: elements){
-			String image = e.select("img").attr("data-layzr");
-			String title = e.select(".ellipsis").text();
-			String price = e.select(".price").text();
-			String link = e.select(".card-overlay").attr("href");
-		
-			System.out.println(image);
-			System.out.println(title);
-			System.out.println(price);
-			System.out.println(link + "\n");
-		}
-	}
+
 }

@@ -3,7 +3,7 @@
  */
 
  var app = angular.module("Myapp",[]);
-app.controller("controller_scrap",function($http,$scope){
+app.controller("controller_scrap",function($http , $scope){
  		
  		$scope.findall_web_sources = function(){
  			
@@ -49,14 +49,15 @@ app.controller("controller_scrap",function($http,$scope){
 
 	  $scope.getData= function(record){
 
-	  		if(record.scrap.scrap_id!=null){
-	  			$scope.btn = "UPDATE";
-	  			$scope.title ="UPDATE";
-	  			$scope.id 				= record.scrap.scrap_id;
-	  			$scope.scrap_url 		= record.scrap.url;
+	  		if(record!='new'){
+	  			$scope.btn 				= 	"UPDATE";
+	  			$scope.title 			=	"UPDATE";
+	  			$scope.id 				= 	record.scrap.scrap_id;
+	  			$scope.scrap_url 		= 	record.scrap.url;
+
 	  		}else{
-	  			$scope.btn = "Save";
-	  			$scope.title ="NEW";
+	  			$scope.btn 				= 	"Save";
+	  			$scope.title 			=	"NEW";
 	  		}
 
 	  		
