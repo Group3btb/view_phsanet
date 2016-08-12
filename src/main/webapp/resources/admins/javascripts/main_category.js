@@ -48,9 +48,9 @@ app.controller("controller_maincategory", function($scope, $http) {
 							url:'/maincategories/'+id,
 								method:'delete'
 							}).then(function(respone){
-								alert("SUCCESS");
+								
 							},function(respone){
-								alert("Error");
+								
 							});
 
 					} else {

@@ -80,7 +80,7 @@ public class ScrapController {
 	@RequestMapping(value={"/scrapmanagerment"} , method = RequestMethod.PUT)
 	@ResponseBody
 	public ResponseEntity<Map<String,Object>> update_scrap(@RequestBody Scrap_Managerment scrap){
-		
+		System.out.println(scrap.getScrap_id()+"  "+scrap.getUrl());
 		RestTemplate restTemplate = new RestTemplate();
 		HttpEntity<Object> request = new HttpEntity<Object>(scrap,new HttpHeaders());
 		@SuppressWarnings("rawtypes")
