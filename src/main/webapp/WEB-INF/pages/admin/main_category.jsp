@@ -108,16 +108,16 @@
                         </div>
                         <div class="col-sm-6 text-xs-center text-right">
                           <div class="form-group">
-                            <input id="demo-input-search2" type="text" placeholder="Search" class="form-control  input-sm" autocomplete="off">
+                            <input ng-model="search.$" id="demo-input-search2" type="text" placeholder="Search" class="form-control  input-sm" autocomplete="off">
                           </div>
                         </div>
                       </div>
                     </div>
 						<tbody>
 											
-						<tr ng-repeat="main_cate in meain_category">
+						<tr ng-repeat="main_cate in meain_category| filter:search:strict">
 							<td>{{main_cate.maincategory_id}}</td>
-							<td>{{main_cate.category_name}}</td>
+							<td ng-bind-html="main_cate.category_name | highlight:search.$">{{main_cate.category_name}}</td>
 							<td>{{main_cate.description}}</td>
 							<td class="actions">
 							
@@ -161,6 +161,32 @@
 
         	});
             var resizefunc = [];
+              
+            
+   /*          angular.module('myApp', [])
+  .controller('controller_maincategory', function($scope) {
+     $scope.data = [
+      { 
+		}
+    ] 
+  }) 
+  .filter('highlight', function($sce) {
+    return function(t, phrase) {
+      if (phrase) t = t.replace(new RegExp('('+phrase+')', 'gi'),
+        '<span class="highlighted">$1</span>')
+
+      return $sce.trustAsHtml(t)
+    }
+  }) */
+     
+  myApp.filter('highlight', function($sce) {
+	    return function(t, phrase) {
+	        if (phrase) t = t.replace(new RegExp('('+phrase+')', 'gi'),
+	          '<span class="highlighted">$1</span>')
+
+	        return $sce.trustAsHtml(t)
+	      }
+	    })
         </script>
 
        <!-- script -->
