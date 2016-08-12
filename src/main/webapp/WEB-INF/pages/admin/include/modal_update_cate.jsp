@@ -13,6 +13,7 @@
                         <div class="form-group">
                             <label for="name">Category Name</label>
                             <input ng-model="cate_name_update" type="text" class="form-control" id="cate_name" placeholder="Enter site name">
+                            <input type="hidden" value="{{cate_id_update}}">
                         </div> 
                         
                         <div class="form-group">
