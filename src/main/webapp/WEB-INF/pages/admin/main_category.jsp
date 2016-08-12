@@ -13,6 +13,15 @@
 		<title>aUbold - Responsive Admin Dashboard Template</title>
 		
 		<jsp:include page="/WEB-INF/pages/admin/include/head.jsp"></jsp:include>
+		<style>
+			.table-responsive 
+			{
+			  min-height: .01%;
+			  overflow-x: visible;
+			}
+		
+		</style>
+		
 	</head>
 
 	<body class="fixed-left">
@@ -85,6 +94,8 @@
                       <button type="reset" class="btn btn-default waves-effect waves-light m-l-5" id="main_cancel">Cancel</button>
                     </div>
                   </form><br>
+                  
+                  <div class="table-responsive">
 					<table id="demo-foo-pagination" class="table m-b-0 toggle-arrow-tiny" data-page-size="10">
 						<thead>
 								<tr>
@@ -117,7 +128,7 @@
 											
 						<tr ng-repeat="main_cate in meain_category| filter:search:strict">
 							<td>{{main_cate.maincategory_id}}</td>
-							<td ng-bind-html="main_cate.category_name | highlight:search.$">{{main_cate.category_name}}</td>
+							<td>{{main_cate.category_name}}</td>
 							<td>{{main_cate.description}}</td>
 							<td class="actions">
 							
@@ -137,6 +148,7 @@
 											</tr>
 										</tfoot>
 									</table>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -161,32 +173,7 @@
 
         	});
             var resizefunc = [];
-              
-            
-   /*          angular.module('myApp', [])
-  .controller('controller_maincategory', function($scope) {
-     $scope.data = [
-      { 
-		}
-    ] 
-  }) 
-  .filter('highlight', function($sce) {
-    return function(t, phrase) {
-      if (phrase) t = t.replace(new RegExp('('+phrase+')', 'gi'),
-        '<span class="highlighted">$1</span>')
-
-      return $sce.trustAsHtml(t)
-    }
-  }) */
-     
-  myApp.filter('highlight', function($sce) {
-	    return function(t, phrase) {
-	        if (phrase) t = t.replace(new RegExp('('+phrase+')', 'gi'),
-	          '<span class="highlighted">$1</span>')
-
-	        return $sce.trustAsHtml(t)
-	      }
-	    })
+    
         </script>
 
        <!-- script -->
