@@ -1,9 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%> 
-<div id="header">
-	<nav class="navbar navbar-fixed-top bg-success nav-header" role="navigation">
+<nav class="navbar navbar-fixed-top  nav-header" role="navigation">
 		<div class="container">
-			<div class="navbar-header col-md-2 col-sm-2">
+			<div class="navbar-header">
 				<button type="button" class="navbar-toggle button"
 					data-toggle="collapse" data-target=".navbar-ex1-collapse">
 					<i class="fa fa-bars" aria-hidden="true"></i>
@@ -12,7 +11,7 @@
 				<a class="navbar-brand" href="#" style="font-size: 18px;">PhsarNet</a>
 			</div>
 
-			<div class="select collapse navbar-collapse navbar-ex1-collapse col-md-10 col-sm-10">
+			<div class="select collapse navbar-collapse navbar-ex1-collapse">
 				<form class="navbar-form navbar-left form-header" role="search">
 					<div class="form-group">
 						<select class="form-control">
@@ -22,9 +21,9 @@
 							<option>ទូរស័ព្ទ</option>
 							<option>កុំព្យូទ័រ</option>
 						</select> 
-						<input type="text" class="form-control frm-search" id="form-search"  placeholder="ស្វែងរក">
-						<button type="submit"  class="btn btn-primary">
-							<i class="fa fa-search"></i>ស្វែងរក
+						<input type="text" class="form-control" id="form-search"  placeholder="ស្វែងរក">
+						<button type="submit"  class="btn">
+							<i class="fa fa-search"></i> ស្វែងរក
 						</button>
 					</div>
 				</form>
@@ -39,5 +38,3 @@
 
 		</div>
 	</nav>
-</div>
-

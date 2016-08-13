@@ -11,6 +11,16 @@
         <title>PhsarNet</title>
         
        	<jsp:include page="/WEB-INF/pages/admin/include/chetra_head.jsp"></jsp:include>
+       	<style>
+       		.sort-icon {
+			    font-size: 9px;
+			    margin-left: 5px;
+			}
+			
+			th {
+			    cursor:pointer;
+			}
+       	</style>
        	
     </head>
 
@@ -55,21 +65,24 @@
               <div class="row">
 							<div class="col-sm-12">
 								<div class="card-box">
-									        <table id="datatable" class="table table-striped table-bordered table-actions-bar"><!-- <table class="table table-actions-bar m-b-0"> -->
+									<div class="table-responsive">
+										<div class="col-sm-6 text-xs-center text-right pull-right">
+						                    <input id="demo-input-search2" type="text" placeholder="Search" class="form-control  input-sm" autocomplete="off" ng-model="query">
+						
+						                  </div>
+									        <table class="table table-actions-bar m-b-0"><!-- <table class="table table-actions-bar m-b-0"> -->
                                             <thead>
                                                 <tr>
-                                                    <th style="max-width: 20px; text-align: center" >ID</th>
-                                                    <th style="text-align: center">Category Name</th>
-                                                    <th style="text-align: center">Main Category Name</th>
+                                                    <th style="max-width: 20px; text-align: center" ng-click="sort('category_id')">ID</th>
+                                                    <th style="text-align: center" ng-click="sort('category_name')">Category Name</th>
+                                                    <th style="text-align: center" ng-click="sort('main_category.category_name')">Main Category Name</th>
                                                     <th style="text-align: center">ACTION</th>
                                                     
                                                 </tr>
                                             </thead>
-
-
                                             <tbody>
                                              
-                                                <tr ng-repeat="cate in categories">
+                                                <tr dir-paginate="cate in categories | filter:query | orderBy:sortKey:reverse |itemsPerPage:10">
                                                 
         											<td>{{cate.category_id}}</td>                                           
                                                     <td>{{cate.category_name}}<input type="hidden" value="{{cate.description}}"></td>
@@ -80,16 +93,18 @@
                                                     	<a href="#" id="btnclose" ng-click="deleteCate(cate.category_id)" class="btn btn-danger btn-md waves-effect"><i class="glyphicon glyphicon-trash"></i></a>
                                                     </td>
                                                 </tr>   
-                                              
-                                          
-                                        </table>
-                                     <!--  </div>   -->            
-                                   
-										</div>
+                                       		</table>
+                                       		 <dir-pagination-controls
+										       max-size="10"
+										       direction-links="true"
+										       boundary-links="true" >
+										    </dir-pagination-controls>
+                                     	</div>  
 									</div>
 								</div>
 							</div>
 						</div>
+					</div>
     
     
      
