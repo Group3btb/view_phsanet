@@ -7,7 +7,7 @@
           <button type="button" class="close" onclick="Custombox.close();">
               <span>&times;</span><span class="sr-only">Close</span>
           </button>
-          <h4 class="custom-modal-title" ng-bind="title_web"></h4>
+          <h4 class="custom-modal-title">Add New Category</h4>
           <div class="custom-modal-text text-left" ng-controller="controller_category">
                <form role="form">
                         <div class="form-group">

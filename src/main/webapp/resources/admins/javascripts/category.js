@@ -2,7 +2,7 @@
  * 
  */
 
- var app = angular.module("Cateapp",[]);
+ var app = angular.module("Cateapp",['angularUtils.directives.dirPagination']);
  app.controller("controller_category",function($http,$scope){
 
  	$scope.findAll_category = function(){
@@ -122,6 +122,12 @@
  	};// end delete category
 
  	$scope.findAll_category();
+ 	
+ 	
+ 	$scope.sort = function(keyname){
+        $scope.sortKey = keyname;   //set the sortKey to the param passed
+        $scope.reverse = !$scope.reverse; //if true make it false and vice versa
+    };//end sort function
 
  });// end controller
 
