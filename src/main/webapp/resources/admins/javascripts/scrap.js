@@ -151,11 +151,12 @@ app.controller("controller_scrap",function($http , $scope){
 
 	  //getid subcategory
 	  $scope.webSiteChange = function(record){
-	  		$scope.web_source_id = record;
+	  		$scope.web_source_id = record.web_source_id;
 	  }
 	  
 	  $scope.subcategoryChange = function(record){
-	  		$scope.subcategory_id = record;
+	  		alert(record);
+	  		$scope.subcategory_id = record.subcategory_id ;
 	  }
 
  });//end controller

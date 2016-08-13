@@ -2,47 +2,53 @@ package phsanet.controllers.admin;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Map;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.client.RestTemplate;
 
 import phsanet.entitys.Products;
+import phsanet.entitys.Scrap_Managerment;
+import phsanet.entitys.SubCategory;
+import phsanet.entitys.Temporary_Item;
 import phsanet.entitys.Web_Source;
 
 //@EnableScheduling
 
 @Controller
-public class TestScrapController {
+public class TestSelecorController {
 	@RequestMapping(value={"/test"})
 	public String testscrap(){
-		return "admin/test_scrap";
+		return "admin/test_selector";
 	}
 	
-	@RequestMapping(value={"/scrap_test"},method = RequestMethod.POST)
+	@RequestMapping(value={"/test_selector"},method = RequestMethod.POST)
 	@ResponseBody
-	public ArrayList<Products> testt_scrap(@RequestBody Web_Source web){
+	public ArrayList<Temporary_Item> testt_scrap(@RequestBody Web_Source web){
 		try{
-			return scrap_product(web);
+			return test_scrap(web);
 		}catch(Exception ex){
 			
 		}
 		return null;
 	}
 	
-	private ArrayList<Products> scrap_product(Web_Source web) throws IOException{
+	private ArrayList<Temporary_Item> test_scrap(Web_Source web) throws IOException{
 		
-		
-		
-	
-		ArrayList<Products> all 		= new ArrayList<>();
+		ArrayList<Temporary_Item> all 		= new ArrayList<>();
 		ArrayList<String> all_name 		= new ArrayList<>();
 		ArrayList<String> all_image 	= new ArrayList<>();
 		ArrayList<String> all_price 	= new ArrayList<>();
@@ -60,6 +66,7 @@ public class TestScrapController {
 			
 			Document document = Jsoup.connect(url).timeout(10000).get();
 			Elements main_selector = document.select(row_selector);
+			
 			System.out.println("URL "+web.getUrl());
 			/*Connection con = HttpConnection.connect(url)
 					.method(Method.POST)
@@ -74,11 +81,20 @@ public class TestScrapController {
 				
 			}
 			
-			
 			Elements e_url_image = main_selector.select(selector_url_image);
 			for(Element e: e_url_image){
-				System.out.println(e.attr("data-layzr"));
-				all_image.add(e.attr("data-layzr"));
+				/*System.out.println(e.attr("data-layzr"));
+				all_image.add(e.attr("data-layzr"));*/
+				String img = e.attr("data-layzr").toString().trim();
+				System.out.println("Boolean "+img.compareTo(""));
+				if(img.compareTo("")!=0){
+					all_image.add(e.attr("data-layzr"));
+					System.out.println(e.attr("data-layzr"));
+				}else{
+					System.out.println(e.attr("src"));
+					all_image.add(e.attr("src"));
+				}
+				
 				
 			}
 			//ArrayList<String> price = new ArrayList<String>();
@@ -92,65 +108,42 @@ public class TestScrapController {
 			Elements e_descride = main_selector.select(selector_descride);
 			for(Element e : e_descride){
 				System.out.println("Detail "+e.attr("href"));
-				all_describe.add(e.text());
+				all_describe.add(e.attr("href"));
 			}
-			
+		
 			int i = 0;
 			for(String pro_name : all_name){
-				Products product = new Products();
-				product.setProduct_name(pro_name);
-				product.setPrice(all_price.get(i));
-				product.setProduct_image(all_image.get(i));
-				if(selector_descride!=null&& all_describe.isEmpty()){
+				Temporary_Item product = new Temporary_Item();
+				
 					try{
-					product.setDescription(all_describe.get(i));
+						product.setProduct_name(pro_name);
+						product.setPrice(all_price.get(i));
+						product.setProduct_image(all_image.get(i));
+						product.setDescription(all_describe.get(i));
+						all.add(product);
+						
 					}catch(Exception ex){}
-				}
-				all.add(product);
 				i++;
 			}
-			
-			/*for(String s :price){
-				System.out.println(s);
-			}*/
-			
-			System.out.println("All product "+all);
-			
-			
+			System.out.println("All product "+all);	
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
 		return all;
 	}
-	
-	
-	
-	
-	public void s() throws IOException{
-		Document doc = Jsoup.connect("http://www.kaymu.com.kh/men-polos/").get();
-		Elements elements = doc.select(".product");
-		//System.out.println(elements);
 		
-		for(Element e: elements){
-			
-			String image = e.select("img").attr("data-layzr");
-			String title = e.select(".ellipsis").text();
-			String price = e.select(".price").text();
-			String link = e.select(".card-overlay").attr("href");
+	@ResponseBody
+	public ResponseEntity<Map<String,Object>> save_items(Temporary_Item item){
 		
-			System.out.println(image);
-			System.out.println(title);
-			System.out.println(price);
-			System.out.println(link + "\n");
-		}
-	}
+		RestTemplate restTemplate = new RestTemplate();
+		HttpEntity<Object> request = new HttpEntity<Object>(item,new HttpHeaders());
+		ResponseEntity<Map> response = restTemplate.exchange(
+					"http://localhost:2222/api/producttemporary", 
+					HttpMethod.POST, 
+					request, 
+					Map.class);
+		return new ResponseEntity<Map<String, Object>>(response.getBody(), response.getStatusCode());
+	}// end 
 	
-	/*public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		try{
-			new TestScrapController().scrap_product(new Web_Source());
-		}catch(Exception ex){
-			
-		}
-	}*/
+	
 }

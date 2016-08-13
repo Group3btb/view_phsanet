@@ -7,7 +7,7 @@ public class Temporary_Item {
 		private SubCategory 	subcategory;
 		private String 			product_name;
 		private String 			price;
-		private String 			describe;
+		private String 			description;
 		private String 			link;
 		private String 			product_image;
 		private Web_Source 		web_source;
@@ -37,12 +37,7 @@ public class Temporary_Item {
 		public void setPrice(String price) {
 			this.price = price;
 		}
-		public String getDescribe() {
-			return describe;
-		}
-		public void setDescribe(String describe) {
-			this.describe = describe;
-		}
+	
 		public String getLink() {
 			return link;
 		}
@@ -61,5 +56,15 @@ public class Temporary_Item {
 		public void setWeb_source(Web_Source web_source) {
 			this.web_source = web_source;
 		}
-	
+		public String getDescription() {
+			return description;
+		}
+		public void setDescription(String description) {
+			this.description = description;
+		}
+		@Override
+		public String toString() {
+		// TODO Auto-generated method stub
+			return this.product_name+ "  "+this.product_image +" "+this.price+"  "+this.description;
+		}
 }

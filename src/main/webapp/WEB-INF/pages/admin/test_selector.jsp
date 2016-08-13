@@ -18,7 +18,7 @@
     <body class="fixed-left">  
     
         <!-- Begin page -->
-        <div id="wrapper" ng-controller="controller_test_scrap">
+        <div id="wrapper" ng-controller="controller_test_selector">
 
              <!-- Top Bar Start -->
            	<jsp:include page="/WEB-INF/pages/admin/menu/top_bar.jsp"></jsp:include>
@@ -42,11 +42,9 @@
                         <!-- Page-Title -->
                         <div class="row">
                             <div class="col-sm-12">
-                                <h4 class="page-title">ធ្វើការទាញទិន្ន័យ</h4>
+                                <h4 class="page-title">Testing Seletor</h4>
                                 <ol class="breadcrumb">
-                                    <!-- <li><a href="#">Ubold</a></li>
-                                    <li><a href="#">Forms</a></li>
-                                    <li class="active">Form Validation</li> -->
+                                    
                                 </ol>
                             </div>
                         </div>
@@ -54,39 +52,14 @@
                         <div class="row">
 							<div class="col-sm-12">
 								<div class="card-box">
-								      <h4 class="m-t-0 header-title"><b>Product full information</b></h4>
+								      <h4 class="m-t-0 header-title"><b>Test Selector of website</b></h4>
                   <p class="text-muted font-13 m-b-30">
-                                      Your awesome text goes here.
+                                      Please input selector of product.
                                   </p>
                                             
                   <form  data-parsley-validate novalidate>
                   
-                     <div class="form-group">
-                            <!-- <label for="name">SITE NAME</label>                    
-                            <select ng-change="webSiteChange(web)" ng-model="web" class="form-control">   
-                              <option >-selected site-</option>
-                              <option ng-repeat="web in webs" ng-value="web">
-                                {{web.website}}
-                              </option> -->
-                            <label for="name">SITE NAME</label>
-                                <select class="form-control"
-                                      ng-model="web" 
-                                      ng-change="webSiteChange(web)" 
-                                      data-ng-options="web as web.website for web in webs">
-                                      <option value="">---selected site---</option>
-                                </select>
-                        </div> 
-                        
-                        <div class="form-group">
-                            <label for="name">SUB CATEGORY</label>                    
-                            <select ng-change="subcategoryChange(sub)"
-                                    ng-model="sub" class="form-control"
-                                     data-ng-options="sub as sub.subcategory_name for sub in subs"
-                                    >  
-                                    <option value="">---selected subcategory---</option>
-                            </select>
-                        </div> 
-
+    
                     <div class="form-group">
                       <label for="userName">URL Wedsite*</label>
                       <input ng-model="test_url" type="text" name="nick" parsley-trigger="change" required placeholder="Enter URL Wedsite" class="form-control" id="url_wedsite">
@@ -100,11 +73,6 @@
                       <input  ng-model="test_name"  type="text" placeholder="Enter Selector ឈ្មោះទំនិញ" required class="form-control">
                     </div>
 
-                  <!--   <div class="form-group">
-                      <label for="selector_product_name">Selector Title</label>
-                      <input id="selector_title" type="text" placeholder="Enter Selector Title" required class="form-control">
-                    </div> -->
-
                     <div class="form-group">
                       <label for="selector_price">Selector តម្លៃ</label>
                       <input  ng-model="test_price" type="text" required placeholder="Enter Selector តម្លៃ" class="form-control" id="selector_price">
@@ -114,12 +82,12 @@
                       <input  ng-model="test_image" type="text" required placeholder="Enter Selector Image" class="form-control" id="selector_image">
                     </div>
                     <div class="form-group">
-                      <label for="passWord2">Selector Descride</label>
+                      <label for="passWord2">Selector Description</label>
                       <input ng-model="test_description" type="text" placeholder="Enter Selector Descride" class="form-control" id="selector_descride">
                     </div>
                      
                     <div class="form-group text-right m-b-0">
-                      <button  ng-click="test_scrap_product()"  class="btn btn-primary waves-effect waves-light" type="submit">
+                      <button  ng-click="test_selector()"  class="btn btn-primary waves-effect waves-light" type="submit">
                         Submit
                       </button>
                       <button type="reset" class="btn btn-default waves-effect waves-light m-l-5">
@@ -150,34 +118,22 @@
                                                 <tr>
                                                
                                                     <th style=" width: 50px">ID</th>
-                                                    <th>WEBSITE</th>
-                                                    <th>SUBCATEGORY</th>
-                                                    <th>SCRAP URL</th>
-                                                    <th>ALL SCRAP</th>
-                                                    <th>ACTION</th>
-
+                                                    <th>PRODUCT NAME</th>
+                                                    <th>PRICE</th>
+                                                    <th>IMAGE</th>
+                                                    <th>DESCRIPTION</th>
+                                                    
                                                 </tr>
                                             </thead>
                                             <tbody>
 
                                                 <tr ng-repeat="pro in scrap_products">
-                                                   
+                                                   <td>{{$index+1}}</td>
                                                    <td><span data-plugin="peity-bar" data-colors="#5fbeaa,#5fbeaa" data-width="80" data-height="30">{{pro.product_name}}</span></td> 
                                                     <td>{{pro.price}}</td>
                                                     
-                                                    
-                                                    <td><img src={{pro.product_image}} class="thumb-sm pull-left m-r-5" alt=""</td>
-                                                    <td>{{scrap.url}}</td>
-                                                    <td></td>
-                                                    <td style="text-align: center">
-                                                    
-                                                        <a href="#"  class="btn btn-info btn-md waves-effect waves-light" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="200" data-overlaycolor="#36404a"><i class="glyphicon glyphicon-eye-open"></i></a>
-
-                                                        <a href="javascript:" ng-click="getData(this)" class="btn btn-primary btn-md waves-effect waves-light call-modal"><i class="glyphicon glyphicon-pencil"></i></a>
-
-                                                        <a href="#" ng-click="delete_web_scrap(scrap.scrap_id)" class="btn btn-danger btn-md waves-effect " ng-click="" ><i class="glyphicon glyphicon-trash"></i></a>
-                                                    
-                                                    </td>
+                                                    <td><img src={{pro.product_image}} class="thumb-sm pull-left m-r-5" alt=""></td>
+                                                    <td>{{pro.description}}</td>
                                                    
                                                 </tr>            
 
@@ -211,24 +167,14 @@
         </div>
         <!-- END wrapper -->
 		    <jsp:include page="/WEB-INF/pages/admin/include/headscript.jsp"></jsp:include>
-        <script src="/resources/admins/javascripts/test_scrap.js"></script>
+        <script src="/resources/admins/javascripts/test_selector.js"></script>
         <script>
             var resizefunc = [];
         </script>
 
         <script type="text/javascript">
 			$(document).ready(function() {
-				$('form').parsley();
-        $('#datatable').dataTable( );
-       
-        $("#mybtn").click(function(){
-
-         $("input[type='checkbox']").prop("checked","true");
-         })
-        $("#mybtn1").click(function(){
-
-         $("input[type='checkbox']").removeAttr("checked");
-         })
+				
 			});
 		</script>
 
