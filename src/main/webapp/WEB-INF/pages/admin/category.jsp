@@ -9,7 +9,7 @@
         <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
         <meta name="author" content="Coderthemes">
         <title>PhsarNet</title>
-        
+     
        	<jsp:include page="/WEB-INF/pages/admin/include/chetra_head.jsp"></jsp:include>
        	<style>
        		.sort-icon {
@@ -25,7 +25,7 @@
     </head>
 
 
-    <body class="fixed-left">
+    <body class="fixed-left" ng-cloak>
 
        
         <!-- Begin page -->	
@@ -50,9 +50,6 @@
                 <!-- Start content -->
                 <div class="content">
                     <div class="container">
-
-                        
-                        
                         <div class="row">
 							<div class="col-sm-12">
 								<div class="card-box">
@@ -68,7 +65,6 @@
 									<div class="table-responsive">
 										<div class="col-sm-6 text-xs-center text-right pull-right">
 						                    <input id="demo-input-search2" type="text" placeholder="Search" class="form-control  input-sm" autocomplete="off" ng-model="query">
-						
 						                  </div>
 									        <table class="table table-actions-bar m-b-0"><!-- <table class="table table-actions-bar m-b-0"> -->
                                             <thead>
@@ -77,7 +73,6 @@
                                                     <th style="text-align: center" ng-click="sort('category_name')">Category Name</th>
                                                     <th style="text-align: center" ng-click="sort('main_category.category_name')">Main Category Name</th>
                                                     <th style="text-align: center">ACTION</th>
-                                                    
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -105,10 +100,6 @@
 							</div>
 						</div>
 					</div>
-    
-    
-     
-
             		</div> <!-- container -->
                                
                 </div> <!-- content -->
@@ -158,7 +149,7 @@
 
 			});// end method ready
 		</script>
-
+	
 
 	</body>
 </html>

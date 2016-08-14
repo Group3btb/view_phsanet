@@ -5,7 +5,7 @@
  var app = angular.module("Cateapp",['angularUtils.directives.dirPagination']);
  app.controller("controller_category",function($http,$scope){
 
- 	$scope.findAll_category = function(){
+	 $scope.findAll_category = function(){
  		$http({
  			url:'/categories',
  			method:'GET'
@@ -15,7 +15,7 @@
  			alert("Error");
  		});
  	};//end findall category
- 	
+
  	$scope.findAllMainCate = function(){
  		$http({
  			url:'/maincategories',
@@ -48,15 +48,15 @@
  	
  	$scope.getData = function(record){
  		$scope.cate_name_update = record.cate.category_name;
- 		/*$scope.main_cate_upeate = record.cate.main_category.maincategory_id;*/
  		$scope.cate_desc_update = record.cate.description;
  		$scope.cate_id_update = record.cate.category_id;
  		$scope.findAllMainCate();
+ 		$scope.main_cate = record.cate.main_category.maincategory_id;
  		/*alert($scope.cate_id_update);*/
  		//$scope.selected = "selected";
  	};//end function getData per record
  	
- 	$scope.UpdateCate = function(){
+ 	$scope.UpdateCate = function(){	  
  		swal({   
 			title: "Are you sure to update this record?",   
 			text: "You will not be able to roll back!",   
@@ -81,9 +81,10 @@
 		 				}
 		 			}
 				}).then(function(response){
-					swal("Updated!", "Your record updated!", "success"); 
-					$('#btnclose').trigger('click');
+					swal("Updated!", "Your record updated!", "success");
+					alert("Success!");
 					$scope.findAll_category();
+					
 			},function(response){
 
 			});	  
@@ -109,10 +110,10 @@
 					$http({
 						url:'/categories/'+id,
 						method:'DELETE'
-				}).then(function(response){
-					swal("Deleted!", "Your record deleted!", "success");  
-					$scope.findAll_category();
-				},function(response){
+					}).then(function(response){
+						swal("Deleted!", "Your record deleted!", "success");  
+						$scope.findAll_category();
+					},function(response){
 
 				}); 
 			} else {     
@@ -128,7 +129,9 @@
         $scope.sortKey = keyname;   //set the sortKey to the param passed
         $scope.reverse = !$scope.reverse; //if true make it false and vice versa
     };//end sort function
-
+   
+   
+    
  });// end controller
 
 

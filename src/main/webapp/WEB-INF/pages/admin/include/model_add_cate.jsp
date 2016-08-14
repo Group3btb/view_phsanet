@@ -3,12 +3,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
  <!-- Model -->
-        <div id="add_cate_model" class="modal-demo" ng-app="Cateapp">
+        <div id="add_cate_model" class="modal-demo">
           <button type="button" class="close" onclick="Custombox.close();">
               <span>&times;</span><span class="sr-only">Close</span>
           </button>
           <h4 class="custom-modal-title">Add New Category</h4>
-          <div class="custom-modal-text text-left" ng-controller="controller_category">
+          <div class="custom-modal-text text-left">
                <form role="form">
                         <div class="form-group">
                             <label for="name">Category Name</label>
