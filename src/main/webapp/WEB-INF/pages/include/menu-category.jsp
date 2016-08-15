@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 
 <!--  category -->
-	 	  	    <div class="hidden-xs col-xs-15 col-md-3 col-sm-3 nav-cat">
+	 	  	  
 	 	  	    	<ul class="nav nav-stacked">
 					  <li class="active"><a href="#"><i class="fa fa-bars"></i> Main Category</a></li>
 					  <li class="dropdown mega-dropdown">
@@ -48,7 +48,6 @@
 					  <li><a href="#">Other</a></li>
 					</ul>
 
-	 	  	    </div>
 	 	  	   <!--  end category -->
 
 

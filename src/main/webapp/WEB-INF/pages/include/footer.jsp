@@ -8,7 +8,7 @@
 					រក្សាសិទ្ធិគ្រប់យ៉ាងដោយ​ផ្សារនែត</span>
 			</div>
 
-			<div class="col-md-6 col-sm-6 text-right">
+			<div class="col-md-6 col-sm-6 text-right" style="padding:0px;">
 				<ul ​ class="foot-ul">
 					<li><a href=""><i class="fa fa-volume-control-phone"></i>
 							ទំនាក់ទំនង</a></li>

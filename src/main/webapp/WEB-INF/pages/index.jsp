@@ -23,8 +23,12 @@
          <div class="menu">
             <div class="container">
                  <div class="row">
-                      <%@ include file="include/menu-category.jsp" %>
-                      <%@ include file="include/slider.jsp" %>
+                      <div class="hidden-xs col-xs-15 col-md-3 col-sm-3 nav-cat">
+                           <%@ include file="include/menu-category.jsp" %>
+                      </div>
+                      <div class="hidden-xs col-xs-15  col-sm-9 col-md-9 col-lg-9">
+                           <%@ include file="include/slider.jsp" %>
+                      </div>
                  </div>
             </div>
          </div>   
@@ -43,7 +47,7 @@
 			</div>
         </div>
      
-        <div class="resource bg-success">
+        <div class="resource">
              <%@include file="include/resource.jsp" %>
         </div>
  <!--end resource --> 
