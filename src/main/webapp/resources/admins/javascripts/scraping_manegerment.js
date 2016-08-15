@@ -5,10 +5,10 @@
  var app = angular.module('Myapp',[]);
  app.controller('controller_scraping',function($http,$scope){
  	  // find all web input url to scrap
-	  $scope.findAll_web_scrap = function(){
+	  $scope.findAll_web_structure = function(){
 	  		
 	  		$http({
-	  			url:'/scrapmanagerment',
+	  			url:'/sitemanagerment',
 	  			method:'GET'
 	  		}).then(function(respone){
 	  			
@@ -20,21 +20,21 @@
 	  		});
 	  }
 
-	  $scope.findAll_web_scrap();
+	  $scope.findAll_web_structure();
 
 	  $scope.web_Struture = function(record){
 
 
 	  		$scope.url_ 					= record.url;
-	  		$scope.selector_row_ 			= record.web_source.selector_row;
-	  		$scope.selector_name_ 			= record.web_source.selector_name;
-	  		$scope.selector_price_ 			= record.web_source.selector_price;
-	  		$scope.selector_image_ 			= record.web_source.selector_image;
-	  		$scope.selector_description_ 	= record.web_source.selector_description;
-	  		$scope.web_source_id_ 			= record.web_source.web_source_id;
+	  		$scope.website_					= record.website;
+	  		$scope.selector_row_ 			= record.selector_row;
+	  		$scope.selector_name_ 			= record.selector_name;
+	  		$scope.selector_price_ 			= record.selector_price;
+	  		$scope.selector_image_ 			= record.selector_image;
+	  		$scope.selector_description_ 	= record.selector_description;
+	  		$scope.web_source_id_ 			= record.web_source_id;
 	  		
-	  		alert("row"+$scope.url_  +" name "+$scope.selector_name_+" price "+
-	  			$scope.selector_price_ +  "  img "+ $scope.selector_image_  +" de "+	$scope.selector_description_ ) ;
+	  		alert($scope.website_);
 	  }
 
 
@@ -51,7 +51,8 @@
 	  				subcategory  	: {subcategory_id:$scope.subcategory_id},
 	  				url 			: $scope.scrap_url*/
 
-	  				url:$scope.url_ ,
+	  				url  			:$scope.url_ ,
+	  				website			:$scope.website_,
 	  				selector_row 	:$scope.selector_row_ ,
 	  				selector_name 	:$scope.selector_name_ ,
 	  				selector_price 	:$scope.selector_price_,

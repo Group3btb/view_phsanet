@@ -17,7 +17,7 @@ import org.springframework.web.client.RestTemplate;
 import phsanet.entitys.Web_Source;
 
 @Controller
-public class WebSourceController {
+public class WebSiteController {
 	
 	@RequestMapping(value={"/site"})
 	public String siteManagerment(){

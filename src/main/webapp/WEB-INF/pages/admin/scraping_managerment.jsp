@@ -67,7 +67,7 @@ html4/loose.dtd">
                          <select class="form-control"
                                       ng-model="web_selected" 
                                       ng-change="web_Struture(web_selected)" 
-                                      data-ng-options="scrap as scrap.web_source.website for scrap in scraps">
+                                      data-ng-options="scrap as scrap.website for scrap in scraps">
                                       <option value="">---selected site---</option>
                           </select>
                     </div>
