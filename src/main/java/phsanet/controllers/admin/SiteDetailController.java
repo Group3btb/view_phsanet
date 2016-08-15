@@ -13,14 +13,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
 
-import phsanet.entitys.Scrap_Managerment;
+import phsanet.entitys.Site_Detail_Managerment;
 
 @Controller
-public class ScrapController {
+public class SiteDetailController {
 		
-	@RequestMapping(value={"/scrap"})	
+	@RequestMapping(value={"/sitedetail"})	
 	public String scrap(){
-		return "admin/scrap_url_managerment";
+		return "admin/site_details_url_managerment";
 	}
 	
 	@SuppressWarnings("unchecked")
@@ -57,7 +57,7 @@ public class ScrapController {
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@RequestMapping(value={"/scrapmanagerment"} , method = RequestMethod.POST)
 	@ResponseBody
-	public ResponseEntity<Map<String,Object>> save_scrap(@RequestBody Scrap_Managerment scrap){
+	public ResponseEntity<Map<String,Object>> save_scrap(@RequestBody Site_Detail_Managerment scrap){
 		
 		RestTemplate restTemplate = new RestTemplate();
 		HttpEntity<Object> request = new HttpEntity<Object>(scrap,new HttpHeaders());
@@ -74,7 +74,7 @@ public class ScrapController {
 	@SuppressWarnings("unchecked")
 	@RequestMapping(value={"/scrapmanagerment"} , method = RequestMethod.PUT)
 	@ResponseBody
-	public ResponseEntity<Map<String,Object>> update_scrap(@RequestBody Scrap_Managerment scrap){
+	public ResponseEntity<Map<String,Object>> update_scrap(@RequestBody Site_Detail_Managerment scrap){
 		
 		RestTemplate restTemplate = new RestTemplate();
 		HttpEntity<Object> request = new HttpEntity<Object>(scrap,new HttpHeaders());

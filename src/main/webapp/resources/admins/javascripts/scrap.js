@@ -48,7 +48,7 @@ app.controller("controller_scrap",function($http , $scope){
 	  }// end operation 
 
 	  $scope.getData= function(record){
-
+	  		
 	  		if(record!='new'){
 	  			$scope.btn 				= 	"UPDATE";
 	  			$scope.title 			=	"UPDATE";
