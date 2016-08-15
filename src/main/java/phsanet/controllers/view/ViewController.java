@@ -15,4 +15,9 @@ public class ViewController {
 	public String allcat(){
 		return "category";
 	}
+	
+	@RequestMapping(value={"user/","user/savelist"})
+	public String savelist(){
+		return "users/index";
+	}
 }

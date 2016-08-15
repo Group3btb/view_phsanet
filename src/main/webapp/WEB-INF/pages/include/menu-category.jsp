@@ -4,9 +4,9 @@
 <!--  category -->
 	 	  	  
 	 	  	    	<ul class="nav nav-stacked">
-					  <li class="active"><a href="#"><i class="fa fa-bars"></i> Main Category</a></li>
+					  <li class="active"><a href="#"><i class="fa fa-bars"></i> ប្រភេទផលិតផល</a></li>
 					  <li class="dropdown mega-dropdown">
-					      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Fashions</a>
+					      <a href="#" class="dropdown-toggle" data-toggle="dropdown">សម្លៀកបំពាក់</a>
 
                           <ul class="dropdown-menu mega-dropdown-menu">
 								<li>
@@ -43,9 +43,13 @@
 
 
 
-					  <li><a href="#">Computer</a></li>
-					  <li><a href="#">Phone</a></li>
-					  <li><a href="#">Other</a></li>
+					  <li><a href="#">គ្រឿងអលង្ការ</a></li>
+					  <li><a href="#">កំព្យូទ័រ</a></li>
+					  <li><a href="#">ទូរស័ព្ទដៃ</a></li>
+					  <li><a href="#">ឡាន</a></li>
+					  <li><a href="#">ម៉ូតូ</a></li>
+					  <li><a href="#">កង់</a></li>
+					  <li><a href="#">សម្ភារផ្ទះ​ ​ និង​​​ ដី</a></li>
 					</ul>
 
 	 	  	   <!--  end category -->

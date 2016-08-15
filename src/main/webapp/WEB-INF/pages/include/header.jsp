@@ -29,8 +29,8 @@
 				</form>
 
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href=""><i class="fa fa-sign-in"></i> ចូលប្រើប្រាស់</a></li>
-					<li><a href=""><i class="fa fa-user"></i> ចុះឈ្មោះ</a></li>
+					<li><a href=""><i class="fa fa-sign-in"></i>ចូលប្រើប្រាស់</a></li>
+					<li><a href=""><i class="fa fa-users"></i>ចុះឈ្មោះ</a></li>
 				</ul>
 
 			</div>

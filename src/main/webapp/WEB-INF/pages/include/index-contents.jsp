@@ -28,7 +28,7 @@
 							<a href="#" title="រក្សាទុក" class="pricetext"> <i
 								class="fa fa-bookmark-o"></i></a>
 						</div>
-						<div class="pricetext">£8.95</div>
+						<div class="pricetext">$8.95</div>
 					</div>
 				</div>
 
@@ -49,7 +49,7 @@
 							<a href="#" title="រក្សាទុក" class="pricetext"> <i
 								class="fa fa-bookmark-o"></i></a>
 						</div>
-						<div class="pricetext">£8.95</div>
+						<div class="pricetext">$8.95</div>
 					</div>
 				</div>
 			</div>
@@ -69,7 +69,7 @@
 							<a href="#" title="រក្សាទុក" class="pricetext"> <i
 								class="fa fa-bookmark-o"></i></a>
 						</div>
-						<div class="pricetext">£8.95</div>
+						<div class="pricetext">$8.95</div>
 					</div>
 				</div>
 			</div>
@@ -88,7 +88,7 @@
 							<a href="#" title="រក្សាទុក" class="pricetext"> <i
 								class="fa fa-bookmark-o"></i></a>
 						</div>
-						<div class="pricetext">£8.95</div>
+						<div class="pricetext">$8.95</div>
 					</div>
 				</div>
 
@@ -109,7 +109,7 @@
 							<a href="#" title="រក្សាទុក" class="pricetext"> <i
 								class="fa fa-bookmark-o"></i></a>
 						</div>
-						<div class="pricetext">£8.95</div>
+						<div class="pricetext">$8.95</div>
 					</div>
 				</div>
 
@@ -139,7 +139,7 @@
 							<a href="#" title="រក្សាទុក" class="pricetext"> <i
 								class="fa fa-bookmark-o"></i></a>
 						</div>
-						<div class="pricetext">£8.95</div>
+						<div class="pricetext">$8.95</div>
 					</div>
 				</div>
 			</div>
@@ -159,7 +159,7 @@
 							<a href="#" title="រក្សាទុក" class="pricetext"> <i
 								class="fa fa-bookmark-o"></i></a>
 						</div>
-						<div class="pricetext">£8.95</div>
+						<div class="pricetext">$8.95</div>
 					</div>
 				</div>
 
@@ -179,7 +179,7 @@
 							<a href="#" title="រក្សាទុក" class="pricetext"> <i
 								class="fa fa-bookmark-o"></i></a>
 						</div>
-						<div class="pricetext">£8.95</div>
+						<div class="pricetext">$8.95</div>
 					</div>
 				</div>
 			</div>
@@ -198,7 +198,7 @@
 							<a href="#" title="រក្សាទុក" class="pricetext"> <i
 								class="fa fa-bookmark-o"></i></a>
 						</div>
-						<div class="pricetext">£8.95</div>
+						<div class="pricetext">$8.95</div>
 					</div>
 				</div>
 
@@ -218,7 +218,7 @@
 							<a href="#" title="រក្សាទុក" class="pricetext"> <i
 								class="fa fa-bookmark-o"></i></a>
 						</div>
-						<div class="pricetext">£8.95</div>
+						<div class="pricetext">$8.95</div>
 					</div>
 				</div>
 
@@ -239,7 +239,7 @@
 							<a href="#" title="រក្សាទុក" class="pricetext"> <i
 								class="fa fa-bookmark-o"></i></a>
 						</div>
-						<div class="pricetext">£8.95</div>
+						<div class="pricetext">$8.95</div>
 					</div>
 				</div>
 
@@ -260,7 +260,7 @@
 							<a href="#" title="រក្សាទុក" class="pricetext"> <i
 								class="fa fa-bookmark-o"></i></a>
 						</div>
-						<div class="pricetext">£8.95</div>
+						<div class="pricetext">$8.95</div>
 					</div>
 				</div>
 
@@ -281,7 +281,7 @@
 							<a href="#" title="រក្សាទុក" class="pricetext"> <i
 								class="fa fa-bookmark-o"></i></a>
 						</div>
-						<div class="pricetext">£8.95</div>
+						<div class="pricetext">$8.95</div>
 					</div>
 				</div>
 
@@ -302,7 +302,7 @@
 							<a href="#" title="រក្សាទុក" class="pricetext"> <i
 								class="fa fa-bookmark-o"></i></a>
 						</div>
-						<div class="pricetext">£8.95</div>
+						<div class="pricetext">$8.95</div>
 					</div>
 				</div>
 
@@ -323,7 +323,7 @@
 							<a href="#" title="រក្សាទុក" class="pricetext"> <i
 								class="fa fa-bookmark-o"></i></a>
 						</div>
-						<div class="pricetext">£8.95</div>
+						<div class="pricetext">$8.95</div>
 					</div>
 				</div>
 			</div>
@@ -352,7 +352,7 @@
 							<a href="#" title="រក្សាទុក" class="pricetext"> <i
 								class="fa fa-bookmark-o"></i></a>
 						</div>
-						<div class="pricetext">£8.95</div>
+						<div class="pricetext">$8.95</div>
 					</div>
 				</div>
 			</div>
@@ -372,7 +372,7 @@
 							<a href="#" title="រក្សាទុក" class="pricetext"> <i
 								class="fa fa-bookmark-o"></i></a>
 						</div>
-						<div class="pricetext">£8.95</div>
+						<div class="pricetext">$8.95</div>
 					</div>
 				</div>
 
@@ -392,7 +392,7 @@
 							<a href="#" title="រក្សាទុក" class="pricetext"> <i
 								class="fa fa-bookmark-o"></i></a>
 						</div>
-						<div class="pricetext">£8.95</div>
+						<div class="pricetext">$8.95</div>
 					</div>
 				</div>
 			</div>
@@ -411,7 +411,7 @@
 							<a href="#" title="រក្សាទុក" class="pricetext"> <i
 								class="fa fa-bookmark-o"></i></a>
 						</div>
-						<div class="pricetext">£8.95</div>
+						<div class="pricetext">$8.95</div>
 					</div>
 				</div>
 			</div>
@@ -430,7 +430,7 @@
 							<a href="#" title="រក្សាទុក" class="pricetext"> <i
 								class="fa fa-bookmark-o"></i></a>
 						</div>
-						<div class="pricetext">£8.95</div>
+						<div class="pricetext">$8.95</div>
 					</div>
 				</div>
 
@@ -451,7 +451,7 @@
 							<a href="#" title="រក្សាទុក" class="pricetext"> <i
 								class="fa fa-bookmark-o"></i></a>
 						</div>
-						<div class="pricetext">£8.95</div>
+						<div class="pricetext">$8.95</div>
 					</div>
 				</div>
 
@@ -472,7 +472,7 @@
 							<a href="#" title="រក្សាទុក" class="pricetext"> <i
 								class="fa fa-bookmark-o"></i></a>
 						</div>
-						<div class="pricetext">£8.95</div>
+						<div class="pricetext">$8.95</div>
 					</div>
 				</div>
 
@@ -493,7 +493,7 @@
 							<a href="#" title="រក្សាទុក" class="pricetext"> <i
 								class="fa fa-bookmark-o"></i></a>
 						</div>
-						<div class="pricetext">£8.95</div>
+						<div class="pricetext">$8.95</div>
 					</div>
 				</div>
 
@@ -514,7 +514,7 @@
 							<a href="#" title="រក្សាទុក" class="pricetext"> <i
 								class="fa fa-bookmark-o"></i></a>
 						</div>
-						<div class="pricetext">£8.95</div>
+						<div class="pricetext">$8.95</div>
 					</div>
 				</div>
 
@@ -535,7 +535,7 @@
 							<a href="#" title="រក្សាទុក" class="pricetext"> <i
 								class="fa fa-bookmark-o"></i></a>
 						</div>
-						<div class="pricetext">£8.95</div>
+						<div class="pricetext">$8.95</div>
 					</div>
 				</div>
 

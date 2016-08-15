@@ -4,15 +4,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Categories | phsanet.com</title>
-<%@ include file="include/head.jsp"%>
+<title>Save List | phsanet.com</title>
+<%@ include file="../include/head.jsp"%>
 </head>
 <body>
 	<div id="body">
 
 		<!-- header -->
 		<div class="header">
-			<%@ include file="include/header.jsp"%>
+			<%@ include file="../include/header.jsp"%>
 		</div>
 		<!--end header -->
 
@@ -24,27 +24,17 @@
 				
 					<div class="col-md-3 col-sm-4 col-lg-3">
 						<div class="fixed">
-							<div class="hidden-xs col-md-12 col-sm-12 col-lg-12">
-								<!-- all category -->
-								<div class="row nav-cat">
-									<%@ include file="include/menu-category.jsp"%>
-								</div>
-								<!--end all category -->
-
-								<!--filter-->
-								<div class="row">
-									<%@ include file="include/filter.jsp"%>
-								</div>
-								<!--end filter -->
+							<div class="hidden-xs col-md-12 col-sm-12 col-lg-12 nav-cat">
+								 <%@ include file="../include/savelist.jsp"%> 
 							</div>
 						 </div>
 					</div>
 
-					<!-- category item -->
+					<!-- save item -->
 					<div class="col-md-9 col-sm-8 col-lg-9">
-						<%@ include file="include/cat-contents.jsp"%>
+						<%@ include file="../include/save-items.jsp"%>
 					</div>
-					<!-- end category items -->
+					<!-- end save items -->
 				</div>
 			</div>
 
@@ -62,13 +52,13 @@
 		</div>
 
 		<div class="resource bg-success">
-			<%@include file="include/resource.jsp"%>
+			<%@include file="../include/resource.jsp"%>
 		</div>
 		<!-- end resource -->
 
 		<!-- footer -->
 		<div class="footer bg-primary">
-			<%@ include file="include/footer.jsp"%>
+			<%@ include file="../include/footer.jsp"%>
 		</div>
 		<!-- end resource -->
 

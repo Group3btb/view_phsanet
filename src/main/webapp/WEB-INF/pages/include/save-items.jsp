@@ -5,7 +5,7 @@
 <div class="row">
 	<div class="col-md-12">
 		<div class="location">
-			<span>សម្លៀកបំពាក់​ ​ >​​​​ សម្រាប់នារី</span>
+			<span><i class="fa fa-bookmark-o"></i>​ ផលិតផលដែលបានរក្សារទុក</span>
 		</div>
 
 	</div>
@@ -24,13 +24,13 @@
 
 
 			</div>
-			<a href=""><img src="/resources/views/fashion/1.jpg"
+			<a href=""><img src="/resources/views/electronic/1.jpg"
 				class="img-responsive"></a>
 			<div class="producttitle">Product 2</div>
 			<div class="productprice">
 				<div class="pull-right">
-					<a href="#" title="រក្សាទុក" class="pricetext"> <i
-						class="fa fa-bookmark-o"></i></a>
+					<a href="#" title="ធ្វើការលុប" class="pricetext"> <i
+						class="fa fa-trash-o"></i></a>
 				</div>
 				<div class="pricetext">$8.95</div>
 			</div>
@@ -48,13 +48,13 @@
 				</span>
 
 			</div>
-			<a href=""><img src="/resources/views/fashion/2.jpg"
+			<a href=""><img src="/resources/views/electronic/2.jpg"
 				class="img-responsive"></a>
 			<div class="producttitle">Product 2</div>
 			<div class="productprice">
 				<div class="pull-right">
-					<a href="#" title="រក្សាទុក" class="pricetext"> <i
-						class="fa fa-bookmark-o"></i></a>
+					<a href="#" title="ធ្វើការលុប" class="pricetext"> <i
+						class="fa fa-trash-o"></i></a>
 				</div>
 				<div class="pricetext">$8.95</div>
 			</div>
@@ -72,13 +72,13 @@
 				</span>
 
 			</div>
-			<a href=""><img src="/resources/views/fashion/3.jpg"
+			<a href=""><img src="/resources/views/electronic/3.jpg"
 				class="img-responsive"></a>
 			<div class="producttitle">Product 2</div>
 			<div class="productprice">
 				<div class="pull-right">
-					<a href="#" title="រក្សាទុក" class="pricetext"> <i
-						class="fa fa-bookmark-o"></i></a>
+					<a href="#" title="ធ្វើការលុប" class="pricetext"> <i
+						class="fa fa-trash-o"></i></a>
 				</div>
 				<div class="pricetext">$8.95</div>
 			</div>
@@ -96,13 +96,13 @@
 				</span>
 
 			</div>
-			<a href=""><img src="/resources/views/fashion/4.jpg"
+			<a href=""><img src="/resources/views/electronic/4.jpg"
 				class="img-responsive"></a>
 			<div class="producttitle">Product 2</div>
 			<div class="productprice">
 				<div class="pull-right">
-					<a href="#" title="រក្សាទុក" class="pricetext"> <i
-						class="fa fa-bookmark-o"></i></a>
+					<a href="#" title="ធ្វើការលុប" class="pricetext"> <i
+						class="fa fa-trash-o"></i></a>
 				</div>
 				<div class="pricetext">$8.95</div>
 			</div>
@@ -120,13 +120,13 @@
 				</span>
 
 			</div>
-			<a href=""><img src="/resources/views/fashion/5.jpg"
+			<a href=""><img src="/resources/views/electronic/5.jpg"
 				class="img-responsive"></a>
 			<div class="producttitle">Product 2</div>
 			<div class="productprice">
 				<div class="pull-right">
-					<a href="#" title="រក្សាទុក" class="pricetext"> <i
-						class="fa fa-bookmark-o"></i></a>
+					<a href="#" title="ធ្វើការលុប" class="pricetext"> <i
+						class="fa fa-trash-o"></i></a>
 				</div>
 				<div class="pricetext">$8.95</div>
 			</div>
@@ -145,13 +145,13 @@
 				</span>
 
 			</div>
-			<a href=""><img src="/resources/views/fashion/6.jpg"
+			<a href=""><img src="/resources/views/electronic/6.jpg"
 				class="img-responsive"></a>
 			<div class="producttitle">Product 2</div>
 			<div class="productprice">
 				<div class="pull-right">
-					<a href="#" title="រក្សាទុក" class="pricetext"> <i
-						class="fa fa-bookmark-o"></i></a>
+					<a href="#" title="ធ្វើការលុប" class="pricetext"> <i
+						class="fa fa-trash-o"></i></a>
 				</div>
 				<div class="pricetext">$8.95</div>
 			</div>
@@ -169,13 +169,13 @@
 				</span>
 
 			</div>
-			<a href=""><img src="/resources/views/fashion/7.jpg"
+			<a href=""><img src="/resources/views/electronic/7.jpg"
 				class="img-responsive"></a>
 			<div class="producttitle">Product 2</div>
 			<div class="productprice">
 				<div class="pull-right">
-					<a href="#" title="រក្សាទុក" class="pricetext"> <i
-						class="fa fa-bookmark-o"></i></a>
+					<a href="#" title="ធ្វើការលុប" class="pricetext"> <i
+						class="fa fa-trash-o"></i></a>
 				</div>
 				<div class="pricetext">$8.95</div>
 			</div>
@@ -194,13 +194,13 @@
 				</span>
 
 			</div>
-			<a href=""><img src="/resources/views/fashion/8.jpg"
+			<a href=""><img src="/resources/views/electronic/8.jpg"
 				class="img-responsive"></a>
 			<div class="producttitle">Product 2</div>
 			<div class="productprice">
 				<div class="pull-right">
-					<a href="#" title="រក្សាទុក" class="pricetext"> <i
-						class="fa fa-bookmark-o"></i></a>
+					<a href="#" title="ធ្វើការលុប" class="pricetext"> <i
+						class="fa fa-trash-o"></i></a>
 				</div>
 				<div class="pricetext">$8.95</div>
 			</div>
