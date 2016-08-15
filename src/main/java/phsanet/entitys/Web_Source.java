@@ -68,5 +68,17 @@ public class Web_Source {
 	public void setUrl(String url) {
 		this.url = url;
 	}
+	@Override
+	public String toString(){
+		String info=this.url+
+				"\n"+this.selector_row+
+				"\n"+this.selector_name+
+				"\n"+this.selector_price+
+				"\n"+this.selector_image+
+				"\n"+this.selector_description+
+				"\n"+this.web_source_id;
+		return info;
+	}
+	
 	
 }

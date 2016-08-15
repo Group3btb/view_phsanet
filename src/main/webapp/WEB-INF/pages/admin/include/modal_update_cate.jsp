@@ -3,12 +3,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
  <!-- Model -->
-        <div id="update_model" class="modal-demo" ng-app="Cateapp">
+        <div id="update_model" class="modal-demo">
           <button type="button" class="close" onclick="Custombox.close();">
               <span>&times;</span><span class="sr-only">Close</span>
           </button>
-          <h4 class="custom-modal-title" ng-bind="title_web"></h4>
-          <div class="custom-modal-text text-left" ng-controller="controller_category">
+          <h4 class="custom-modal-title">Update Category</h4>
+          <div class="custom-modal-text text-left">
                <form role="form">
                         <div class="form-group">
                             <label for="name">Category Name</label>
@@ -18,9 +18,10 @@
                         
                         <div class="form-group">
                             <label for="name">Main Category</label>
-                            <select ng-change="changeCate(maincate)" ng-model="main_cate" class="form-control">
-							    <option selected>---Select Main Category---</option>
-							    <option ng-repeat="maincate in maincates" ng-value="maincate.maincategory_id">{{maincate.category_name}}</option>
+                            <select ng-change="changeCate(maincate)" ng-model="main_cate" class="form-control" 
+                            	ng-options="maincate.maincategory_id as maincate.category_name for maincate in maincates">
+							    <option value="">---Select Main Category---</option>
+							    <!-- <option ng-repeat="maincate in maincates" ng-value="maincate.maincategory_id">{{maincate.category_name}}</option> -->
 							</select>
                         </div>  
                         <div class="form-group">

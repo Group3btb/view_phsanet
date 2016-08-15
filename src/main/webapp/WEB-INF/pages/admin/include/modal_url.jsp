@@ -12,24 +12,25 @@
                <form role="form">
                         <div class="form-group">
                             <label for="name">SITE NAME</label>                    
-                            <select ng-change="webSiteChange(web)" ng-model="web" class="form-control">   
-                            	<option >---selected site---</option>
-                            	<option ng-repeat="web in webs" ng-value="web.web_source_id">
-                            		{{web.website}}
-                            	</option>
-                            </select>
+                            <label for="name">SITE NAME</label>
+                                <select class="form-control"
+                                      ng-model="web_selected" 
+                                      ng-change="webSiteChange(web_selected)" 
+                                      data-ng-options="web as web.website for web in webs">
+                                      <option value="">---selected site---</option>
+                                </select>
                         </div> 
                         
                         <div class="form-group">
                             <label for="name">SUB CATEGORY</label>                    
-                            <select ng-change="subcategoryChange(sub)" ng-model="sub" class="form-control">  
-                            	<option>---selected subcategory---</option>
-                            	<option ng-repeat="sub in subs" ng-value="sub.subcategory_id">
-                            		{{sub.subcategory_name}}
-                            	</option>
-                            	                                        
-                            	
+                            
+                            <select   class="form-control"
+                                      ng-model="sub" 
+                                      ng-change="subcategoryChange(sub)" 
+                                      data-ng-options="sub as sub.subcategory_name for sub in subs">
+                                      <option value="">---Subcategory---</option>
                             </select>
+
                         </div> 
                         
                         <div class="form-group">

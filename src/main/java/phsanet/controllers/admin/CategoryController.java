@@ -35,7 +35,7 @@ public class CategoryController {
 				 							HttpMethod.GET, 
 				 							request, 
 				 							Map.class);
-		 
+		
 		return new ResponseEntity<Map<String, Object>>(response.getBody(), response.getStatusCode());
 	}// end findAll_MainCategories
 	
