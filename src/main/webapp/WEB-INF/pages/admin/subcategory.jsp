@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-<html ng-app="Cateapp">
+<html ng-app="SubCate">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,10 +29,10 @@
 
        
         <!-- Begin page -->	
-        <div id="wrapper" ng-controller="controller_category">
+        <div id="wrapper" ng-controller="controller_subcate">
 
-            <jsp:include page="/WEB-INF/pages/admin/include/model_add_cate.jsp"></jsp:include>
-            <jsp:include page="/WEB-INF/pages/admin/include/modal_update_cate.jsp"></jsp:include>
+            <jsp:include page="/WEB-INF/pages/admin/include/model_add_subcate.jsp"></jsp:include>
+            <jsp:include page="/WEB-INF/pages/admin/include/modal_update_subcate.jsp"></jsp:include>
 
             <!-- Top Bar Start -->
            	<jsp:include page="/WEB-INF/pages/admin/menu/top_bar.jsp"></jsp:include>
@@ -54,7 +54,7 @@
 							<div class="col-sm-12">
 								<div class="card-box">
 								      <h4 class="m-t-0 header-title"><b>Category</b></h4><br>
-                  						<a href="#add_cate_model" ng-click="findAllMainCate()" class="btn btn-default btn-md waves-effect waves-light m-b-30" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="200" data-overlaycolor="#36404a"><i class="md md-add"></i>Add Category</a>
+                  						<a href="#add_subcate_model" ng-click="findAll_category()" class="btn btn-default btn-md waves-effect waves-light m-b-30" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="200" data-overlaycolor="#36404a"><i class="md md-add"></i>Add Sub Category</a>
 								</div>
 							</div>
 						</div>
@@ -69,26 +69,26 @@
 									        <table class="table table-actions-bar m-b-0"><!-- <table class="table table-actions-bar m-b-0"> -->
                                             <thead>
                                                 <tr>
-                                                    <th style="max-width: 20px; text-align: center" ng-click="sort('category_id')">ID</th>
-                                                    <th style="text-align: center" ng-click="sort('category_name')">Category Name</th>
-                                                    <th style="text-align: center" ng-click="sort('main_category.category_name')">Main Category Name</th>
+                                                    <th style="max-width: 20px; text-align: center" ng-click="sort('subcategory_id')">ID</th>
+                                                    <th ng-click="sort('subcategory_name')">Sub Category Name</th>
+                                                    <th ng-click="sort('category.category_name')">Category Name</th>
                                                     <th style="text-align: center">ACTION</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                              
-                                                <tr dir-paginate="cate in categories | filter:query | orderBy:sortKey:reverse |itemsPerPage:10">
+                                                <tr dir-paginate="subcate in subcates | filter:query | orderBy:sortKey:reverse |itemsPerPage:10">
                                                 
-        											<td>{{cate.category_id}}</td>                                           
-                                                    <td>{{cate.category_name}}<input type="hidden" value="{{cate.description}}"></td>
-                                                    <td>{{cate.main_category.category_name}}<input type="hidden" value="{{cate.main_category.main_category_id}}"></td>
+        											<td>{{subcate.subcategory_id}}</td>                                           
+                                                    <td>{{subcate.subcategory_name}}<input type="hidden" value="{{subcate.description}}"></td>
+                                                    <td>{{subcate.category.category_name}}<input type="hidden" value="{{subcate.category.category_id}}"></td>
                                                     <td style="text-align: center">
                                                     	<a href="#"  class="btn btn-info btn-md waves-effect waves-light" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="200" data-overlaycolor="#36404a"><i class="glyphicon glyphicon-eye-open"></i></a>
                                                     	<a href="javascript:" ng-click="getData(this)" class="btn btn-primary btn-md waves-effect waves-light call-modal_update"><i class="glyphicon glyphicon-pencil"></i></a>
                                                     	<a href="#" id="btnclose" ng-click="deleteCate(cate.category_id)" class="btn btn-danger btn-md waves-effect"><i class="glyphicon glyphicon-trash"></i></a>
                                                     </td>
                                                 </tr>   
-                                       		</table>
+                                       	</table>
                                        		 <dir-pagination-controls
 										       max-size="10"
 										       direction-links="true"
@@ -130,7 +130,7 @@
                 
                 $(document).on('click', '.call-modal_update', function(){
                     Custombox.open({
-                        target: '#update_model',
+                        target: '#update_model_subcate',
                         effect: 'fadein',
                         overlaySpeed: '200',
                         overlayColor: '#36404a'

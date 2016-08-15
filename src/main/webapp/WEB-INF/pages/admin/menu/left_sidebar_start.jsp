@@ -16,7 +16,7 @@
                                 <a href="#" class="waves-effect"><i class="ti-home"></i> <span>Others</span></a>
                             </li>
                             <li class="has_sub">
-                                <a href="#" class="waves-effect"><i class="ti-light-bulb"></i><span>Manage Categories</span> </a>
+                                <a href="#" class="waves-effect"><i class="ti-menu-alt"></i><span>Manage Categories</span> </a>
                                 <ul class="list-unstyled">
                                     <li><a href="main_category.html">Main Category</a></li>
                                     <li><a href="category.html">Category</a></li>

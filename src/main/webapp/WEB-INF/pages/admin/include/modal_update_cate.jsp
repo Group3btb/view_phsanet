@@ -1,7 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
  <!-- Model -->
         <div id="update_model" class="modal-demo">
           <button type="button" class="close" onclick="Custombox.close();">
@@ -29,7 +25,7 @@
                             <input ng-model="cate_desc_update" type="text" class="form-control" id="cate_desc" placeholder="Enter Description">
                         </div>  
                         <button ng-click="UpdateCate()" type="button" class="btn btn-default waves-effect waves-light"  id="btnokay">Update</button>
-                        <button type="button"  onclick="Custombox.close();" class="btn btn-danger waves-effect waves-light m-l-10">Close</button>
+                        <button type="button" onclick="Custombox.close();" class="btn btn-danger waves-effect waves-light m-l-10">Close</button>
                     </form>
           </div>
       </div>

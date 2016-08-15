@@ -1,7 +1,3 @@
-/**
- * 
- */
-
  var app = angular.module("Cateapp",['angularUtils.directives.dirPagination']);
  app.controller("controller_category",function($http,$scope){
 
@@ -12,7 +8,7 @@
  		}).then(function(respone){
  			$scope.categories = respone.data.DATA;
  		},function(respone){
- 			alert("Error");
+ 			alert("Failed to Load data from the Database");
  		});
  	};//end findall category
 
@@ -38,9 +34,8 @@
  			}
  		}).then(function(response){
  			$scope.findAll_category();
- 			$socpe.cate_name = "";
- 			$scope.cate_desc = "";
- 			alert("Add Success!");
+ 			$socpe.cate_name = " ";
+ 			$scope.cate_desc = " ";
  		}, function(response){
  			alert("Add failed!");
  		});
@@ -82,7 +77,7 @@
 		 			}
 				}).then(function(response){
 					swal("Updated!", "Your record updated!", "success");
-					alert("Success!");
+					$('.btn-danger').trigger('click');
 					$scope.findAll_category();
 					
 			},function(response){

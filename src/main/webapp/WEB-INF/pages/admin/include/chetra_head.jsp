@@ -30,3 +30,4 @@
 		<script src="/resources/admins/javascripts/main_category.js"></script>
 		<script src="/resources/admins/javascripts/web_source.js"></script>
 		<script src="/resources/admins/javascripts/category.js"></script>
+		<script src="/resources/admins/javascripts/subcategory.js"></script>
