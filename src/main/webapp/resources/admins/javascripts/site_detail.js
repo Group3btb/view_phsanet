@@ -3,10 +3,10 @@
  */
 
  var app = angular.module("Myapp",[]);
-app.controller("controller_scrap",function($http , $scope){
+app.controller("controller_site_detail",function($http , $scope){
  		
  		$scope.findall_web_sources = function(){
- 			
+ 	
 	 	$http({
 	 		url:'/sitemanagerment',
 	 		method:'GET'
@@ -67,7 +67,7 @@ app.controller("controller_scrap",function($http , $scope){
 	  
 	  // find all web input url to scrap
 	  $scope.findAll_web_scrap = function(){
-	  	
+	  		
 	  		$http({
 	  			url:'/scrapmanagerment',
 	  			method:'GET'

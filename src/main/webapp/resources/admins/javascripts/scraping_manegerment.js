@@ -4,7 +4,8 @@
 
  var app = angular.module('Myapp',[]);
  app.controller('controller_scraping',function($http,$scope){
- 	  // find all web input url to scrap
+
+
 	  $scope.findAll_web_structure = function(){
 	  		
 	  		$http({
@@ -47,10 +48,6 @@
 	  			method:'POST',
 	  			data:{
 
-	  				/*web_source  	: {web_source_id :$scope.web_source_id },
-	  				subcategory  	: {subcategory_id:$scope.subcategory_id},
-	  				url 			: $scope.scrap_url*/
-
 	  				url  			:$scope.url_ ,
 	  				website			:$scope.website_,
 	  				selector_row 	:$scope.selector_row_ ,
@@ -67,27 +64,7 @@
 	  			$scope.findAll_web_scrap();
 	  		},function(respone){
 	  			swal("Failed", "", "error");
-	  		});
-
-	  /*	$http({
-	  		url 	: '/startscrap',
-	  		method 	: 'POST',
-	  		DATA 	: {
-	  				url:$scope.url_ ,
-	  				selector_row 	:$scope.selector_row_ ,
-	  				selector_name 	:$scope.selector_name_ ,
-	  				selector_price 	:$scope.selector_price_,
-	  				selector_image 	:$scope.selector_image_ ,
-	  				selector_description:$scope.selector_description_
-	  		} 
-
-
-	  	}).then(function(respone){
-	  		swal("Scrap Success", "", "success");
-	  	},function(respone){
-	  		swal("Scrap Faild", "", "error");
-	  	});*/
-	  
+	  		}); 
 	  }
 
  });//end controller 
