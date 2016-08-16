@@ -20,7 +20,7 @@
 
        
         <!-- Begin page -->	
-        <div id="wrapper" ng-controller="controller_scrap">
+        <div id="wrapper" ng-controller="controller_site_detail">
 
             <jsp:include page="/WEB-INF/pages/admin/include/modal_url.jsp"></jsp:include>
            
@@ -88,7 +88,14 @@
                                                     
                                                     <td>{{scrap.subcategory.subcategory_name}}</td>
                                                     <td>{{scrap.url}}</td>
-                                                    <td></td>
+                                                    <td>
+                                                        <div class="checkbox checkbox-success">
+                                                        <input  ng-model="a" ng-checked="h" type="checkbox">
+                                                    <label >
+                                                        
+                                                    </label>
+                                                </div>
+                                                    </td>
                                                     <td style="text-align: center">
                                                     
                                                         <a href="#"  class="btn btn-info btn-md waves-effect waves-light" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="200" data-overlaycolor="#36404a"><i class="glyphicon glyphicon-eye-open"></i></a>
@@ -135,7 +142,7 @@
         <script>
             var resizefunc = [];
         </script>
-		<script src="/resources/admins/javascripts/scrap.js"></script>
+		<script src="/resources/admins/javascripts/site_detail.js"></script>
 		<jsp:include page="/WEB-INF/pages/admin/include/headscript.jsp"></jsp:include>
        
         <script type="text/javascript">
