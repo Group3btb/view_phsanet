@@ -5,7 +5,7 @@
 <div class="row">
 	<div class="col-md-12">
 		<div class="location">
-			<span>សម្លៀកបំពាក់​ ​ >​​​​ សម្រាប់នារី</span>
+			<span><a href=""> សម្លៀកបំពាក់​</a>​​​​ > <a href=""> សម្រាប់នារី</a></span>
 		</div>
 
 	</div>

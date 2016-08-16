@@ -16,8 +16,13 @@ public class ViewController {
 		return "category";
 	}
 	
-	@RequestMapping(value={"user/","user/savelist"})
+	@RequestMapping(value={"/user","/user/savelist"})
 	public String savelist(){
 		return "users/index";
+	}
+
+	@RequestMapping(value={"/register"})
+	public String register(){
+		return "include/register";
 	}
 }

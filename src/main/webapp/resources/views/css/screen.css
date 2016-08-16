@@ -80,7 +80,7 @@
 @media (min-width:1200px){
 	.col-xs-15{width:20%;float: left;}
 	.col-xs-12{width:25%;float: left;}
-	input#form-search{width:450px;}
+	input#form-search{width:420px;}
 	.productbox img{ margin: 0 auto; width: 200px; height: 200px;}
     .item-box{margin:0 auto; width:200px; border:solid 1px #dadada;}
 	.mega-dropdown-menu {
