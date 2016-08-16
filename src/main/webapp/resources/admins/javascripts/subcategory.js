@@ -27,7 +27,7 @@ app.controller("controller_subcate", function($http, $scope){
  			url: '/subcategories',
  			method: 'POST',
  			data: {
- 				category:{
+ 				category :{
  					category_id : $scope.category
  				},
  				description : $scope.subcate_desc,
@@ -38,7 +38,7 @@ app.controller("controller_subcate", function($http, $scope){
  			$socpe.subcate_name = " ";
  			$scope.subcate_desc = " ";
  		}, function(response){
- 			alert("Add failed!");
+ 			alert("Add failed");
  		});
  	};//end add sub category
  	
@@ -48,7 +48,7 @@ app.controller("controller_subcate", function($http, $scope){
  		$scope.subcate_id_update = record.subcate.subcategory_id;
  		$scope.findAll_category();
  		$scope.cate = record.subcate.category.category_id;
- 		alert($scope.cate);
+ 		/*alert($scope.cate);*/
  		//$scope.selected = "selected";
  	};//end function getData per record for update Sub Category
  	
@@ -73,15 +73,17 @@ app.controller("controller_subcate", function($http, $scope){
 		 					    category_id: $scope.cate
 		 					  },
 		 				description:$scope.subcate_desc_update ,
+		 				subcategory_id : $scope.subcate_id_update,
 		 				subcategory_name: $scope.subcate_name_update
 		 			}
 				}).then(function(response){
+					alert("Update Success!");
 					swal("Updated!", "Your record updated!", "success");
 					$('.btn-danger').trigger('click');
 					$scope.findAllSubCate();
 					
 			},function(response){
-
+				alert("Update Faile");
 			});	  
 			}else {     
 				swal("Cancelled", "Your record has not been updated:)", "error");   
@@ -92,6 +94,8 @@ app.controller("controller_subcate", function($http, $scope){
  	
  	$scope.findAllSubCate();
 
+ 	
+ 	
  	$scope.sort = function(keyname){
         $scope.sortKey = keyname;   //set the sortKey to the param passed
         $scope.reverse = !$scope.reverse; //if true make it false and vice versa

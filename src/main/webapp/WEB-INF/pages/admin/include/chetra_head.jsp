@@ -3,7 +3,7 @@
 
 
 
- 		<link rel="shortcut icon" href="/resources/admins/images/favicon_1.ico">
+ 		<link rel="shortcut icon" href="/resources/admins/images/logo3.png">
         <link href="/resources/admins/plugins/custombox/dist/custombox.min.css" rel="stylesheet">
         
         <link href="/resources/admins/plugins/bootstrapvalidator/src/css/bootstrapValidator.css" rel="stylesheet" type="text/css" />

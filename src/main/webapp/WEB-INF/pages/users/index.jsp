@@ -51,7 +51,7 @@
 			</div>
 		</div>
 
-		<div class="resource bg-success">
+		<div class="resource">
 			<%@include file="../include/resource.jsp"%>
 		</div>
 		<!-- end resource -->

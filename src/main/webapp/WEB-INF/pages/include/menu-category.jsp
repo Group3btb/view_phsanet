@@ -6,7 +6,7 @@
 	 	  	    	<ul class="nav nav-stacked">
 					  <li class="active"><a href="#"><i class="fa fa-bars"></i> ប្រភេទផលិតផល</a></li>
 					  <li class="dropdown mega-dropdown">
-					      <a href="#" class="dropdown-toggle" data-toggle="dropdown">សម្លៀកបំពាក់</a>
+					      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-male" aria-hidden="true"></i> សម្លៀកបំពាក់</a>
 
                           <ul class="dropdown-menu mega-dropdown-menu">
 								<li>
@@ -43,13 +43,13 @@
 
 
 
-					  <li><a href="#">គ្រឿងអលង្ការ</a></li>
-					  <li><a href="#">កំព្យូទ័រ</a></li>
-					  <li><a href="#">ទូរស័ព្ទដៃ</a></li>
-					  <li><a href="#">ឡាន</a></li>
-					  <li><a href="#">ម៉ូតូ</a></li>
-					  <li><a href="#">កង់</a></li>
-					  <li><a href="#">សម្ភារផ្ទះ​ ​ និង​​​ ដី</a></li>
+					  <li><a href="#"><i class="fa fa-gift" aria-hidden="true"></i> គ្រឿងអលង្ការ</a></li>
+					  <li><a href="#"><i class="fa fa-laptop" aria-hidden="true"></i> កំព្យូទ័រ</a></li>
+					  <li><a href="#"><i class="fa fa-tablet" aria-hidden="true"></i> ទូរស័ព្ទដៃ</a></li>
+					  <li><a href="#"><i class="fa fa-car" aria-hidden="true"></i> ឡាន</a></li>
+					  <li><a href="#"><i class="fa fa-motorcycle" aria-hidden="true"></i> ម៉ូតូ</a></li>
+					  <li><a href="#"><i class="fa fa-bicycle" aria-hidden="true"></i> កង់</a></li>
+					  <li><a href="#"><i class="fa fa-bed" aria-hidden="true"></i> សម្ភារផ្ទះ​ ​ និង​​​ ដី</a></li>
 					</ul>
 
 	 	  	   <!--  end category -->
