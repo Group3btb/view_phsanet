@@ -8,12 +8,12 @@
                     <!--- Divider -->
                     <div id="sidebar-menu">
                         <ul>
-                          <li class="text-muted menu-title">Menus</li>
+                          <li class="text-muted menu-title">Admin PhsarNet</li>
                             <li>
                                 <a href="index.html" class="waves-effect active"><i class="ti-home"></i> <span> Dashboard </span></a>
                             </li>
                             <li>
-                                <a href="#" class="waves-effect"><i class="ti-home"></i> <span>Others</span></a>
+                                <a href="#" class="waves-effect"><i class="ti-more"></i> <span>Others</span></a>
                             </li>
                             <li class="has_sub">
                                 <a href="#" class="waves-effect"><i class="ti-menu-alt"></i><span>Manage Categories</span> </a>
