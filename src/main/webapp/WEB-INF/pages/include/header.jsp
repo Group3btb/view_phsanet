@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%> 
     
     
-   <%@include file="register.jsp" %>
+   <%@include file="account.jsp" %>
 <nav class="navbar navbar-fixed-top  nav-header" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
@@ -27,18 +27,15 @@
 							<option>កុំព្យូទ័រ</option>
 						</select> 
 						<input type="text" class="form-control" id="form-search"  placeholder="ស្វែងរក">
-						<button type="submit"  class="btn">
+						<button type="submit"  class="btn btn-search">
 							<i class="fa fa-search"></i> ស្វែងរក
 						</button>
 					</div>
 				</form>
 
 				<ul class="nav navbar-nav navbar-right">
-				 
-					<li><a href=""><i class="fa fa-sign-in"></i>ចូលប្រើប្រាស់</a></li>
-					<li><a href="" data-toggle="modal" data-target="#modal"><i class="fa fa-users"></i>ចុះឈ្មោះ</a></li>
-				   
-				
+					<li><a href="" data-toggle="modal" data-target="#login"><i class="fa fa-sign-in"></i>ចូលប្រើប្រាស់</a></li>
+					<li><a href="" data-toggle="modal" data-target="#register"><i class="fa fa-users"></i>ចុះឈ្មោះ</a></li> 
 				</ul>
                     
 			</div>
