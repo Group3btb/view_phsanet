@@ -47,7 +47,7 @@ public class SubCategory {
 		RestTemplate restTemplate = new RestTemplate();
 		HttpEntity<String> request = new HttpEntity<String>(new HttpHeaders());
 		ResponseEntity<Map> response = restTemplate.exchange(
-				 							"http://localhost:2222/api/category/"+search, 
+				 							"http://localhost:2222/api/subcategory/"+search, 
 				 							HttpMethod.GET, 
 				 							request, 
 				 							Map.class);
@@ -63,7 +63,7 @@ public class SubCategory {
 		RestTemplate restTemplate = new RestTemplate();
 		HttpEntity<Object> request = new HttpEntity<Object>(category,new HttpHeaders());
 		ResponseEntity<Map> response = restTemplate.exchange(
-					"http://localhost:2222/api/category", 
+					"http://localhost:2222/api/subcategory", 
 					HttpMethod.POST, 
 					request, 
 					Map.class);
@@ -81,7 +81,7 @@ public class SubCategory {
 		HttpEntity<Object> request = new HttpEntity<Object>(category,new HttpHeaders());
 		@SuppressWarnings("rawtypes")
 		ResponseEntity<Map> response = restTemplate.exchange(
-					"http://localhost:2222/api/category", 
+					"http://localhost:2222/api/subcategory", 
 					HttpMethod.PUT, 
 					request, 
 					Map.class);
@@ -103,7 +103,7 @@ public class SubCategory {
 		HttpEntity<Object> request = new HttpEntity<Object>(new HttpHeaders());
 		@SuppressWarnings("rawtypes")
 		ResponseEntity<Map> response = restTemplate.exchange(
-					"http://localhost:2222/api/category/"+id, 
+					"http://localhost:2222/api/subcategory/"+id, 
 					HttpMethod.DELETE, 
 					request, 
 					Map.class);

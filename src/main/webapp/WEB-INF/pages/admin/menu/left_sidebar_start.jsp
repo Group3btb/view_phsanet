@@ -12,15 +12,25 @@
                             <li>
                                 <a href="index.html" class="waves-effect active"><i class="ti-home"></i> <span> Dashboard </span></a>
                             </li>
-                            <li>
-                                <a href="#" class="waves-effect"><i class="ti-more"></i> <span>Others</span></a>
-                            </li>
                             <li class="has_sub">
                                 <a href="#" class="waves-effect"><i class="ti-menu-alt"></i><span>Manage Categories</span> </a>
                                 <ul class="list-unstyled">
-                                    <li><a href="main_category.html">Main Category</a></li>
-                                    <li><a href="category.html">Category</a></li>
-                                    <li><a href="sub_category.html">Sub Category</a></li>
+                                    <li><a href="maincategory">Main Category</a></li>
+                                    <li><a href="category">Category</a></li>
+                                    <li><a href="subcategory">Sub Category</a></li>
+                                </ul>
+                            </li>
+                             <li class="has_sub">
+                                <a href="#" class="waves-effect"><i class="ti-menu-alt"></i><span>Management Site</span> </a>
+                                <ul class="list-unstyled">
+                                    <li><a href="site">Site Management</a></li>
+                                    <li><a href="sitedetail">Site Detail</a></li>
+                                </ul>
+                            </li>
+                             <li class="has_sub">
+                                <a href="#" class="waves-effect"><i class="ti-menu-alt"></i><span>Manage Scrape</span> </a>
+                                <ul class="list-unstyled">
+                                    <li><a href="site">URL Scrape</a></li>
                                 </ul>
                             </li>
                         </ul>

@@ -168,7 +168,7 @@
                 </div> <!-- content -->
 
                 <footer class="footer">
-                    2015 © PhsarKhmer
+                    2016 © PhsarNet
                 </footer>
 
             </div>

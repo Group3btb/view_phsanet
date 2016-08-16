@@ -108,7 +108,7 @@
                 </div> <!-- content -->
 
                 <footer class="footer">
-                    2015 © Ubold.
+                    2016 © PhsarNet
                 </footer>
 
             </div>
