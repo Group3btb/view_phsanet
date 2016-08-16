@@ -18,7 +18,10 @@ import phsanet.entitys.Category;
 
 @Controller
 public class SubCategory {
-	
+	@RequestMapping(value={"/subcategory"})
+	public String category(){
+		return "/admin/subcategory";
+	}
 	
 	
 	@SuppressWarnings("unchecked")
