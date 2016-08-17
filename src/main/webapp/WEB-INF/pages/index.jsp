@@ -7,11 +7,11 @@
 <title>Phsanet | Homepage</title>
 
  <%@ include file="include/head.jsp"  %>
- <script src="/resources/views/js/jssor.slider.min.js"></script>
+<script src="/resources/views/js/jssor.slider.min.js"></script>
 <script src="/resources/views/js/slider.js"></script>
 </head>
 <body>
-      <div id="body">
+      <div id="body" ng-app="app">
       
 <!--header -->
           <div class="header">
@@ -35,7 +35,7 @@
  <!--end menu -->   
  
  <!--content -->       
-        <div class="content">
+        <div class="content" ng-controller="ctrl">
               <%@ include file="include/index-contents.jsp" %>
         </div>
  <!--end content -->    
@@ -57,7 +57,7 @@
             <%@ include file="include/footer.jsp" %>
         </div>
   <!--end footer -->       
-  
+ 
         
 </div>
 <script>

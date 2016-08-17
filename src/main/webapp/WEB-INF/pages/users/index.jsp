@@ -43,19 +43,6 @@
 		<!--end all category ,filter & items-->
 
 
-
-		<!-- resource -->
-		<div class="re-title​">
-			<div class="container" style="padding: 0px;">
-				<span class="span text-primary">ប្រភពមកពី</span>
-			</div>
-		</div>
-
-		<div class="resource">
-			<%@include file="../include/resource.jsp"%>
-		</div>
-		<!-- end resource -->
-
 		<!-- footer -->
 		<div class="footer bg-primary">
 			<%@ include file="../include/footer.jsp"%>

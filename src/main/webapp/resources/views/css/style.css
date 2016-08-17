@@ -99,7 +99,6 @@ li.dropdown.mega-dropdown a:hover{background-color:#428BCA}
     margin-top:10px;
 }
 
-
 .item-box:hover{border:solid 1px #5BC0DE}
 .product-source{height:35px;border-bottom:1px solid #dadada;}
 .source-img a img{margin-left:5px; width:35px;height:35px;}
@@ -174,6 +173,7 @@ i.fa-trash-o{color:#C9302C;}
 .filter-items select{color: #428BCA;}
 .location{width:100%;height:40px; background-color:#428BCA;padding-left:15px;}
 .location span{height:40px; line-height:40px; color:#fff;}
+.location a{color: #fff;}
 .location span i{color:#fff}
 /* end filter  */
 
@@ -183,19 +183,6 @@ i.fa-trash-o{color:#C9302C;}
 .modal-body div span i{color:#000;}
 
 /* end modal account */
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* carousel */

@@ -8,7 +8,7 @@
 <%@ include file="include/head.jsp"%>
 </head>
 <body>
-	<div id="body">
+	<div id="body" ng-app="app">
 
 		<!-- header -->
 		<div class="header">
@@ -41,7 +41,7 @@
 					</div>
 
 					<!-- category item -->
-					<div class="col-md-9 col-sm-8 col-lg-9">
+					<div class="col-md-9 col-sm-8 col-lg-9" ng-controller="ctrl">
 						<%@ include file="include/cat-contents.jsp"%>
 					</div>
 					<!-- end category items -->
@@ -54,17 +54,6 @@
 
 
 
-		<!-- resource -->
-		<div class="re-title​">
-			<div class="container" style="padding: 0px;">
-				<span class="span text-primary">ប្រភពមកពី</span>
-			</div>
-		</div>
-
-		<div class="resource bg-success">
-			<%@include file="include/resource.jsp"%>
-		</div>
-		<!-- end resource -->
 
 		<!-- footer -->
 		<div class="footer bg-primary">

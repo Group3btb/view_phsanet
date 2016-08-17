@@ -9,3 +9,7 @@
   <script src="/resources/views/js/jquery.nicescroll.min.js"></script>
   <script src="/resources/views/js/jquery.nicescroll.plus.js"></script>
   <link rel="stylesheet" type="text/css" href="/resources/views/css/screen.css">
+  <script src="/resources/views/js/angular.min.js"></script>
+<script src="/resources/views/js/retrive_datas.js"></script>
+<script src="/resources/views/js/dirPagination.js"></script>
+<script src="/resources/views/js/jquery.bootpag.min.js"></script>
