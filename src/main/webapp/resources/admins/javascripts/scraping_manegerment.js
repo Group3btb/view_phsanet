@@ -35,7 +35,7 @@
 	  		$scope.selector_description_ 	= record.selector_description;
 	  		$scope.web_source_id_ 			= record.web_source_id;
 	  		
-	  		alert($scope.website_);
+	  		alert("web site id " + $scope.web_source_id_);
 	  }
 
 
@@ -66,5 +66,11 @@
 	  			swal("Failed", "", "error");
 	  		}); 
 	  }
+
+
+	  $scope.start_scrap_all_web = function(){
+	  		
+	  }
+
 
  });//end controller 

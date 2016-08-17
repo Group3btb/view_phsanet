@@ -64,6 +64,8 @@ app.controller("controller_site_detail",function($http , $scope){
 	  		
 
 	  }
+
+	 
 	  
 	  // find all web input url to scrap
 	  $scope.findAll_web_scrap = function(){
@@ -149,7 +151,7 @@ app.controller("controller_site_detail",function($http , $scope){
 
 	  }
 
-	  //getid subcategory
+	 
 	  $scope.webSiteChange = function(record){
 	  		$scope.web_source_id = record.web_source_id;
 	  }
@@ -157,6 +159,37 @@ app.controller("controller_site_detail",function($http , $scope){
 	  $scope.subcategoryChange = function(record){
 	  		alert(record);
 	  		$scope.subcategory_id = record.subcategory_id ;
+	  }
+
+
+	  // allow scrap
+	   $scope.allow_scrap = function(event,record){
+	  	var x = event.target.checked;
+	  	$scope.scrap_id = record.scrap.scrap_id;
+	  	if (x){
+			$scope.update_status('yes');
+	  	}else{
+	  		$scope.update_status('no');
+	  	}
+	  }
+
+	  $scope.update_status = function(st){
+	  		alert($scope.scrap_id+"  "+status);
+
+	  		$http({
+	  			url 	: '/scrapmanagerment',
+	  			method	: 'PATCH',
+	  			data 	: {
+	  				status : st,
+	  				scrap_id : 	$scope.scrap_id
+	  			}
+	  		}).then(function(respone){
+	  			swal(" Success", "", "success");
+	  			$scope.findAll_web_scrap();
+	  		},function(respone){
+	  			swal("Failed", "", "error");
+	  		});
+	  		alert(st);
 	  }
 
  });//end controller

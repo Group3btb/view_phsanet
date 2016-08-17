@@ -87,6 +87,23 @@ public class SiteDetailController {
 		return new ResponseEntity<Map<String, Object>>(response.getBody(), response.getStatusCode());
 	}// end update_MainCategories
 	
+	@SuppressWarnings("unchecked")
+	@RequestMapping(value={"/scrapmanagerment"} , method = RequestMethod.PATCH)
+	@ResponseBody
+	public ResponseEntity<Map<String,Object>> update_status(@RequestBody Site_Detail_Managerment scrap){
+		System.out.println(scrap.getStatus());
+		
+		RestTemplate restTemplate = new RestTemplate();
+		HttpEntity<Object> request = new HttpEntity<Object>(scrap,new HttpHeaders());
+		@SuppressWarnings("rawtypes")
+		ResponseEntity<Map> response = restTemplate.exchange(
+					"http://localhost:2222/api/scrap", 
+					HttpMethod.PATCH, 
+					request, 
+					Map.class);
+		return new ResponseEntity<Map<String, Object>>(response.getBody(), response.getStatusCode());
+	}// end update_MainCategories
+	
 	/***
 	 * 
 	 * @param id

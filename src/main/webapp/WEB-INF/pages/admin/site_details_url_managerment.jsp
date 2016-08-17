@@ -90,11 +90,13 @@
                                                     <td>{{scrap.url}}</td>
                                                     <td>
                                                         <div class="checkbox checkbox-success">
-                                                        <input  ng-model="a" ng-checked="h" type="checkbox">
-                                                    <label >
+                                                        <input type="checkbox" 
+                                                        ng-checked="(scrap.status.trim() == 'yes' ? true : false)" 
+                                                        ng-click="allow_scrap($event,this)">
+                                                            <label >
                                                         
-                                                    </label>
-                                                </div>
+                                                            </label>
+                                                         </div>
                                                     </td>
                                                     <td style="text-align: center">
                                                     
