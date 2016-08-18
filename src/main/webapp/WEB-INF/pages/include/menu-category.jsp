@@ -243,9 +243,7 @@
 										<li><a href="#">Custom Fonts</a></li>
 										<li><a href="#">Slide down on Hover</a></li>                         
 									</ul>
-								</li>
-
-			                    
+								</li>  
 							</ul>
 					  </li>
 					  
@@ -259,8 +257,11 @@
 
 
  <script>
- var li = $("ul.nav li.dropdown").length+1;
- var total=-((42*li)+43)+'px';
- $('.mega-dropdown-menu').css({'margin-top':total}); 
+ $(document).ready(function(){
+	 var li = $("ul.nav li.dropdown").length+1;
+	 var total=-((42*li)+43)+'px';
+	 $('.mega-dropdown-menu').css({'margin-top':total}); 
+ });
+ 
  
  </script>

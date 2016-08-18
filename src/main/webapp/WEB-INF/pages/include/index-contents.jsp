@@ -21,12 +21,12 @@
 					
 					<div class="item-box">
 						<div class="product-source">
-							<span class="source-img"> <a href="{{item.web.url}}"><img
+							<span class="source-img"> <a href="{{item.web.url}}" target="new"><img
 									class="img-circle" src="{{item.web.logo}}"> {{item.web.website}}
 							</a>
 							</span>
 						</div>
-						<a href="{{item.description}}"><img src="{{item.product_image}}" class="img-responsive"></a>
+						<a href="{{item.description}}" target="new"><img src="{{item.product_image}}" class="img-responsive"></a>
 						<div class="producttitle">{{item.product_name | myFilter}}</div>
 						<div class="productprice">
 							<div class="pull-right">
@@ -54,12 +54,12 @@
 					
 					<div class="item-box">
 						<div class="product-source">
-							<span class="source-img"> <a href="{{item.web.url}}"><img
+							<span class="source-img"> <a href="{{item.web.url}}" target="new"><img
 									class="img-circle" src="{{item.web.logo}}"> {{item.web.website}}
 							</a>
 							</span>
 						</div>
-						<a href="{{item.description}}"><img src="{{item.product_image}}" class="img-responsive"></a>
+						<a href="{{item.description}}" target="new"><img src="{{item.product_image}}" class="img-responsive"></a>
 						<div class="producttitle">{{item.product_name | myFilter}}</div>
 						<div class="productprice">
 							<div class="pull-right">

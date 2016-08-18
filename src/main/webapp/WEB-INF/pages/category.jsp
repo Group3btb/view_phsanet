@@ -67,7 +67,6 @@
 </body>
 <script>
 
-
 $(".dropdown").hover(            
         function() {
          $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).show();

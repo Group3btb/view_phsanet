@@ -48,6 +48,7 @@ function new_phone(){
 		  }
 		}).then(function(respones){
 			$scope.phone=respones.data.DATA;
+			console.log($scope.phone);
 		},function(respones){
 			
 		});
