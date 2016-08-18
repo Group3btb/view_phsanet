@@ -174,11 +174,10 @@ app.controller("controller_site_detail",function($http , $scope){
 	  }
 
 	  $scope.update_status = function(st){
-	  		alert($scope.scrap_id+"  "+status);
-
+	  		
 	  		$http({
-	  			url 	: '/scrapmanagerment',
-	  			method	: 'PATCH',
+	  			url 	: '/status',
+	  			method	: 'put',
 	  			data 	: {
 	  				status : st,
 	  				scrap_id : 	$scope.scrap_id
@@ -189,7 +188,7 @@ app.controller("controller_site_detail",function($http , $scope){
 	  		},function(respone){
 	  			swal("Failed", "", "error");
 	  		});
-	  		alert(st);
+	  		
 	  }
 
  });//end controller

@@ -33,7 +33,7 @@ public class ScrapingManagermentController {
 		HttpEntity<Object> request = new HttpEntity<Object>(web,new HttpHeaders());
 		@SuppressWarnings("rawtypes")
 		ResponseEntity<Map> response = restTemplate.exchange(
-					"http://localhost:2222/startscrap", 
+					"http://localhost:2222/api/startscrap", 
 					HttpMethod.POST, 
 					request, 
 					Map.class);
@@ -41,17 +41,17 @@ public class ScrapingManagermentController {
 	}// end
 	
 	@SuppressWarnings("unchecked")
-	@RequestMapping(value={"/startscrap"} , method = RequestMethod.POST)
+	@RequestMapping(value={"/startscrap"} , method = RequestMethod.GET)
 	@ResponseBody
-	public ResponseEntity<Map<String,Object>> start_scrap_all(@RequestBody Web_Source web){
+	public ResponseEntity<Map<String,Object>> start_scrap_all(){
 		
 		
 		RestTemplate restTemplate = new RestTemplate();
-		HttpEntity<Object> request = new HttpEntity<Object>(web,new HttpHeaders());
+		HttpEntity<Object> request = new HttpEntity<Object>(new HttpHeaders());
 		@SuppressWarnings("rawtypes")
 		ResponseEntity<Map> response = restTemplate.exchange(
-					"http://localhost:2222/startscrap", 
-					HttpMethod.POST, 
+					"http://localhost:2222/api/startscrap", 
+					HttpMethod.GET, 
 					request, 
 					Map.class);
 		return new ResponseEntity<Map<String, Object>>(response.getBody(), response.getStatusCode());

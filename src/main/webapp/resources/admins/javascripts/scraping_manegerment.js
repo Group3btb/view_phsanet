@@ -35,13 +35,12 @@
 	  		$scope.selector_description_ 	= record.selector_description;
 	  		$scope.web_source_id_ 			= record.web_source_id;
 	  		
-	  		alert("web site id " + $scope.web_source_id_);
+	  		
 	  }
 
 
 	  $scope.start_scraping = function(){
-	  	alert("Hello");
-
+	
 	  	$http({
 
 	  			url:'/startscrap',
@@ -68,8 +67,19 @@
 	  }
 
 
-	  $scope.start_scrap_all_web = function(){
-	  		
+	  $scope.start_scraping_all = function(){
+	  		alert("Hello");
+	  	$http({
+
+	  			url:'/startscrap',
+	  			method:'GET'
+
+	  		}).then(function(respone){
+	  			swal("Scrap Success", "", "success");
+	  			$scope.findAll_web_scrap();
+	  		},function(respone){
+	  			swal("Failed", "", "error");
+	  		}); 
 	  }
 
 

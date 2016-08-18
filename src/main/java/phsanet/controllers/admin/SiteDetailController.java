@@ -31,7 +31,7 @@ public class SiteDetailController {
 		HttpEntity<String> request = new HttpEntity<String>(new HttpHeaders());
 		@SuppressWarnings("rawtypes")
 		ResponseEntity<Map> response = restTemplate.exchange(
-				 							"http://localhost:2222/api/scrap", 
+				 							"http://localhost:2222/api/sitedetail", 
 				 							HttpMethod.GET, 
 				 							request, 
 				 							Map.class);
@@ -46,7 +46,7 @@ public class SiteDetailController {
 		RestTemplate restTemplate = new RestTemplate();
 		HttpEntity<String> request = new HttpEntity<String>(new HttpHeaders());
 		ResponseEntity<Map> response = restTemplate.exchange(
-				 							"http://localhost:2222/api/scrap/"+search, 
+				 							"http://localhost:2222/api/sitedetail/"+search, 
 				 							HttpMethod.GET, 
 				 							request, 
 				 							Map.class);
@@ -62,7 +62,7 @@ public class SiteDetailController {
 		RestTemplate restTemplate = new RestTemplate();
 		HttpEntity<Object> request = new HttpEntity<Object>(scrap,new HttpHeaders());
 		ResponseEntity<Map> response = restTemplate.exchange(
-					"http://localhost:2222/api/scrap", 
+					"http://localhost:2222/api/sitedetail", 
 					HttpMethod.POST, 
 					request, 
 					Map.class);
@@ -80,7 +80,7 @@ public class SiteDetailController {
 		HttpEntity<Object> request = new HttpEntity<Object>(scrap,new HttpHeaders());
 		@SuppressWarnings("rawtypes")
 		ResponseEntity<Map> response = restTemplate.exchange(
-					"http://localhost:2222/api/scrap", 
+					"http://localhost:2222/api/sitedetail", 
 					HttpMethod.PUT, 
 					request, 
 					Map.class);
@@ -88,17 +88,17 @@ public class SiteDetailController {
 	}// end update_MainCategories
 	
 	@SuppressWarnings("unchecked")
-	@RequestMapping(value={"/scrapmanagerment"} , method = RequestMethod.PATCH)
+	@RequestMapping(value={"/status"} , method = RequestMethod.PUT)
 	@ResponseBody
 	public ResponseEntity<Map<String,Object>> update_status(@RequestBody Site_Detail_Managerment scrap){
-		System.out.println(scrap.getStatus());
+		
 		
 		RestTemplate restTemplate = new RestTemplate();
 		HttpEntity<Object> request = new HttpEntity<Object>(scrap,new HttpHeaders());
 		@SuppressWarnings("rawtypes")
 		ResponseEntity<Map> response = restTemplate.exchange(
-					"http://localhost:2222/api/scrap", 
-					HttpMethod.PATCH, 
+					"http://localhost:2222/api/status", 
+					HttpMethod.PUT, 
 					request, 
 					Map.class);
 		return new ResponseEntity<Map<String, Object>>(response.getBody(), response.getStatusCode());
@@ -118,7 +118,7 @@ public class SiteDetailController {
 		HttpEntity<Object> request = new HttpEntity<Object>(new HttpHeaders());
 		@SuppressWarnings("rawtypes")
 		ResponseEntity<Map> response = restTemplate.exchange(
-					"http://localhost:2222/api/scrap/"+id, 
+					"http://localhost:2222/api/sitedetail/"+id, 
 					HttpMethod.DELETE, 
 					request, 
 					Map.class);

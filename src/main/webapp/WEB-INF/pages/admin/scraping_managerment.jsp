@@ -59,7 +59,7 @@ html4/loose.dtd">
                                   </p>
                 
     				<div class="form-group text-right m-b-0">
-                      <button  ng-click="start_scrping()"  class="btn btn-primary waves-effect waves-light" type="submit">
+                      <button  ng-click="start_scraping_all()"  class="btn btn-primary waves-effect waves-light" type="submit">
                         Scrap All
                     </button>
                     <div class="form-group">
