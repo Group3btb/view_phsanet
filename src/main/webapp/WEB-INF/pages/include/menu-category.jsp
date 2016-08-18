@@ -182,6 +182,7 @@
 			                    
 							</ul>
 					  </li>
+					  
 					  <li class="dropdown mega-dropdown"><a href="#"><i class="fa fa-motorcycle" aria-hidden="true" class="dropdown-toggle" data-toggle="dropdown"></i> ម៉ូតូ</a>
 					        <ul class="dropdown-menu mega-dropdown-menu">
 								<li>
@@ -215,6 +216,7 @@
 			                    
 							</ul>
 					  </li>
+					  
 					  <li class="dropdown mega-dropdown"><a href="#"><i class="fa fa-bicycle" aria-hidden="true" class="dropdown-toggle" data-toggle="dropdown"></i> កង់</a>
 					        <ul class="dropdown-menu mega-dropdown-menu">
 								<li>
@@ -256,12 +258,3 @@
 	 	  	   <!--  end category -->
 
 
- <script>
- $(document).ready(function(){
-	 var li = $("ul.nav li.dropdown").length+1;
-	 var total=-((42*li)+43)+'px';
-	 $('.mega-dropdown-menu').css({'margin-top':total}); 
- });
- 
- 
- </script>

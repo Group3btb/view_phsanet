@@ -66,7 +66,10 @@
 
 </body>
 <script>
-
+var li = $("ul.nav li.dropdown").length+1;
+var total=-((li*40)+279)+'px'
+/* var total=-((42*li)+43)+'px'; */
+$('.mega-dropdown-menu').css({'margin-top':total,'margin-left':'215px'}); 
 $(".dropdown").hover(            
         function() {
          $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).show();
@@ -78,6 +81,5 @@ $(".dropdown").hover(
          $(this).toggleClass('open');       
        }
       );
-$('.mega-dropdown-menu').css({'margin-top':'-431px','margin-left':'215px'});
 </script>
 </html>
