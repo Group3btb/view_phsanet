@@ -41,7 +41,7 @@
 					</div>
 
 					<!-- category item -->
-					<div class="col-md-9 col-sm-8 col-lg-9" ng-controller="ctrl">
+					<div class="col-md-9 col-sm-8 col-lg-9 cat" ng-controller="ctrl">
 						<%@ include file="include/cat-contents.jsp"%>
 					</div>
 					<!-- end category items -->

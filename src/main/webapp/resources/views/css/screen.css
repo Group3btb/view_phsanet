@@ -46,7 +46,7 @@
 	
 	.mega-dropdown-menu {
 	padding:10px;
-    margin-top:-210px;
+  
     width: 550px;
     margin-left:210px;
     box-shadow: none;
@@ -64,7 +64,6 @@
 	.menu{margin-top:0px;}
 	.mega-dropdown-menu {
 	padding:10px;
-    margin-top:-210px;
     width: 750px;
     margin-left:210px;
     box-shadow: none;
@@ -86,12 +85,10 @@
     .item-box{margin:0 auto; width:200px; border:solid 1px #dadada;}
 	.mega-dropdown-menu {
 		padding:10px;
-	    margin-top:-210px;
 	    width: 950px;
 	    margin-left:210px;
 	    box-shadow: none;
-	    -webkit-box-shadow: none;
-	   
+	    -webkit-box-shadow: none;  
 	   }
     .mega-dropdown-menu > li > ul {width:300px;float: left;}
     .menu{margrin-top:0px;}

@@ -101,7 +101,7 @@ li.dropdown.mega-dropdown a:hover{background-color:#428BCA}
 
 .item-box:hover{border:solid 1px #5BC0DE}
 .product-source{height:35px;border-bottom:1px solid #dadada;}
-.source-img a img{margin-left:5px; width:35px;height:35px;}
+.source-img a img{margin-left:5px; width:35px;height:35px; border:1px solid #5BC0DE}
 .source-img a{color:#428BCA;}
 .source-img a:hover{text-decoration: none;}
 .promotion{text-align: center;}
@@ -175,6 +175,7 @@ i.fa-trash-o{color:#C9302C;}
 .location span{height:40px; line-height:40px; color:#fff;}
 .location a{color: #fff;}
 .location span i{color:#fff}
+.cat{min-height:750px;}
 /* end filter  */
 
 /* modal account */

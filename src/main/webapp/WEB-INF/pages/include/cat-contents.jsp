@@ -13,7 +13,6 @@
 
 
 <div class="row">
-
 	<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 column productbox" ng-repeat="item in man">
 
 		<div class="item-box">
@@ -43,15 +42,5 @@
 	
 
 	
-	
-	
 </div>
-<div id="content">Dynamic page content</div>
 <div id="page-selection"></div>
-
-<!-- <dir-pagination-controls
-| itemsPerPage:12
-			 max-size="12"
-		     direction-links="true"
-			 boundary-links="true" >
-	</dir-pagination-controls>  -->

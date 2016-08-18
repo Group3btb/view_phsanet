@@ -2,11 +2,16 @@ var application=angular.module('app',['angularUtils.directives.dirPagination']);
 application.controller('ctrl',function($scope,$http){
 
 	
+var base_url="http://192.168.178.180:2222/api";	
 /*new lates scrap products*/
 	function new_product(){
 		$http({
 			method:'GET',
-			url:'http://192.168.178.180:2222/api/product?productname=&limit=5'
+			url:base_url+'/product',
+			params:{
+				   productname:"",
+				   limit:5
+			}
 	
 		}).then(function(respones){
 			$scope.lates=respones.data.DATA;
@@ -20,7 +25,11 @@ application.controller('ctrl',function($scope,$http){
 function new_fashion(){
 	$http({
 	  method:'GET',
-	  url:'http://192.168.178.180:2222/api/product?maincategory=Fashion&limit=10'
+	  url:base_url+'/product',
+	  params:{
+		     maincategory:"Fashion",
+		     limit:10
+		  }
 	}).then(function(respones){
 		$scope.fasions=respones.data.DATA;
 	},function(respones){
@@ -32,13 +41,18 @@ function new_fashion(){
 function new_phone(){
 	$http({
 		  method:'GET',
-		  url:'http://192.168.178.180:2222/api/product?maincategory=Phone&limit=10'
+		  url:base_url+'/product',
+		  params:{
+			  maincategory:"Phone",
+			  limit:10
+		  }
 		}).then(function(respones){
 			$scope.phone=respones.data.DATA;
 		},function(respones){
 			
 		});
 }
+
 var paging = {
 		limit: 12,
 		page: 1,
@@ -49,7 +63,7 @@ var paging = {
 function man_fashion(){
 	$http({
 		  method:'GET',
-		  url:'http://192.168.178.180:2222/api/product',
+		  url:base_url+'/product',
 		  params: paging
 		}).then(function(respones){
 			
