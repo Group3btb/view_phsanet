@@ -70,10 +70,13 @@
 									        <table class="table table-actions-bar m-b-0"><!-- <table class="table table-actions-bar m-b-0"> -->
                                             <thead>
                                                 <tr>
-                                                    <th style="max-width: 20px; text-align: center" ng-click="sort('category_id')">ID</th>
+                                                    <th style="max-width: 20px;text-align: center" ng-click="sort('maincategory_id')">ID</th>
                                                     <!-- <th style="text-align: center" ng-click="sort('category_name')">Category Name</th> -->
-                                                    <th style="text-align: center" ng-click="sort('main_category.category_name')">Main Category Name</th>
-                                                    <th style="text-align: center" ng-click="sort('main_category.main_cate.description')">Description</th>
+                                                    
+                                                    <td></td>
+                                                    
+                                                    <th style="" ng-click="sort('main_category.category_name')">Main Category Name</th>
+                                                    <th style="text-align: left" ng-click="sort('main_category.main_cate.description')" class="col-md-4">Description</th>
                                                     <th style="text-align: center">ACTION</th>
                                                 </tr>
                                             </thead>
@@ -81,9 +84,12 @@
                                              
                                                 <tr dir-paginate="main_cate in meain_category | filter:query | orderBy:sortKey:reverse |itemsPerPage:10">
                                                 
-        											<td>{{main_cate.maincategory_id}}</td>                                           
+        											<td style="text-align: center" class="col-md-1">{{main_cate.maincategory_id}}</td> 
+        											
+        											<td></td>
+        											                                          
                                                     <td >{{main_cate.category_name}}<!-- <input type="hidden" value="{{cate.description}}"> --></td>
-                                                    <td >{{main_cate.description}}<!-- <input type="hidden" value="{{cate.main_category.main_category_id}}"> --></td>
+                                                    <td>{{main_cate.description}}<!-- <input type="hidden" value="{{cate.main_category.main_category_id}}"> --></td>
                                                     <td style="text-align: center" class="col-md-3">
                                                     	<a href="#"  class="btn btn-info btn-md waves-effect waves-light" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="200" data-overlaycolor="#36404a"><i class="glyphicon glyphicon-eye-open"></i></a>
                                                     	<a href="javascript:" ng-click="getData(this)" class="btn btn-primary btn-md waves-effect waves-light call-modal_update"><i class="glyphicon glyphicon-pencil"></i></a>
