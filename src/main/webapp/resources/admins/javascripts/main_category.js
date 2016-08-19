@@ -1,110 +1,138 @@
-/**
- * 
- */
-           
-/*var app = angular.module("myApp", []);*/
-angular.module("myApp", []).controller("controller_maincategory", function($scope, $http) {
-	
-	$scope.findAll_main_category = function(){
+ var app = angular.module("MainCateapp",['angularUtils.directives.dirPagination']);
+ app.controller("controller_Maincategory",function($http,$scope){
 
-		$http({
-			url:'/maincategories',
-			method:'GET'
-		}).then(function(respone){
-			$scope.meain_category = respone.data.DATA;
-		},function(respone){
-			console.log(respone.data)
-			alert("Error");
+	 $scope.findAll_Maincategory = function(){
+ 		$http({
+ 			url:'/maincategories',
+ 			method:'GET'
+ 		}).then(function(respone){
+ 			$scope.meain_category = respone.data.DATA;
+ 		},function(respone){
+ 			alert("Failed to Load data from the Database");
+ 		});
+ 	};//end findall category
+
+ 	/*$scope.findAllMainCate = function(){
+ 		$http({
+ 			url:'/maincategories',
+ 			method : 'GET'
+ 		}).then(function(response){
+ 			$scope.maincates = response.data.DATA;
+ 		},function(response){
+ 			alert("Error");
+ 		});
+ 	};*///end findAllMainCate
+ 	
+ 	$scope.addMainCate = function(){
+ 		$http({
+ 			url: '/maincategories',
+ 			method: 'POST',
+ 			data: {
+ 				category_name:$scope.MainCategory_name,
+				description: $scope.MainCategory_desc
+ 			}
+ 		}).then(function(response){
+ 			$scope.findAll_Maincategory();
+ 			/*$socpe.cate_name = " ";
+ 			$scope.cate_desc = " ";*/
+ 			$scope.clear_data();
+ 			
+ 		}, function(response){
+ 			alert("Add failed!");
+ 		});
+ 	};//end add category
+ 	
+ 	$scope.getData = function(record){
+ 		$scope.MainCate_name_update = record.main_cate.category_name;
+ 		$scope.MainCate_desc_update = record.main_cate.description;
+ 		$scope.MainCate_id_update = record.main_cate.maincategory_id;
+ 		/*$scope.findAllMainCate();*/
+ 		/*$scope.main_cate = record.cate.main_category.maincategory_id;*/
+ 		/*alert($scope.cate_id_update);*/
+ 		//$scope.selected = "selected";
+ 	};//end function getData per record
+ 	
+ 	$scope.UpdateMainCate = function(){	  
+ 		swal({   
+			title: "Are you sure to update this record?",   
+			text: "You will not be able to roll back!",   
+			type: "warning",   
+			showCancelButton: true,   
+			confirmButtonColor: "#E98106",   
+			confirmButtonText: "Yes",   
+			cancelButtonText: "No",   
+			closeOnConfirm: false,   
+			closeOnCancel: false }, 
+		function(isConfirm){   
+			if (isConfirm) {     
+				$http({
+					url : '/maincategories',
+		 			method : 'PUT',
+		 			data : {
+		 				maincategory_id : $scope.MainCate_id_update,
+		 				category_name : $scope.MainCate_name_update,
+		 				description : $scope.MainCate_desc_update,
+		 				/*main_category:{
+		 					maincategory_id : $scope.main_cate
+		 				}*/
+		 			}
+				}).then(function(response){
+					swal("Updated!", "Your record updated!", "success");
+					$('.btn-danger').trigger('click');
+					$scope.findAll_Maincategory();
+					
+			},function(response){
+
+			});	  
+			}else {     
+				swal("Cancelled", "Your record has not been updated:)", "error");   
+			} 
 		});
-	}
-	$scope.findAll_main_category();
+ 	};//end update category
+ 	
+ 	$scope.deleteMainCate = function(id){
+		swal({   
+			title: "Are you sure to delete this record?",   
+			text: "You will not be able to recover this record!",   
+			type: "warning",   
+			showCancelButton: true,   
+			confirmButtonColor: "#ED0909",   
+			confirmButtonText: "Yes",   
+			cancelButtonText: "No",   
+			closeOnConfirm: false,   
+			closeOnCancel: false }, 
+		function(isConfirm){   
+			if (isConfirm) {     
+					$http({
+						url:'/maincategories/'+id,
+						method:'DELETE'
+					}).then(function(response){
+						swal("Deleted!", "Your record deleted!", "success");  
+						$scope.findAll_Maincategory();
+					},function(response){
 
-
-	$scope.save_main_category = function(){
-
-		$http({
-			url:'/maincategories',
-			method:'POST',
-			data:{
-				category_name:$scope.category_name,
-				description: $scope.descriptions
-			}
-		}).then(function(respone){
-			swal("Save Success", "", "success");
-			$scope.findAll_main_category();
-			$scope.clear_data();
-		},function(respone){
-			swal("please input main category", "", "error");
+				}); 
+			} else {     
+				swal("Cancelled", "Your record has not been deleted:)", "error");   
+			} 
 		});
-	} /// end method save main category
+ 	};// end delete category
+ 		
+ 	$scope.clear_data = function(){
+		$scope.MainCategory_name="";
+		$scope.MainCategory_desc="";	
+}
 
-	$scope.delete_main_category = function(id){
-			swal({   title: "Are you sure to delete ?",   text: "",   type: "warning",   showCancelButton: true,   confirmButtonColor: "#DD6B55",   confirmButtonText: "Yes, delete it!",   cancelButtonText: "No, cancel plx!",   closeOnConfirm: false,   closeOnCancel: false }, 
-				function(isConfirm){   
-					if (isConfirm) {
-					  	swal("Deleted!", "Your file has been deleted.", "success");  
-							
-							$http({
-							url:'/maincategories/'+id,
-								method:'delete'
-							}).then(function(respone){
-								
-							},function(respone){
-								
-							});
-
-					} else {
-			     swal("Cancelled", "Your file is safe :)", "error");  
-			 } });
-			
-			
-	}/// end method delete_main_category
-
-	$scope.update_main_category = function(){
-
-		$http({
-			url:'/maincategories',
-			method:'PUT',
-			data:{
-
-				category_name:$scope.update_maincategory_name,
-				maincategory_id:$scope.update_maincategory_id,
-				description: $scope.update_description
-			}
-		}).then(function(respone){
-			swal("Update Success", "", "success");
-			$scope.findAll_main_category();
-			$scope.clear_data();
-		},function(respone){
-			swal("Update  Fail", "", "error");
-		});
-	} /// end method save main category
-
-	$scope.getAllData = function(record){
-
-			$scope.update_maincategory_id 		= 	record.main_cate.maincategory_id;
-			$scope.update_maincategory_name 	= 	record.main_cate.category_name;
-			$scope.update_description 			= 	record.main_cate.description;
-
-	}
-
-	$scope.clear_data = function(){
-			$scope.category_name="";
-			$scope.descriptions="";	
-	}
+ 	$scope.findAll_Maincategory();
+ 	
+ 	
+ 	$scope.sort = function(keyname){
+        $scope.sortKey = keyname;   //set the sortKey to the param passed
+        $scope.reverse = !$scope.reverse; //if true make it false and vice versa
+    };//end sort function
+   
+   
+    
+ });// end controller
 
 
-
-
-})// end controller
-
-.filter('highlight', function($sce) {
-    return function(t, phrase) {
-        
-    	if (phrase) t = t.replace(new RegExp('('+phrase+')', 'gi'),
-        '<span class="highlighted">$1</span>')
-
-        return $sce.trustAsHtml(t)
-        
-      }
-    })

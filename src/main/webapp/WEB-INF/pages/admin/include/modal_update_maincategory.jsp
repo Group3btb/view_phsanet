@@ -1,44 +1,40 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    
-      <!-- Model -->
-        <div id="custom-modal" class="modal-demo">
+ <!-- Model -->
+        <div id="updateMainCate_model" class="modal-demo">
           <button type="button" class="close" onclick="Custombox.close();">
               <span>&times;</span><span class="sr-only">Close</span>
           </button>
-          <h4 class="custom-modal-title">Sub Category</h4>
+          <h4 class="custom-modal-title">Update Main Category</h4>
           <div class="custom-modal-text text-left">
                <form role="form">
                         <div class="form-group">
-                            <label for="name">search Category*</label>
-                            <input type="text" class="form-control" id="searchcategory" placeholder="Search">
+                            <label for="name">Main Category Name</label>
+                            <input ng-model="MainCate_name_update" type="text" class="form-control" id="cate_name" placeholder="Enter site name">
+                            <input type="hidden" value="{{MainCate_id_update}}">
                         </div> 
+                        
+                        <!-- <div class="form-group">
+                            <label for="name">ID</label>
+                            <input ng-model="MainCate_id_update" type="text" class="form-control" id="cate_desc" placeholder="Enter Description">
+                        </div>  -->                       
+                        
+                        
+                        <!-- <div class="form-group">
+                            <label for="name">Main Category</label>
+                            <select ng-change="changeCate(maincate)" ng-model="main_cate" class="form-control" 
+                            	ng-options="maincate.maincategory_id as maincate.category_name for maincate in maincates">
+							    <option value="">---Select Main Category---</option>
+							    <option ng-repeat="maincate in maincates" ng-value="maincate.maincategory_id">{{maincate.category_name}}</option>
+							</select>
+                        </div>  --> 
                         <div class="form-group">
-                             <label for="name">Category Name*</label>
-                              <select id="categoryname" class="form-control">
-                                <option>A</option>
-                                <option>B</option>
-                                <option>C</option>
-                                <option>D</option>
-                                <option>E</option>
-                                <option>F</option>
-                              </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="name">Category ID*</label>
-                            <input type="text" class="form-control" id="categoryid" placeholder="Category ID">
-                        </div>     
-                  
-                        <button type="button" class="btn btn-default waves-effect waves-light"  onclick="Custombox.close();" id="btnokay">Okay</button>
-                        <button type="button" class="btn btn-danger waves-effect waves-light m-l-10">Cancel</button>
+                            <label for="name">Description</label>
+                            <input ng-model="MainCate_desc_update" type="text" class="form-control" id="cate_desc" placeholder="Enter Description">
+                        </div>  
+                        <button ng-click="UpdateMainCate()" type="button" class="btn btn-default waves-effect waves-light"  id="btnokay">Update</button>
+                        <button type="button" onclick="Custombox.close();" class="btn btn-danger waves-effect waves-light m-l-10">Close</button>
                     </form>
           </div>
-          <script type="text/javascript">
-                      //var jq = $.noConflict();
-                      $(document).ready(function(){
-                          $("#btnokay").click(function(){
-                            alert("hello");
-                          });
-                      });
-          </script>
       </div>
+      
+      
+      
