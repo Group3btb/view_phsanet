@@ -10,8 +10,8 @@
 <script src="/resources/views/js/jssor.slider.min.js"></script>
 <script src="/resources/views/js/slider.js"></script>
 </head>
-<body>
-      <div id="body" ng-app="app">
+<body ng-app="app">
+      <div id="body" ng-controller="ctrl">
       
 <!--header -->
           <div class="header">
@@ -35,7 +35,7 @@
  <!--end menu -->   
  
  <!--content -->       
-        <div class="content" ng-controller="ctrl">
+        <div class="content" >
               <%@ include file="include/index-contents.jsp" %>
         </div>
  <!--end content -->    

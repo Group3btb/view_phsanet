@@ -41,14 +41,15 @@
 
 		</div>
 			
-			<div class="row">
+		<!-- 	<div class="row">
 				<div class="col-sm-12 title">
 					<span ​​ class="text-primary span">ទូរស័ព្ទដៃថ្មី</span>
 					<div class="border"></div>
 				</div>
 			</div>
-			
-			<div class="row">
+			 -->
+			 
+			<!-- <div class="row">
 				
                   <div class="col-xs-15 col-md-3 col-sm-3 column productbox" ng-repeat="item in phone">
 					
@@ -72,7 +73,7 @@
 				 </div>
 			
 		
-			</div>
+			</div> -->
 			
 		</div>
 	</div>

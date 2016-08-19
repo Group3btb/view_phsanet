@@ -1,8 +1,21 @@
 var application=angular.module('app',['angularUtils.directives.dirPagination']);
 application.controller('ctrl',function($scope,$http){
 
-	
 var base_url="http://192.168.178.180:2222/api";	
+
+/*main category*/
+function allcategory(){
+	$http({
+		url:base_url+'/listcategory',
+		method:'GET'
+	}).then(function(respones){
+		alert("success");
+		$scope.list_cat=respones.data.DATA;
+		console.log($scope.list_cat);
+	},function(error){});
+}
+
+
 /*new lates scrap products*/
 	function new_product(){
 		$http({
@@ -27,8 +40,8 @@ function new_fashion(){
 	  method:'GET',
 	  url:base_url+'/product',
 	  params:{
-		     maincategory:"Fashion",
-		     limit:10
+		    
+		     limit:15
 		  }
 	}).then(function(respones){
 		$scope.fasions=respones.data.DATA;
@@ -48,7 +61,6 @@ function new_phone(){
 		  }
 		}).then(function(respones){
 			$scope.phone=respones.data.DATA;
-			console.log($scope.phone);
 		},function(respones){
 			
 		});
@@ -67,7 +79,6 @@ function man_fashion(){
 		  url:base_url+'/product',
 		  params: paging
 		}).then(function(respones){
-			
 			$scope.man=respones.data.DATA;
 			$scope.total=respones.data.PAGE.TOTAL_PAGES;
 			paging.page = respones.data.PAGE.PAGE;
@@ -88,11 +99,31 @@ $('#page-selection').on("page", function(event, num){
 });
 
 
+
+/*save users*/
+$scope.saveUser=function(){
+	
+	$http({
+		url:base_url+'/user',
+		method:'POST',
+		data:{
+			"user_name":$scope.user_name,
+			"email":$scope.email,
+			"password":$scope.password
+		}
+	}).then(function(respones){
+		
+	},function(errors){
+		alert("eorr");
+	});
+	
+}
+
 new_product();
 new_fashion();	
 new_phone();
 man_fashion();	
-	
+allcategory();	
 	
 });
 
