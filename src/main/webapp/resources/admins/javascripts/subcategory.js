@@ -91,10 +91,36 @@ app.controller("controller_subcate", function($http, $scope){
 		});
  	};//end update sub category
  	
+ 	$scope.deleteSubCate = function(id){
+		swal({   
+			title: "Are you sure to delete this record?",   
+			text: "You will not be able to recover this record!",   
+			type: "warning",   
+			showCancelButton: true,   
+			confirmButtonColor: "#ED0909",   
+			confirmButtonText: "Yes",   
+			cancelButtonText: "No",   
+			closeOnConfirm: false,   
+			closeOnCancel: false }, 
+		function(isConfirm){   
+			if (isConfirm) {     
+					$http({
+						url:'/subcategory/'+id,
+						method:'DELETE'
+					}).then(function(response){
+						swal("Deleted!", "Your record deleted!", "success"); 
+						$scope.findAllSubCate();
+					},function(response){
+						swal("Failed!", "Delete Failed!", "error");	
+				}); 
+			} else {     
+				swal("Cancelled", "Your record has not been deleted", "error");   
+			} 
+		});
+ 	};// end delete category
  	
  	$scope.findAllSubCate();
 
- 	
  	
  	$scope.sort = function(keyname){
         $scope.sortKey = keyname;   //set the sortKey to the param passed

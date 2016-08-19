@@ -58,10 +58,10 @@ public class SubCategory {
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@RequestMapping(value={"/subcategories"} , method = RequestMethod.POST)
 	@ResponseBody
-	public ResponseEntity<Map<String,Object>> save_Categories(@RequestBody Category category){
+	public ResponseEntity<Map<String,Object>> save_SubCategories(@RequestBody phsanet.entitys.SubCategory subcategory){
 		
 		RestTemplate restTemplate = new RestTemplate();
-		HttpEntity<Object> request = new HttpEntity<Object>(category,new HttpHeaders());
+		HttpEntity<Object> request = new HttpEntity<Object>(subcategory,new HttpHeaders());
 		ResponseEntity<Map> response = restTemplate.exchange(
 					"http://localhost:2222/api/subcategory", 
 					HttpMethod.POST, 
@@ -75,10 +75,10 @@ public class SubCategory {
 	@SuppressWarnings("unchecked")
 	@RequestMapping(value={"/subcategories"} , method = RequestMethod.PUT)
 	@ResponseBody
-	public ResponseEntity<Map<String,Object>> update_Categories(@RequestBody Category category){
+	public ResponseEntity<Map<String,Object>> update_SubCategories(@RequestBody phsanet.entitys.SubCategory subcategory){
 		
 		RestTemplate restTemplate = new RestTemplate();
-		HttpEntity<Object> request = new HttpEntity<Object>(category,new HttpHeaders());
+		HttpEntity<Object> request = new HttpEntity<Object>(subcategory,new HttpHeaders());
 		@SuppressWarnings("rawtypes")
 		ResponseEntity<Map> response = restTemplate.exchange(
 					"http://localhost:2222/api/subcategory", 
@@ -94,11 +94,10 @@ public class SubCategory {
 	 * @return 
 	 */
 	@SuppressWarnings("unchecked")
-	@RequestMapping(value={"/subcategories/{id}"} , method = RequestMethod.DELETE)
+	@RequestMapping(value={"/subcategory/{id}"} , method = RequestMethod.DELETE)
 	@ResponseBody
-	public ResponseEntity<Map<String,Object>> delete_Categories(@PathVariable("id") int id){
-		
-		System.out.println("maincate ID "+id);
+	public ResponseEntity<Map<String,Object>> delete_SubCategories(@PathVariable("id") int id){
+		//System.out.println("view "+id);
 		RestTemplate restTemplate = new RestTemplate();
 		HttpEntity<Object> request = new HttpEntity<Object>(new HttpHeaders());
 		@SuppressWarnings("rawtypes")

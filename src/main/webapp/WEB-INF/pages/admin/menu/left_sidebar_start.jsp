@@ -10,7 +10,7 @@
                         <ul>
                           <li class="text-muted menu-title">Admin PhsarNet</li>
                             <li>
-                                <a href="index.html" class="waves-effect active"><i class="ti-home"></i> <span> Dashboard </span></a>
+                                <a href="admin" class="waves-effect active"><i class="ti-home"></i> <span> Dashboard </span></a>
                             </li>
                             <li class="has_sub">
                                 <a href="#" class="waves-effect"><i class="ti-menu-alt"></i><span>Manage Categories</span> </a>

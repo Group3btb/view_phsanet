@@ -26,8 +26,6 @@
 
 
     <body class="fixed-left" ng-cloak>
-
-       
         <!-- Begin page -->	
         <div id="wrapper" ng-controller="controller_category">
 
