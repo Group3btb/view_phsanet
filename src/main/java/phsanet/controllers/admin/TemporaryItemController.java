@@ -31,12 +31,26 @@ public class TemporaryItemController {
 		System.out.println("productname "+filter.getProductname());
 		System.out.println("subcategory "+filter.getSubcategoryname() +" productname "+ filter.getProductname()+" sub "+filter.getSubcategoryname());
 		
+		String http ="http://localhost:2222/api/temporary?productname=";
+		if(filter.getSubcategoryname()==null && filter.getProductname()!=null){
+			http="http://localhost:2222/api/temporary?productname="+filter.getProductname(); 
+		}
+		
+		if(filter.getSubcategoryname()!=null && filter.getProductname()!=null){
+			http="http://localhost:2222/api/temporary?productname="+filter.getProductname()+
+					"&subcategoryname="+filter.getSubcategoryname(); 
+		}
+		
+		if(filter.getSubcategoryname()!=null && filter.getProductname()==null){
+			http="http://localhost:2222/api/temporary?&subcategoryname="+filter.getSubcategoryname(); 
+		}
+		
+		
 		RestTemplate restTemplate = new RestTemplate();
 		HttpEntity<String> request = new HttpEntity<String>(new HttpHeaders());
 		@SuppressWarnings("rawtypes")
 		ResponseEntity<Map> response = restTemplate.exchange(
-				 							"http://localhost:2222/api/temporary?productname="+filter.getProductname()+"&subcategoryname="+filter.getSubcategoryname()
-				 							+"& limit="+filter.getLimit(), 
+				 							 http, 
 				 							HttpMethod.GET, 
 				 							request, 
 				 							Map.class);
