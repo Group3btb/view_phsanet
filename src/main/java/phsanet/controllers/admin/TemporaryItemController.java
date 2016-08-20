@@ -7,7 +7,6 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -33,16 +32,16 @@ public class TemporaryItemController {
 		
 		String http ="http://localhost:2222/api/temporary?productname=";
 		if(filter.getSubcategoryname()==null && filter.getProductname()!=null){
-			http="http://localhost:2222/api/temporary?productname="+filter.getProductname(); 
+			http="http://localhost:2222/api/temporary?productname="+filter.getProductname();
 		}
 		
 		if(filter.getSubcategoryname()!=null && filter.getProductname()!=null){
 			http="http://localhost:2222/api/temporary?productname="+filter.getProductname()+
-					"&subcategoryname="+filter.getSubcategoryname(); 
+					"&subcategoryname="+filter.getSubcategoryname();
 		}
 		
 		if(filter.getSubcategoryname()!=null && filter.getProductname()==null){
-			http="http://localhost:2222/api/temporary?&subcategoryname="+filter.getSubcategoryname(); 
+			http="http://localhost:2222/api/temporary?subcategoryname="+filter.getSubcategoryname();
 		}
 		
 		
