@@ -13,3 +13,5 @@
 <script src="/resources/views/js/retrive_datas.js"></script>
 <script src="/resources/views/js/dirPagination.js"></script>
 <script src="/resources/views/js/jquery.bootpag.min.js"></script>
+<script src="/resources/views/js/sweetalert.min.js"></script> 
+<link rel="stylesheet" type="text/css" href="/resources/views/css/sweetalert.css">

@@ -42,8 +42,8 @@
  
  <!--resource -->  
         <div class="re-title​">
-			<div class="container" style="padding:0px;">
-				<span class="span text-primary">ប្រភពមកពី</span>
+			<div class="container text-center" style="padding:0px;">
+				<span class="span">Ours Resources</span>
 			</div>
         </div>
      
