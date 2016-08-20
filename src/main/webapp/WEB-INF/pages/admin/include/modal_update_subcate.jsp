@@ -13,7 +13,7 @@
                         </div> 
                         
                         <div class="form-group">
-                            <label for="name">Main Category</label>
+                            <label for="name">Category</label>
                             <select ng-change="changeSubCate(maincate)" ng-model="cate" class="form-control" 
                             	ng-options="category.category_id as category.category_name for category in categories">
 							    <option value="">---Select Category---</option>
