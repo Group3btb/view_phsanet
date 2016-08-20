@@ -4,7 +4,7 @@
 .nav-header{background-color:#428BCA;}
 .nav-header a{color:#fff;}
 i{color:#fff;}
-ul.nav li a:hover{
+ul.nav li a:hover,ul.nav li a:visited.account{
    background-color:#428BCA;
    color:#fff;
    text-decoration:underline;
@@ -180,7 +180,7 @@ i.fa-trash-o{color:#C9302C;}
 /* end filter  */
 
 /* modal account */
-.modal-header{background-color:#5cb85c; color:#fff; }
+.modal-header{background-color:#5BC0DE; color:#fff; }
 
 .modal-body div span i{color:#000;}
 

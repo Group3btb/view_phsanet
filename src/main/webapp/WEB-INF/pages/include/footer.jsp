@@ -5,15 +5,15 @@
 		<div class="row">
 			<div class="col-md-6 col-sm-6">
 				<span class="footer-span font">Copyrights &#169;
-					រក្សាសិទ្ធិគ្រប់យ៉ាងដោយ​ផ្សារនែត</span>
+					Phsanet.com</span>
 			</div>
 
 			<div class="col-md-6 col-sm-6 text-right" style="padding:0px;">
 				<ul ​ class="foot-ul">
 					<li><a href=""><i class="fa fa-volume-control-phone"></i>
-							ទំនាក់ទំនង</a></li>
+							Contact Us</a></li>
 					<li>|</li>
-					<li><a href=""><i class="fa fa-users"></i> អំពីយើង</a></li>
+					<li><a href=""><i class="fa fa-users"></i> About Us</a></li>
 				</ul>
 			</div>
 

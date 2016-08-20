@@ -26,16 +26,16 @@
 							<option>ទូរស័ព្ទ</option>
 							<option>កុំព្យូទ័រ</option>
 						</select> 
-						<input type="text" class="form-control" id="form-search"  placeholder="ស្វែងរក">
+						<input type="text" class="form-control" id="form-search"  placeholder="Enter keyword...">
 						<button type="submit"  class="btn btn-search">
-							<i class="fa fa-search"></i> ស្វែងរក
+							<i class="fa fa-search"></i> Search
 						</button>
 					</div>
 				</form>
 
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="" data-toggle="modal" data-target="#login"><i class="fa fa-sign-in"></i>ចូលប្រើប្រាស់</a></li>
-					<li><a href="" data-toggle="modal" data-target="#register"><i class="fa fa-users"></i>ចុះឈ្មោះ</a></li> 
+					<li><a class="account" href="" data-toggle="modal" data-target="#login"><i class="fa fa-sign-in"></i> Sign In</a></li>
+					<li><a class="account" href="" data-toggle="modal" data-target="#register"><i class="fa fa-users"></i> Register</a></li> 
 				</ul>
                     
 			</div>

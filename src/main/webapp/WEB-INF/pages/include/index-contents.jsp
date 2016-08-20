@@ -6,10 +6,9 @@
 		<div class="items">
 	
 			
-			
 			<div class="row">
-				<div class="col-sm-12">
-					<span ​​ class="text-primary span">សម្លៀកបំពាក់ថ្មី</span>
+				<div class="col-sm-12 text-center">
+					<span ​​ class="span">New Fashions</span>
 					<div class="border"></div>
 				</div>
 			</div>
@@ -30,7 +29,7 @@
 						<div class="producttitle">{{item.product_name | myFilter}}</div>
 						<div class="productprice">
 							<div class="pull-right">
-								<a href="#" title="រក្សាទុក" class="pricetext"> <i
+								<a href="" data-toggle="modal" data-target="#login"  title="រក្សាទុក" class="pricetext"> <i
 									class="fa fa-bookmark-o"></i></a>
 							</div>
 							<div class="pricetext">{{item.price}}</div>
