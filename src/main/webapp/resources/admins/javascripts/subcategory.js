@@ -7,7 +7,7 @@ app.controller("controller_subcate", function($http, $scope){
  		}).then(function(respone){
  			$scope.subcates = respone.data.DATA;
  		},function(respone){
- 			alert("Error");
+ 			alert("Failed to load Subcategories");
  		});
  	};//end find all sub category
  	
@@ -18,7 +18,7 @@ app.controller("controller_subcate", function($http, $scope){
  		}).then(function(respone){
  			$scope.categories = respone.data.DATA;
  		},function(respone){
- 			alert("Error");
+ 			alert("Failed to Load Category");
  		});
  	};//end find all category
  	
@@ -38,7 +38,7 @@ app.controller("controller_subcate", function($http, $scope){
  			$socpe.subcate_name = " ";
  			$scope.subcate_desc = " ";
  		}, function(response){
- 			alert("Add failed");
+ 			alert("Failed to Add Subcategory!");
  		});
  	};//end add sub category
  	
@@ -77,13 +77,12 @@ app.controller("controller_subcate", function($http, $scope){
 		 				subcategory_name: $scope.subcate_name_update
 		 			}
 				}).then(function(response){
-					alert("Update Success!");
 					swal("Updated!", "Your record updated!", "success");
 					$('.btn-danger').trigger('click');
 					$scope.findAllSubCate();
 					
 			},function(response){
-				alert("Update Faile");
+				swal("Failed!", "Failed to Update Record!", "error");
 			});	  
 			}else {     
 				swal("Cancelled", "Your record has not been updated:)", "error");   
