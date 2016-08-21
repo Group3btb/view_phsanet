@@ -1,7 +1,7 @@
 var application=angular.module('app',['angularUtils.directives.dirPagination']);
 application.controller('ctrl',function($scope,$http){
 
-var base_url="http://192.168.178.180:2222/api";	
+var base_url="http://192.168.178.175:2222/api";	
 
 /*main category*/
 function allcategory(){

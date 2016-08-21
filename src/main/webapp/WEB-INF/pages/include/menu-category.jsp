@@ -43,7 +43,7 @@
 
  
 
-					  <li class="dropdown mega-dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-gift" aria-hidden="true"></i> គ្រឿងអលង្ការ</a>
+					 <!--  <li class="dropdown mega-dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-gift" aria-hidden="true"></i> គ្រឿងអលង្ការ</a>
 					        <ul class="dropdown-menu mega-dropdown-menu">
 								<li>
 			    					<ul>
@@ -77,9 +77,9 @@
 							</ul>
 					 
 					  
-					  </li>
+					  </li> -->
 					  
-					  <li class="dropdown mega-dropdown"><a href="#"><i class="fa fa-laptop" aria-hidden="true"></i> កំព្យូទ័រ</a>
+					  <!-- <li class="dropdown mega-dropdown"><a href="#"><i class="fa fa-laptop" aria-hidden="true"></i> កំព្យូទ័រ</a>
 					        <ul class="dropdown-menu mega-dropdown-menu">
 								<li>
 			    					<ul>
@@ -113,8 +113,8 @@
 			                    
 							</ul>
 					  </li>
-					 
-					  <li class="dropdown mega-dropdown"><a href="#"><i class="fa fa-tablet" aria-hidden="true" class="dropdown-toggle" data-toggle="dropdown"></i> ទូរស័ព្ទដៃ</a>
+					  -->
+					  <!-- <li class="dropdown mega-dropdown"><a href="#"><i class="fa fa-tablet" aria-hidden="true" class="dropdown-toggle" data-toggle="dropdown"></i> ទូរស័ព្ទដៃ</a>
 					        <ul class="dropdown-menu mega-dropdown-menu">
 								<li>
 			    					<ul>
@@ -146,9 +146,9 @@
 
 			                    
 							</ul>
-					  </li>
+					  </li> -->
 					   
-					  <li class="dropdown mega-dropdown"><a href="#"><i class="fa fa-car" aria-hidden="true" class="dropdown-toggle" data-toggle="dropdown"></i> ឡាន</a>
+					 <!--  <li class="dropdown mega-dropdown"><a href="#"><i class="fa fa-car" aria-hidden="true" class="dropdown-toggle" data-toggle="dropdown"></i> ឡាន</a>
 					        <ul class="dropdown-menu mega-dropdown-menu">
 								<li>
 			    					<ul>
@@ -180,9 +180,9 @@
 
 			                    
 							</ul>
-					  </li>
+					  </li> -->
 					  
-					  <li class="dropdown mega-dropdown"><a href="#"><i class="fa fa-motorcycle" aria-hidden="true" class="dropdown-toggle" data-toggle="dropdown"></i> ម៉ូតូ</a>
+					 <!--  <li class="dropdown mega-dropdown"><a href="#"><i class="fa fa-motorcycle" aria-hidden="true" class="dropdown-toggle" data-toggle="dropdown"></i> ម៉ូតូ</a>
 					        <ul class="dropdown-menu mega-dropdown-menu">
 								<li>
 			    					<ul>
@@ -214,9 +214,9 @@
 
 			                    
 							</ul>
-					  </li>
+					  </li> -->
 					  
-					  <li class="dropdown mega-dropdown"><a href="#"><i class="fa fa-bicycle" aria-hidden="true" class="dropdown-toggle" data-toggle="dropdown"></i> កង់</a>
+					<!--   <li class="dropdown mega-dropdown"><a href="#"><i class="fa fa-bicycle" aria-hidden="true" class="dropdown-toggle" data-toggle="dropdown"></i> កង់</a>
 					        <ul class="dropdown-menu mega-dropdown-menu">
 								<li>
 			    					<ul>
@@ -246,7 +246,7 @@
 									</ul>
 								</li>  
 							</ul>
-					  </li>
+					  </li> -->
 					  
 					  
 					   
