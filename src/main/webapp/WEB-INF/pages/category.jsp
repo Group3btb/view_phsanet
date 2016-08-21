@@ -5,10 +5,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Categories | phsanet.com</title>
+
+
+
+</script>
 <%@ include file="include/head.jsp"%>
+
 </head>
 <body>
-	<div id="body" ng-app="app">
+	<div id="body" ng-app="app" ng-controller="ctrl">
 
 		<!-- header -->
 		<div class="header">
@@ -41,7 +46,7 @@
 					</div>
 
 					<!-- category item -->
-					<div class="col-md-9 col-sm-8 col-lg-9 cat" ng-controller="ctrl">
+					<div class="col-md-9 col-sm-8 col-lg-9 cat">
 						<%@ include file="include/cat-contents.jsp"%>
 					</div>
 					<!-- end category items -->
@@ -66,20 +71,43 @@
 
 </body>
 <script>
-var li = $("ul.nav li.dropdown").length+1;
-var total=-((li*40)+279)+'px'
-/* var total=-((42*li)+43)+'px'; */
-$('.mega-dropdown-menu').css({'margin-top':total,'margin-left':'215px'}); 
-$(".dropdown").hover(            
-        function() {
-         $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).show();
-         $(this).toggleClass('open');
-      
-        },
-        function() {
-         $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).hide();
-         $(this).toggleClass('open');       
-       }
-      );
+$(document).ready(function(){
+	
+
+	/* var li = $("ul.nav li.dropdown").length+1;
+	var total=-((li*40)+279)+'px'
+	/* var total=-((42*li)+43)+'px'; */
+	/* $('.mega-dropdown-menu').css({'margin-top':total,'margin-left':'215px'}); */ 
+	/* $(".dropdown").hover(            
+	        function() {
+	         $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).show();
+	         $(this).toggleClass('open');
+	        },
+	        function() {
+	         $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).hide();
+	         $(this).toggleClass('open');       
+	       }
+	      );
+	  */
+	  
+	  
+	$(document).ready(function(){
+		
+		$(document).on({
+		    mouseenter: function () {
+		    	$('.mega-dropdown-menu').css({'margin-left':'215px','margin-top':'-599px','min-height':'380px'}); 
+		    	$('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).show(0);
+		    	$(this).toggleClass('open');  
+		    },
+		    mouseleave: function () {
+		    	$('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).hide(0);
+		        $(this).toggleClass('open');
+		    }
+		}, ".dropdown"); 
+
+	});
+});
+
+
 </script>
 </html>

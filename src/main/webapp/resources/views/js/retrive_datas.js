@@ -20,8 +20,8 @@ function allcategory(){
 			method:'GET',
 			url:base_url+'/product',
 			params:{
-				   productname:"",
-				   limit:5
+				
+				   limit:15
 			}
 	
 		}).then(function(respones){
@@ -37,7 +37,7 @@ function new_fashion(){
 	  method:'GET',
 	  url:base_url+'/product',
 	  params:{
-		    
+		     productname:"Fashion",
 		     limit:15
 		  }
 	}).then(function(respones){
@@ -54,7 +54,7 @@ function new_phone(){
 		  method:'GET',
 		  url:base_url+'/product',
 		  params:{
-			  maincategory:"Phone",
+			  productname:"Mobile",
 			  limit:10
 		  }
 		}).then(function(respones){

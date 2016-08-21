@@ -62,20 +62,25 @@
 </div>
 <script>
 $(document).ready(function(){
+	
 	 var li = $("ul.nav li.dropdown").length+1;
-	 var total=-((42*li)+43)+'px';
-	 $('.mega-dropdown-menu').css({'margin-top':total}); 
 
-$(".dropdown").hover(            
-        function() {
-         $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).show();
-         $(this).toggleClass('open');        
-        },
-        function() {
-         $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).hide();
-         $(this).toggleClass('open');       
-       }
-      );
+	 //var total=-((42*li)+43)+'px';
+	 
+	 
+	$(document).on({
+	    mouseenter: function () {
+	    	var t=
+	    	$('.mega-dropdown-menu').css({'margin-top':'-379px','min-height':'380px'});
+	    	$('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).show();
+	    	$(this).toggleClass('open');  
+	    },
+	    mouseleave: function () {
+	    	$('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).hide();
+	        $(this).toggleClass('open');
+	    }
+	}, ".dropdown"); 
+
 });
 </script>
 </body>

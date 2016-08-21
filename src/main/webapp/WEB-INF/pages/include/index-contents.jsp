@@ -8,15 +8,15 @@
 			
 			<div class="row">
 				<div class="col-sm-12 text-center">
-					<span ​​ class="span">New Fashions</span>
+					<span ​​ class="span">New late</span>
 					<div class="border"></div>
 				</div>
 			</div>
 			
-			
+
 			<div class="row">
 			
-					<div class="col-xs-15 col-md-3 col-sm-3 column productbox" ng-repeat="item in fasions">
+					<div class="col-xs-15 col-md-3 col-sm-3 column productbox" ng-repeat="item in lates">
 					
 					<div class="item-box">
 						<div class="product-source">
@@ -39,18 +39,10 @@
 
 
 		</div>
+		
+			<div class="row">
 			
-		<!-- 	<div class="row">
-				<div class="col-sm-12 title">
-					<span ​​ class="text-primary span">ទូរស័ព្ទដៃថ្មី</span>
-					<div class="border"></div>
-				</div>
-			</div>
-			 -->
-			 
-			<!-- <div class="row">
-				
-                  <div class="col-xs-15 col-md-3 col-sm-3 column productbox" ng-repeat="item in phone">
+					<div class="col-xs-15 col-md-3 col-sm-3 column productbox" ng-repeat="item in phone">
 					
 					<div class="item-box">
 						<div class="product-source">
@@ -63,17 +55,17 @@
 						<div class="producttitle">{{item.product_name | myFilter}}</div>
 						<div class="productprice">
 							<div class="pull-right">
-								<a href="#" title="រក្សាទុក" class="pricetext"> <i
+								<a href="" data-toggle="modal" data-target="#login"  title="រក្សាទុក" class="pricetext"> <i
 									class="fa fa-bookmark-o"></i></a>
 							</div>
 							<div class="pricetext">{{item.price}}</div>
 						</div>
 					</div>
 				 </div>
-			
+
+
+		</div>
 		
-			</div> -->
-			
 		</div>
 	</div>
 </div>
