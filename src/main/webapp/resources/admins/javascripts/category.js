@@ -19,7 +19,7 @@
  		}).then(function(response){
  			$scope.maincates = response.data.DATA;
  		},function(response){
- 			alert("Error");
+ 			alert("Failed to Load Main Category");
  		});
  	};//end findAllMainCate
  	
@@ -37,7 +37,7 @@
  			$socpe.cate_name = " ";
  			$scope.cate_desc = " ";
  		}, function(response){
- 			alert("Add failed!");
+ 			alert("Failed to Add Category");
  		});
  	};//end add category
  	
@@ -81,7 +81,7 @@
 					$scope.findAll_category();
 					
 			},function(response){
-
+				swal("Failed", "Update Record Failed!", "error");
 			});	  
 			}else {     
 				swal("Cancelled", "Your record has not been updated:)", "error");   
@@ -109,10 +109,10 @@
 						swal("Deleted!", "Your record deleted!", "success");  
 						$scope.findAll_category();
 					},function(response){
-
+						swal("Failed", "Delete Failed!", "error"); 
 				}); 
 			} else {     
-				swal("Cancelled", "Your record has not been deleted:)", "error");   
+				swal("Cancelled", "Your record has not been deleted.", "error");   
 			} 
 		});
  	};// end delete category

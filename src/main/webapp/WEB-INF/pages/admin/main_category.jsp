@@ -20,6 +20,8 @@
 			th {
 			    cursor:pointer;
 			}
+			
+			.highlighted { background: yellow }
        	</style>
        	
     </head>
@@ -84,12 +86,12 @@
                                              
                                                 <tr dir-paginate="main_cate in meain_category | filter:query | orderBy:sortKey:reverse |itemsPerPage:10">
                                                 
-        											<td style="text-align: center" class="col-md-1">{{main_cate.maincategory_id}}</td> 
+        											<td style="text-align: center" class="col-md-1"><!-- <input type="hidden" value="{{main_cate.maincategory_id}}"> -->{{main_cate.maincategory_id}}</td> 
         											
         											<td></td>
         											                                          
-                                                    <td >{{main_cate.category_name}}<!-- <input type="hidden" value="{{cate.description}}"> --></td>
-                                                    <td>{{main_cate.description}}<!-- <input type="hidden" value="{{cate.main_category.main_category_id}}"> --></td>
+                                                    <td  ng-bind-html="main_cate.category_name |highlight:query"><!-- {{main_cate.category_name}} --><input type="hidden" value="{{main_cate.category_name}}"></td>
+                                                    <td  ng-bind-html="main_cate.description |highlight:query"><!-- {{main_cate.description}} --><input type="hidden" value="{{main_cate.description}}"></td>
                                                     <td style="text-align: center" class="col-md-3">
                                                     	<a href="#"  class="btn btn-info btn-md waves-effect waves-light" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="200" data-overlaycolor="#36404a"><i class="glyphicon glyphicon-eye-open"></i></a>
                                                     	<a href="javascript:" ng-click="getData(this)" class="btn btn-primary btn-md waves-effect waves-light call-modal_update"><i class="glyphicon glyphicon-pencil"></i></a>

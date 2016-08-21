@@ -13,9 +13,9 @@
                         </div> 
                         
                         <div class="form-group">
-                            <label for="name">Category</label>
-                            <select ng-change="changeSubCate(maincate)" ng-model="cate" class="form-control" 
-                            	ng-options="category.category_id as category.category_name for category in categories">
+                            <label for="name">SubCategory</label>
+                            <select ng-change="changeSubCate(sub)" ng-model="sub" class="form-control" 
+                            	ng-options="sub as sub.subcategory_name for sub in subs">
 							    <option value="">---Select Category---</option>
 							</select>
                         </div>  

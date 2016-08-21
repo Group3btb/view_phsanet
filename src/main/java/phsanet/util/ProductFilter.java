@@ -5,6 +5,7 @@ public class ProductFilter {
 	private String maincategory;
 	private String category;
 	private int limit;
+	private int page;
 	
 	public String getMaincategory() {
 		return maincategory;
@@ -51,6 +52,12 @@ public class ProductFilter {
 	}
 	public void setLimit(int limit) {
 		this.limit = limit;
+	}
+	public int getPage() {
+		return page;
+	}
+	public void setPage(int page) {
+		this.page = page;
 	}
 	
 }

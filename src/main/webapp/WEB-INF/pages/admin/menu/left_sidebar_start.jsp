@@ -21,14 +21,14 @@
                                 </ul>
                             </li>
                              <li class="has_sub">
-                                <a href="#" class="waves-effect"><i class="ti-menu-alt"></i><span>Management Site</span> </a>
+                                <a href="#" class="waves-effect"><i class="ti-layers"></i><span>Manage Site</span> </a>
                                 <ul class="list-unstyled">
                                     <li><a href="site">Site Management</a></li>
                                     <li><a href="sitedetail">Site Detail</a></li>
                                 </ul>
                             </li>
                              <li class="has_sub">
-                                <a href="#" class="waves-effect"><i class="ti-menu-alt"></i><span>Manage Scrape</span> </a>
+                                <a href="#" class="waves-effect"><i class="ti-harddrives"></i><span>Manage Scrape</span> </a>
                                 <ul class="list-unstyled">
                                     <li><a href="site">URL Scrape</a></li>
                                 </ul>

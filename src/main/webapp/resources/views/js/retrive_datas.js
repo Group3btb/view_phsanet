@@ -9,12 +9,10 @@ function allcategory(){
 		url:base_url+'/listcategory',
 		method:'GET'
 	}).then(function(respones){
-		alert("success");
 		$scope.list_cat=respones.data.DATA;
 		console.log($scope.list_cat);
 	},function(error){});
 }
-
 
 /*new lates scrap products*/
 	function new_product(){
@@ -33,7 +31,6 @@ function allcategory(){
 		});
 	}
 	
-	
 /*new lates scrap fashions*/
 function new_fashion(){
 	$http({
@@ -45,6 +42,7 @@ function new_fashion(){
 		  }
 	}).then(function(respones){
 		$scope.fasions=respones.data.DATA;
+		
 	},function(respones){
 		
 	});
@@ -102,7 +100,6 @@ $('#page-selection').on("page", function(event, num){
 
 /*save users*/
 $scope.saveUser=function(){
-	
 	$http({
 		url:base_url+'/user',
 		method:'POST',
@@ -112,11 +109,25 @@ $scope.saveUser=function(){
 			"password":$scope.password
 		}
 	}).then(function(respones){
-		
+		message("User has been save","Login","success");
+		clear();
 	},function(errors){
-		alert("eorr");
+		message("User has been faild","Login Faild","error");
 	});
 	
+}
+
+/*message success*/
+function message(title,status,type){
+  swal(title,status,type)
+}
+/*clear input text*/
+function clear(){
+   $scope.user_name="";
+   $scope.email="";
+   $scope.password="";
+   $scope.c_password="";
+   $('#register').trigger('click');
 }
 
 new_product();
