@@ -69,18 +69,22 @@ $('#page-selection').on("page", function(event, num){
 	$scope.update_subcategory = function(){
 
  	$http({
- 		url:'/subcategories',
-			method:'UPT'
+ 			url 	:'/temporary',
+			method	:'PUT',
+			data 	:{
+				product_id 		: $scope.product_id,				
+				subcategory     :{subcategory_id : $scope.subcategory_id}
+			}
 
  	}).then(function(respone){
-
+ 		swal("Updated!", "Your record updated!", "success");
  	},function(respone){
-
+ 		alert("Error");
  	});
  }
 
  $scope.getData = function(record){
- 	alert(record);
+ 	$scope.product_id = record;
  }
 
 
@@ -128,6 +132,8 @@ $('#page-selection').on("page", function(event, num){
 
  $scope.changeSubCate = function(record){
  	//alert(record.subcategory_id);
+ 	$scope.subcategory_id = record.subcategory_id;
+ 	alert($scope.subcategory_id);
  	$scope.subcate_desc_update = record.description;
  }
 
