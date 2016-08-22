@@ -23,7 +23,7 @@
                             <label for="name">Description</label>
                             <input ng-model="subcate_desc_update" type="text" class="form-control" id="cate_desc" placeholder="Enter Description">
                         </div>  
-                        <button ng-click="UpdateSubCate()" type="button" class="btn btn-default waves-effect waves-light"  id="btnokay">Update</button>
+                        <button ng-click="update_subcategory()" type="button" class="btn btn-default waves-effect waves-light"  id="btnokay">Update</button>
                         <button type="button" onclick="Custombox.close();" class="btn btn-danger waves-effect waves-light m-l-10">Close</button>
                     </form>
           </div>
