@@ -19,7 +19,8 @@
         <script src="/resources/admins/pages/jquery-1.12.4.js"></script> 
         <script src="/resources/admins/js/angular.min.js"></script>
         <script src="/resources/admins/js/dirPagination.js"></script>
-
+		<script src="/resources/admins/js/jquery.bootpage.min.js"></script>
+		
 		<!-- sweet alert -->
 		<script src="/resources/admins/dist/sweetalert.min.js"></script>
 		<link rel="stylesheet" type="text/css"href="/resources/admins/dist/sweetalert.css">
