@@ -1,6 +1,8 @@
 package phsanet.controllers.admin;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
@@ -21,6 +23,9 @@ import phsanet.util.ProductFilter;
 
 @Controller
 public class TemporaryItemController {
+	
+	
+	
 	
 	@RequestMapping(value={"/temporary"})
 	public String temporary_item(){
@@ -75,6 +80,24 @@ public class TemporaryItemController {
 				HttpMethod.PUT,
 				request,
 				Map.class);
+		return new ResponseEntity<Map<String,Object>>(map,HttpStatus.OK);
+	}
+	
+	
+	@SuppressWarnings({ "unused", "rawtypes" })
+	@RequestMapping(value={"/temporary/status"},method = RequestMethod.POST)
+	public ResponseEntity<Map<String,Object>> temporary_into_product(@RequestBody List<Object> allid){
+		System.out.println("all ID " + allid);
+		String http="http://localhost:2222/api/temporary/status";
+		
+		Map<String,Object> map = new HashMap<String,Object>();
+		RestTemplate resttemplate = new RestTemplate();
+		HttpEntity<Object> request = new HttpEntity<Object>(allid,new HttpHeaders());
+		ResponseEntity<Map> respone = resttemplate.exchange(http,
+				HttpMethod.POST,
+				request,
+				Map.class);
+		
 		return new ResponseEntity<Map<String,Object>>(map,HttpStatus.OK);
 	}
 	

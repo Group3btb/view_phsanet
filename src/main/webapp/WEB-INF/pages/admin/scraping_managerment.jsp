@@ -27,8 +27,8 @@ html4/loose.dtd">
 
 
             <!-- ========== Left Sidebar Start ========== -->
-			 	<jsp:include page="/WEB-INF/pages/admin/menu/left_sidebar_start.jsp"></jsp:include>
-      		<!-- Left Sidebar End -->
+			 	     <jsp:include page="/WEB-INF/pages/admin/menu/left_sidebar_start.jsp"></jsp:include>
+      		  <!-- Left Sidebar End -->
 
 
 

@@ -79,7 +79,7 @@ $('#page-selection').on("page", function(event, num){
  	}).then(function(respone){
  		swal("Updated!", "Your record updated!", "success");
  	},function(respone){
- 		alert("Error");
+ 		alert("Error");										
  	});
  }
 
@@ -128,7 +128,24 @@ $('#page-selection').on("page", function(event, num){
  		}
  	});
  	console.log($scope.idToUpdate);
+
+ 	$http({
+
+ 		url 	:'/temporary/status',
+ 		method  : 'POST',
+ 		data    :$scope.idToUpdate
+
+
+ 	}).then(function(respone){
+ 		$scope.find_all_temporary_item();
+ 	},function(respone){
+ 		alert("Error");
+ 	});
+
  }
+
+
+
 
  $scope.changeSubCate = function(record){
  	//alert(record.subcategory_id);
