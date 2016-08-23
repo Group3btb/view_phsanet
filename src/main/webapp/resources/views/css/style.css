@@ -1,4 +1,4 @@
-
+body{overflow:hidden;}
 #body{ padding: 0px; margin: 0px;padding-top: 70px;}
 .header{width:100%; background-color:#428BCA;}
 .nav-header{background-color:#428BCA;}
@@ -9,7 +9,7 @@ ul.nav li a:hover,ul.nav li a:visited.account{
    color:#fff;
    text-decoration:underline;
 }
-option,.option {color:#428BCA; }
+.option {color:#428BCA;}
 .btn-search,.btn-search i{background-color:#F1F1F1; color:#428BCA; }
 form.navbar-form{margin-left:0px;}
 /* category */
@@ -40,7 +40,7 @@ li.dropdown.mega-dropdown a:hover{background-color:#428BCA}
 }
 .mega-dropdown-menu .dropdown-header {
   font-size: 18px;
-  color: #ff3546;
+  color:#428BCA;
   padding: 5px 60px 5px 5px;
   line-height: 30px;
 }
@@ -91,7 +91,7 @@ li.dropdown.mega-dropdown a:hover{background-color:#428BCA}
 .list-itmes{width:100%;margin-top: -10px;}
 .items{width:100%;}
 .border{clear:both; border-bottom: 1px solid #ccc;}
-.span{font-size:20px;}
+.span{font-size:20px; margin-left:13px;}
 .productbox {
     background-color:#ffffff;
     padding:10px;
@@ -179,6 +179,11 @@ i.fa-trash-o{color:#C9302C;}
 .cat{min-height:750px;}
 /* end filter  */
 
+
+/* users */
+.setting span i{color: #000;}
+.setting img{margin-bottom:20px;}
+/* end users */
 /* modal account */
 .modal-header{background-color:#5BC0DE; color:#fff; }
 

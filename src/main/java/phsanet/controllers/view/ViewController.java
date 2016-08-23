@@ -1,7 +1,9 @@
 package phsanet.controllers.view;
 
 import org.springframework.stereotype.Controller;
+
 import org.springframework.web.bind.annotation.RequestMapping;
+
 
 @Controller
 public class ViewController {
@@ -13,16 +15,20 @@ public class ViewController {
 	
 	@RequestMapping(value={"/cat"})
 	public String allcat(){
+	
 		return "category";
 	}
+
 	
-	@RequestMapping(value={"/user","/user/savelist"})
+	@RequestMapping(value={"/user/savelist"})
 	public String savelist(){
 		return "users/index";
 	}
 
-	@RequestMapping(value={"/register"})
-	public String register(){
-		return "include/register";
+	@RequestMapping(value={"/user/edit"})
+	public String user(){
+		return "users/users";
 	}
+	
+	
 }

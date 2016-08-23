@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%> 
-    
-    
-   <%@include file="account.jsp" %>
+        
+<%@include file="account.jsp" %>
 <nav class="navbar navbar-fixed-top  nav-header" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
@@ -19,17 +18,16 @@
 			<div class="select collapse navbar-collapse navbar-ex1-collapse">
 				<form class="navbar-form navbar-left form-header" role="search">
 					<div class="form-group">
-						<select class="form-control option">
-							<option>ប្រភេទពេញនិយម</option>
-							<option>សំលៀកបំពាក់</option>
-							<option>អេឡិត្រូនិច</option>
-							<option>ទូរស័ព្ទ</option>
-							<option>កុំព្យូទ័រ</option>
+						<select class="form-control option" style="width:200px;" ng-model="main" ng-options="main.category_name as main.category_name for main in list_cat">
+							<option value="">All products</option>
+							
+		
+							
 						</select> 
-						<input type="text" class="form-control" id="form-search"  placeholder="Enter keyword...">
-						<button type="submit"  class="btn btn-search">
+						<input type="text" class="form-control" ng-model="key" id="form-search"  placeholder="Enter keyword...">
+						<a href="/cat?cname={{main}}&item={{key}}"  class="btn btn-search">
 							<i class="fa fa-search"></i> Search
-						</button>
+						</a>
 					</div>
 				</form>
 

@@ -1,6 +1,6 @@
 
 #body{padding: 0px; margin: 0px;padding-top: 70px;}
-#header{width:100%; background-color:red;}
+#header{width:100%;}
 .button{background-color: green;}
 #content{position:relative; width: 100%;}
 .category{width:190px; border:1px #ccc solid; border-radius:5px;}

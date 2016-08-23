@@ -5,19 +5,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Categories | phsanet.com</title>
-
-
-
-</script>
-<%@ include file="include/head.jsp"%>
-
+<%@ include file="include/include-head.jsp"%>
 </head>
-<body>
-	<div id="body" ng-app="app" ng-controller="ctrl">
+<body ng-app="app">
+	<div id="body"  ng-controller="ctrl">
 
 		<!-- header -->
 		<div class="header">
-			<%@ include file="include/header.jsp"%>
+			<%@ include file="include/include-header.jsp"%>
 		</div>
 		<!--end header -->
 
@@ -59,10 +54,10 @@
 
 
 
-
+       
 		<!-- footer -->
 		<div class="footer bg-primary">
-			<%@ include file="include/footer.jsp"%>
+			<%@ include file="include/include-footer.jsp"%>
 		</div>
 		<!-- end resource -->
 

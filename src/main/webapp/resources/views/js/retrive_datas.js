@@ -1,5 +1,5 @@
 var application=angular.module('app',['angularUtils.directives.dirPagination']);
-application.controller('ctrl',function($scope,$http){
+application.controller('ctrl',function($scope,$http, $window,$rootScope){
 
 var base_url="http://192.168.178.175:2222/api";	
 
@@ -10,26 +10,11 @@ function allcategory(){
 		method:'GET'
 	}).then(function(respones){
 		$scope.list_cat=respones.data.DATA;
-		console.log($scope.list_cat);
-	},function(error){});
+	},function(error){
+		
+	});
 }
 
-/*new lates scrap products*/
-	function new_product(){
-		$http({
-			method:'GET',
-			url:base_url+'/product',
-			params:{
-				
-				   limit:15
-			}
-	
-		}).then(function(respones){
-			$scope.lates=respones.data.DATA;
-		},function(respones){
-			
-		});
-	}
 	
 /*new lates scrap fashions*/
 function new_fashion(){
@@ -37,11 +22,11 @@ function new_fashion(){
 	  method:'GET',
 	  url:base_url+'/product',
 	  params:{
-		     productname:"Fashion",
-		     limit:15
+		     maincategory:"fashion",
+		     limit:5
 		  }
 	}).then(function(respones){
-		$scope.fasions=respones.data.DATA;
+		$scope.fashion=respones.data.DATA;
 		
 	},function(respones){
 		
@@ -54,8 +39,8 @@ function new_phone(){
 		  method:'GET',
 		  url:base_url+'/product',
 		  params:{
-			  productname:"Mobile",
-			  limit:10
+			  maincategory:"mobile and tablets",
+			  limit:5
 		  }
 		}).then(function(respones){
 			$scope.phone=respones.data.DATA;
@@ -64,35 +49,65 @@ function new_phone(){
 		});
 }
 
-var paging = {
-		limit: 12,
-		page: 1,
-		maincategory: "Fashion"
-};
-
-/*man fashions*/
-function man_fashion(){
+/*new lates scrap computers*/
+function new_computer(){
 	$http({
 		  method:'GET',
 		  url:base_url+'/product',
-		  params: paging
+		  params:{
+			  maincategory:"computers",
+			  limit:5
+		  }
 		}).then(function(respones){
-			$scope.man=respones.data.DATA;
+			$scope.computer=respones.data.DATA;
+		},function(respones){
+			
+		});
+}
+
+/*new lates scrap web source*/
+function web_source(){
+	$http({
+		  method:'GET',
+		  url:base_url+'/web',
+		}).then(function(respones){
+			$scope.web=respones.data.DATA;
+		},function(respones){
+			
+		});
+}
+
+
+var paging={
+		limit:12,
+		page:1,
+		subcategoryname:""
+};
+
+$rootScope.subcategory=function(url){
+	paging.subcategoryname=url;
+	$http({
+		  method:'GET',
+		  url:base_url+'/product?',
+		  params:paging
+		}).then(function(respones){
+			$scope.subitems=respones.data.DATA;
 			$scope.total=respones.data.PAGE.TOTAL_PAGES;
 			paging.page = respones.data.PAGE.PAGE;
 			$('#page-selection').bootpag({
 			    total:$scope.total,
 			    page:paging.page,
 			    maxVisible: 5
+			    
 			});
+			
 		},function(respones){
 			
 	});
 }
 $('#page-selection').on("page", function(event, num){
-  
     paging.page = num;
-    man_fashion();
+    $rootScope.subcategory(paging.subcategoryname);
 
 });
 
@@ -129,13 +144,11 @@ function clear(){
    $scope.c_password="";
    $('#register').trigger('click');
 }
-
-new_product();
 new_fashion();	
 new_phone();
-man_fashion();	
+new_computer();
 allcategory();	
-	
+web_source();
 });
 
 
@@ -157,3 +170,20 @@ application.filter('myFilter', function() {
 
 	  }
 });
+
+
+
+application.directive('abc', [function() {
+	return {
+        restrict: 'E', 
+        scope: {
+        	title: '@'
+        },
+        link: function(scope, element, attr) {
+        	console.log(scope.$root.subcategory(attr.title));
+        
+        }
+    };
+  
+}]);
+

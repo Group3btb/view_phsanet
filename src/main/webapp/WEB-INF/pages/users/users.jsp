@@ -30,11 +30,11 @@
 						 </div>
 					</div>
 
-					<!-- save item -->
-					<div class="col-md-9 col-sm-8 col-lg-9">
-						<%@ include file="../include/include-save-items.jsp"%>
+					<!-- about user-->
+					<div class="col-md-9 col-sm-8 col-lg-9" >
+						<%@ include file="../include/include-users-setting.jsp"%>
 					</div>
-					<!-- end save items -->
+					<!-- end about user -->
 				</div>
 			</div>
 

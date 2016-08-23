@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Phsanet | Homepage</title>
 
- <%@ include file="include/head.jsp"  %>
+ <%@ include file="include/include-head.jsp"  %>
 <script src="/resources/views/js/jssor.slider.min.js"></script>
 <script src="/resources/views/js/slider.js"></script>
 </head>
@@ -15,7 +15,7 @@
       
 <!--header -->
           <div class="header">
-                 <%@ include file="include/header.jsp" %>
+                 <%@ include file="include/include-header.jsp" %>
           </div>
 <!--end header -->       
 
@@ -41,12 +41,7 @@
  <!--end content -->    
  
  <!--resource -->  
-        <div class="re-title​">
-			<div class="container text-center" style="padding:0px;">
-				<span class="span">Ours Resources</span>
-			</div>
-        </div>
-     
+ 
         <div class="resource">
              <%@include file="include/resource.jsp" %>
         </div>
@@ -54,7 +49,7 @@
  
  <!--footer -->        
         <div class="footer bg-primary">
-            <%@ include file="include/footer.jsp" %>
+            <%@ include file="include/include-footer.jsp" %>
         </div>
   <!--end footer -->       
  
@@ -63,11 +58,7 @@
 <script>
 $(document).ready(function(){
 	
-	 var li = $("ul.nav li.dropdown").length+1;
-
-	 //var total=-((42*li)+43)+'px';
-	 
-	 
+	var li = $("ul.nav li.dropdown").length+1;
 	$(document).on({
 	    mouseenter: function () {
 	    	var t=

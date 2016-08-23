@@ -5,14 +5,14 @@
 <div class="row">
 	<div class="col-md-12">
 		<div class="location">
-			<span><i class="fa fa-bookmark-o"></i>​ ផលិតផលដែលបានរក្សារទុក</span>
+			<span><i class="fa fa-bookmark-o"></i>​ All Products Saved</span>
 		</div>
 
 	</div>
 </div>
 
 
-<div class="row">
+<div class="row" style="min-height:630px">
 	<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 column productbox">
 
 		<div class="item-box">
