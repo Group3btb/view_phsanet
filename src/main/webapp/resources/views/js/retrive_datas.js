@@ -1,7 +1,7 @@
 var application=angular.module('app',['angularUtils.directives.dirPagination']);
 application.controller('ctrl',function($scope,$http, $window,$rootScope){
 
-var base_url="http://192.168.178.175:2222/api";	
+var base_url="http://192.168.178.180:2222/api";	
 
 /*main category*/
 function allcategory(){
@@ -15,7 +15,6 @@ function allcategory(){
 	});
 }
 
-	
 /*new lates scrap fashions*/
 function new_fashion(){
 	$http({
@@ -78,6 +77,7 @@ function web_source(){
 }
 
 
+/*sub categories items*/
 var paging={
 		limit:12,
 		page:1,
@@ -111,7 +111,22 @@ $('#page-selection').on("page", function(event, num){
 
 });
 
-
+/*search results*/
+$rootScope.search=function(main,sub){
+      $http({
+    	  method:'GET',
+    	  url:base_url+'/product?',
+    	  params:{
+    		  maincategory:main,
+    		  productname:sub
+    	  }
+      }).then(function(respones){
+    	  $scope.search_items=respones.data.DATA;
+    	 console.log($scope.search_items);
+      },function(error){
+    	  alert("error");
+      });      	
+}
 
 /*save users*/
 $scope.saveUser=function(){
@@ -128,6 +143,25 @@ $scope.saveUser=function(){
 		clear();
 	},function(errors){
 		message("User has been faild","Login Faild","error");
+	});
+	
+}
+
+/*update users*/
+$scope.updateUser=function(){
+	$http({
+		url:base_url+'/user',
+		method:'PUT',
+		data:{
+			"user_name":$scope.user_name,
+			"email":$scope.email,
+			"password":$scope.password
+		}
+	}).then(function(respones){
+		message("User has been update","Update","success");
+		clear();
+	},function(errors){
+		message("User has been faild","Update Faild","error");
 	});
 	
 }
@@ -152,7 +186,6 @@ web_source();
 });
 
 
-
 /*sub string*/
 application.filter('myFilter', function() {
 	  return function(input) {
@@ -171,17 +204,17 @@ application.filter('myFilter', function() {
 	  }
 });
 
-
-
+/*custom directive*/
 application.directive('abc', [function() {
 	return {
         restrict: 'E', 
         scope: {
         	title: '@'
         },
-        link: function(scope, element, attr) {
-        	console.log(scope.$root.subcategory(attr.title));
-        
+        link: function(scope,element, attr) {
+        	scope.$root.subcategory(attr.cname);
+        	
+            scope.$root.search(attr.title,attr.value);
         }
     };
   

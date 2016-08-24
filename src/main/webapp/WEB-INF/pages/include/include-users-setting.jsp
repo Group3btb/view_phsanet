@@ -48,7 +48,7 @@
 					<button type="button"
 						ng-disabled="!user_name || user_name.$error.pattern || !email || email.$error.pattern 
 						|| !password || password.$error.pattern || !c_password || password!=c_password "
-						ng-click="saveUser()" class="btn btn-primary btn-block">
+						ng-click="updateUser()" class="btn btn-primary btn-block">
 						<i class="fa fa-floppy-o" aria-hidden="true"></i> Save Change
 					</button>
 					

@@ -7,9 +7,8 @@
 	</div>
 	<div class="filter-items">
 	    <span>Web Source</span> 
-		<select class="form-control" ng-model="web_select">
-			<option value="0">All</option>
-			<option ng-repeat="items in web">{{items.website}}</option>
+		<select class="form-control" ng-model="ws" ng-options="ws.website as ws.website for ws in web  ">
+			<option value="">All</option>
 		</select>
 	</div>
 </div>

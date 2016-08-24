@@ -67,30 +67,12 @@
 </body>
 <script>
 $(document).ready(function(){
-	
 
-	/* var li = $("ul.nav li.dropdown").length+1;
-	var total=-((li*40)+279)+'px'
-	/* var total=-((42*li)+43)+'px'; */
-	/* $('.mega-dropdown-menu').css({'margin-top':total,'margin-left':'215px'}); */ 
-	/* $(".dropdown").hover(            
-	        function() {
-	         $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).show();
-	         $(this).toggleClass('open');
-	        },
-	        function() {
-	         $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).hide();
-	         $(this).toggleClass('open');       
-	       }
-	      );
-	  */
-	  
-	  
 	$(document).ready(function(){
 		
 		$(document).on({
 		    mouseenter: function () {
-		    	$('.mega-dropdown-menu').css({'margin-left':'215px','margin-top':'-599px','min-height':'380px'}); 
+		    	$('.mega-dropdown-menu').css({'margin-left':'215px','margin-top':'-525px','min-height':'380px'}); 
 		    	$('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).show(0);
 		    	$(this).toggleClass('open');  
 		    },

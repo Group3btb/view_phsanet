@@ -24,8 +24,8 @@
 		
 							
 						</select> 
-						<input type="text" class="form-control" ng-model="key" id="form-search"  placeholder="Enter keyword...">
-						<a href="/cat?cname={{main}}&item={{key}}"  class="btn btn-search">
+						<input type="text" class="form-control" ng-model="sub" id="form-search"  placeholder="Enter keyword...">
+						<a href="/cat?cat={{main}}&item={{sub}}"  class="btn btn-primary">
 							<i class="fa fa-search"></i> Search
 						</a>
 					</div>
