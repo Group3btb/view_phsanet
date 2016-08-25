@@ -8,6 +8,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Configuration
 @EnableWebSecurity
@@ -17,13 +18,18 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	@Qualifier("CustomUserServiceImpl")
 	private UserDetailsService userDetailsService;
 	
+	@Autowired
+	private AjaxAuthenticationSuccessHandler successHandler;
+	
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		/*auth.inMemoryAuthentication()
 			.withUser("admin")
 			.password("admin")
 			.roles("ADMIN");*/
-		auth.userDetailsService(userDetailsService);
+		auth.userDetailsService(userDetailsService)
+			.passwordEncoder(new BCryptPasswordEncoder());
+		
 	}
 	
 	@Override
@@ -34,14 +40,19 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 			.loginPage("/login")
 			.usernameParameter("username")
 			.passwordParameter("password")
-			.defaultSuccessUrl("/admin/dashboard")
+			//.defaultSuccessUrl("/admin/dashboard", true)
+			.successHandler(successHandler)
 			.permitAll();
 		
 		http
 			.authorizeRequests()
-			.antMatchers("/**").hasAnyRole("ADMIN","USER")
-			.antMatchers("/admin/**").hasAnyRole("ADMIN");
+			.antMatchers("/admin/**").hasAnyRole("ADMIN")
+			.antMatchers("/**").hasAnyRole("ADMIN","USER");
 		
 		http.exceptionHandling().accessDeniedPage("/access-denied");
 	}
+	
+//	public static void main(String args[]){
+//		System.out.println(new BCryptPasswordEncoder().encode("12345"));
+//	}
 }

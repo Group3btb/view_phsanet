@@ -27,9 +27,14 @@ public class AjaxAuthenticationSuccessHandler implements AuthenticationSuccessHa
 //			
 //			String json = new Gson().toJson(map);
 			
-			response.getWriter().print(determineTargetUrl(auth));
-	        response.getWriter().flush();
+/*			response.getWriter().print(determineTargetUrl(auth));
+	        response.getWriter().flush();*/
 	        
+			//response.sendRedirect("/admin/dashboard");
+		
+			String url = determineTargetUrl(auth);
+			
+			response.sendRedirect(url);
 	}
 	
 	/*
@@ -44,18 +49,22 @@ public class AjaxAuthenticationSuccessHandler implements AuthenticationSuccessHa
 
 		for (GrantedAuthority authority : authorities) {
 			System.out.println(authority.getAuthority());
+			// authority.getAuthority() ==> ROLE_ADMIN , ROLE_USER
+			
 			roles.add(authority.getAuthority());
 			System.out.println("Extract Role: " + authority.getAuthority());
 		}
+		
 		if (roles.contains("ROLE_ADMIN")) {
-			return "admin";
+			return "/admin/dashboard";
 		}else if(roles.contains("ROLE_USER")){
-			return "index";
+			return "/index";
 		}else{
-			return "accessDenied";
+			return "/accessDenied";
 		}
 
 	}
+
 	
 	/*// Get API User from HttpSession
 	private APIUser getAPIUser(){
