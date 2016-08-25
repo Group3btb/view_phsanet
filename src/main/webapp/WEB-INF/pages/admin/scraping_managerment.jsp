@@ -9,14 +9,14 @@ html4/loose.dtd">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
         <meta name="author" content="Coderthemes">
-        
-        <title>Test Scrap</title>
-        <jsp:include page="/WEB-INF/pages/admin/include/head.jsp"></jsp:include>
+        <title>PhsarNet</title>
+     
+       	<jsp:include page="/WEB-INF/pages/admin/include/chetra_head.jsp"></jsp:include>
         
     </head>
 
 
-    <body class="fixed-left">  
+    <body class="fixed-left" ng-cloak>  
     
         <!-- Begin page -->
         <div id="wrapper" ng-controller="controller_scraping">
@@ -54,9 +54,7 @@ html4/loose.dtd">
 							<div class="col-sm-12">
 								<div class="card-box">
 								      <h4 class="m-t-0 header-title"><b>Scraping website</b></h4>
-                  <p class="text-muted font-13 m-b-30">
-                                      Please selected of website
-                                  </p>
+                  		<p class="text-muted font-13 m-b-30">Please selected of website</p>
                 
     				<div class="form-group text-right m-b-0">
                       <button  ng-click="start_scraping_all()"  class="btn btn-primary waves-effect waves-light" type="submit">

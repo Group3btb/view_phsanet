@@ -8,14 +8,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
         <meta name="author" content="Coderthemes">
-        <title>Ubold - Responsive Admin Dashboard Template</title>
-        
-       	<jsp:include page="/WEB-INF/pages/admin/include/head.jsp"></jsp:include>
+        <title>PhsarNet</title>
+     
+       	<jsp:include page="/WEB-INF/pages/admin/include/chetra_head.jsp"></jsp:include>
        	
     </head>
 
 
-    <body class="fixed-left">
+    <body class="fixed-left" ng-cloak>
 
        
         <!-- Begin page -->	
@@ -52,10 +52,14 @@
 							</div>
 						</div>
                         
-              <div class="row">
+              			<div class="row">
 							<div class="col-sm-12">
 								<div class="card-box">
-									        <table id="datatable" class="table table-striped table-bordered table-actions-bar"><!-- <table class="table table-actions-bar m-b-0"> -->
+									<div class="table-responsive">
+										<div class="col-sm-6 text-xs-center text-right pull-right">
+						                    <input id="demo-input-search2" type="text" placeholder="Search" class="form-control  input-sm" autocomplete="off" ng-model="query">
+						                  </div>
+									        <table class="table table-actions-bar m-b-0">
                                             <thead>
                                                 <tr>
                                                     <th style="max-width: 20px; text-align: center" >ID</th>
@@ -70,7 +74,7 @@
 
                                             <tbody>
                                              
-                                                <tr ng-repeat="web in webs">
+                                                <tr dir-paginate="web in webs | filter:query |itemsPerPage:10">
                                                 
         											<td>{{web.web_source_id}}</td>                                           
                                                     <td>{{web.website}}</td>
@@ -88,17 +92,20 @@
                                                     	<a href="#" ng-click="delete_web_source(web.web_source_id)" class="btn btn-danger btn-md waves-effect " ng-click="findall_web_sources()" ><i class="glyphicon glyphicon-trash"></i></a>
                                                     
                                                     </td>
-                                                </tr>   
-                                              
-                                          
+                                                </tr>  
                                         </table>
-                                     <!--  </div>   -->            
-                                   
-										</div>
-									</div>
+                                        <dir-pagination-controls
+										       max-size="10"
+										       direction-links="true"
+										       boundary-links="true" >
+										    </dir-pagination-controls>
+                                     <!--  </div>   -->  
+                                     </div> 
 								</div>
 							</div>
 						</div>
+					</div>
+				</div>
     
     
      

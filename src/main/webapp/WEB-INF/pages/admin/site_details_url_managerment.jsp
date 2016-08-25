@@ -9,14 +9,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
         <meta name="author" content="Coderthemes">
-        <title>Ubold - Responsive Admin Dashboard Template</title>
-        
-       	<jsp:include page="/WEB-INF/pages/admin/include/head.jsp"></jsp:include>
+        <title>PhsarNet</title>
+     
+       	<jsp:include page="/WEB-INF/pages/admin/include/chetra_head.jsp"></jsp:include>
        	
     </head>
 
 
-    <body class="fixed-left">
+    <body class="fixed-left" ng-cloak>
 
        
         <!-- Begin page -->	
@@ -62,7 +62,7 @@
 
 										<input id="demo-input-search2" type="text"
 											placeholder="Search" class="form-control  input-sm"
-											autocomplete="off">
+											autocomplete="off" ng-model="query">
 
 									</div>
 									<table class="table table-actions-bar m-b-0">
@@ -73,14 +73,14 @@
                                                     <th>WEBSITE</th>
                                                     <th>SUBCATEGORY</th>
                                                     <th>SCRAP URL</th>
-                                                    <th>ALL SCRAP</th>
+                                                    <th>ALLOW SCRAP</th>
                                                     <th>ACTION</th>
 
                                                 </tr>
                                             </thead>
                                             <tbody>
 
-                                                <tr ng-repeat="scrap in scraps">
+                                                <tr dir-paginate="scrap in scraps | filter:query | itemsPerPage:10">
                                                    
                                                    <td><span data-plugin="peity-bar" data-colors="#5fbeaa,#5fbeaa" data-width="80" data-height="30">{{scrap.scrap_id}}</span></td> 
                                                     <td><img src={{scrap.web_source.logo}} class="thumb-sm pull-left m-r-5" alt="">{{scrap.web_source.website}}
@@ -112,6 +112,11 @@
 
                                             </tbody>
                                         </table>
+                                        <dir-pagination-controls
+										       max-size="10"
+										       direction-links="true"
+										       boundary-links="true" >
+										 </dir-pagination-controls>
                                     </div>
                                      		          
 										</div>

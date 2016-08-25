@@ -8,14 +8,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
         <meta name="author" content="Coderthemes">
-        
-        <title>Test Scrap</title>
-        <jsp:include page="/WEB-INF/pages/admin/include/head.jsp"></jsp:include>
+        <title>PhsarNet</title>
+     
+       	<jsp:include page="/WEB-INF/pages/admin/include/chetra_head.jsp"></jsp:include>
         
     </head>
 
 
-    <body class="fixed-left">  
+    <body class="fixed-left" ng-cloak>  
     
         <!-- Begin page -->
         <div id="wrapper" ng-controller="controller_test_selector">
