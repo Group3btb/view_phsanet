@@ -1,4 +1,4 @@
-package phsanet.controllers;
+/*package phsanet.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -38,4 +38,4 @@ public class AutoLoginController {
 
 	}
 
-}
+}*/

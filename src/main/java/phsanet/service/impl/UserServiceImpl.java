@@ -1,74 +1,43 @@
 package phsanet.service.impl;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Component;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import phsanet.entitys.Role;
 import phsanet.entitys.User;
-import phsanet.service.UserService;
 
-
-@Component
-public class UserServiceImpl implements UserService {
+@Service
+@Qualifier("CustomUserServiceImpl")
+public class UserServiceImpl implements UserDetailsService{
 
 	@Autowired
-	@Qualifier("KNONGDAI_API_SECRET_HEADER")
-	private HttpHeaders knongDaiSecretHeader;
+	private HttpHeaders header;
 	
 	@Autowired
-	private RestTemplate rest;
+	private RestTemplate restTemplate;
 	
-	@Autowired
-	@Qualifier("KNONGDAI_API_URL")
-	private String knongDaiApiUrl;
+	String url = "http://localhost:2222/api/useremail";
 	
 	@Override
-	public User findUserByUserId(String userId) {
-
-		HttpEntity<Object> request = new HttpEntity<Object>(knongDaiSecretHeader);
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		
-		System.out.println(knongDaiApiUrl+ "/user/"+userId);
+		HttpEntity<String> requestEntity = new HttpEntity<String>(header);
+		ResponseEntity<User>  response = restTemplate.exchange(url + "?email=" + username, HttpMethod.GET, requestEntity, User.class);
+		System.out.println(response.getBody());
+		User user = response.getBody();
+		System.out.println("=>user ui: " + user);
 		
-		ResponseEntity<Map> response = rest.exchange(knongDaiApiUrl+ "/user/"+userId, HttpMethod.POST , request , Map.class) ;
-		Map<String, Object> map = (HashMap<String, Object>)response.getBody();
+		if(user==null)
+			throw new UsernameNotFoundException("User not found!");
 		
-		System.out.println(map);
-		
-		if(map.get("DATA") != null){
-			Map<String , Object> data = (HashMap<String , Object>) map.get("DATA");
-			User u = new User();
-			u.setUserId((Integer)data.get("USER_ID"));
-			u.setEmail((String)data.get("EMAIL"));
-			u.setUsername((String)data.get("USERNAME"));
-			u.setPassword((String) data.get("PASSWORD"));
-			List<Role> roles = new ArrayList<Role>();
-			List<HashMap<String, Object>> dataRole = (List<HashMap<String, Object>>) data.get("ROLES");
-			for (Map<String , Object> datas  : dataRole) {
-				Role role = new Role();
-				role.setRoleId((Integer)datas.get("ROLE_ID"));
-				role.setRoleName((String) datas.get("ROLE_NAME"));
-				roles.add(role);
-			}
-			System.out.println(dataRole);
-			u.setRoles(roles);
-			System.out.println(map);
-			return u;
-		}
-		return null;
+		return user;
 	}
-
-	
-
 }

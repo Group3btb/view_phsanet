@@ -27,7 +27,7 @@ public class TemporaryItemController {
 	
 	
 	
-	@RequestMapping(value={"/temporary"})
+	@RequestMapping(value={"/admin/temporary"})
 	public String temporary_item(){
 		return "/admin/temporary_item";
 	}

@@ -18,7 +18,7 @@ import phsanet.entitys.Category;
 
 @Controller
 public class SubCategory {
-	@RequestMapping(value={"/subcategory"})
+	@RequestMapping(value={"/admin/subcategory"})
 	public String category(){
 		return "/admin/subcategory";
 	}

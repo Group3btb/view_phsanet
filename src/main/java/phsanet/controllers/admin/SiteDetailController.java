@@ -18,7 +18,7 @@ import phsanet.entitys.Site_Detail_Managerment;
 @Controller
 public class SiteDetailController {
 		
-	@RequestMapping(value={"/sitedetail"})	
+	@RequestMapping(value={"/admin/sitedetail"})	
 	public String scrap(){
 		return "admin/site_details_url_managerment";
 	}

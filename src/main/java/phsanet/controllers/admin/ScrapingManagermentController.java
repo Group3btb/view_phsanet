@@ -18,7 +18,7 @@ import phsanet.entitys.Web_Source;
 @Controller
 public class ScrapingManagermentController {
 	
-	@RequestMapping(value={"/scrap"})
+	@RequestMapping(value={"/admin/scrap"})
 	public String scrapingmanagerment(){
 		return "admin/scraping_managerment";
 	}

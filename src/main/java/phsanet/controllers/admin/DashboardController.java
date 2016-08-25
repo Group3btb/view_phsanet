@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class DashboardController {
-	@RequestMapping(value={"/admin"})
+	@RequestMapping(value={"/admin/dashboard"})
 	public String mainPage(){
 		return "/admin/dashboard";
 	}

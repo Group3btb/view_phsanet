@@ -19,7 +19,7 @@ import phsanet.entitys.Web_Source;
 @Controller
 public class WebSiteController {
 	
-	@RequestMapping(value={"/site"})
+	@RequestMapping(value={"/admin/site"})
 	public String siteManagerment(){
 		return "/admin/site_managerment";
 	}

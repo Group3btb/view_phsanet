@@ -30,7 +30,7 @@ import phsanet.entitys.Web_Source;
 
 @Controller
 public class TestSelecorController {
-	@RequestMapping(value={"/test"})
+	@RequestMapping(value={"/admin/test"})
 	public String testscrap(){
 		return "admin/test_selector";
 	}

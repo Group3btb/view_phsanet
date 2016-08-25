@@ -17,7 +17,7 @@ import org.springframework.web.client.RestTemplate;
 @Controller
 public class MainCategory {
 	
-	@RequestMapping(value={"/maincategory"})
+	@RequestMapping(value={"/admin/maincategory"})
 	
 	public String maincategory(){
 		return "/admin/main_category";

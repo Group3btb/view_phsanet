@@ -17,7 +17,7 @@ import org.springframework.web.client.RestTemplate;
 import phsanet.entitys.Category;
 @Controller
 public class CategoryController {
-	@RequestMapping(value={"/category"})
+	@RequestMapping(value={"/admin/category"})
 	public String category(){
 		return "/admin/category";
 	}
