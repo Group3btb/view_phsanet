@@ -1,7 +1,7 @@
 var application=angular.module('app',['angularUtils.directives.dirPagination']);
 application.controller('ctrl',function($scope,$http, $window,$rootScope){
 
-var base_url="http://192.168.178.180:2222/api";	
+var base_url="http://192.168.178.175:2222/api";	
 
 /*main category*/
 function allcategory(){
@@ -22,7 +22,7 @@ function new_fashion(){
 	  url:base_url+'/product',
 	  params:{
 		     maincategory:"fashion",
-		     limit:5
+		     limit:10
 		  }
 	}).then(function(respones){
 		$scope.fashion=respones.data.DATA;
@@ -32,6 +32,24 @@ function new_fashion(){
 	});
 }
 
+/*new lates scrap Jewelry and Watch*/
+function new_jewelry(){
+	$http({
+	  method:'GET',
+	  url:base_url+'/product',
+	  params:{
+		     maincategory:"Jewelry and Watch",
+		     limit:10
+		  }
+	}).then(function(respones){
+		$scope.jewelry=respones.data.DATA;
+	},function(respones){
+		
+	});
+}
+
+
+
 /*new lates scrap phone*/
 function new_phone(){
 	$http({
@@ -39,7 +57,7 @@ function new_phone(){
 		  url:base_url+'/product',
 		  params:{
 			  maincategory:"mobile and tablets",
-			  limit:5
+			  limit:10
 		  }
 		}).then(function(respones){
 			$scope.phone=respones.data.DATA;
@@ -55,10 +73,26 @@ function new_computer(){
 		  url:base_url+'/product',
 		  params:{
 			  maincategory:"computers",
-			  limit:5
+			  limit:10
 		  }
 		}).then(function(respones){
 			$scope.computer=respones.data.DATA;
+		},function(respones){
+			
+		});
+}
+
+/*new lates scrap home and living*/
+function new_home(){
+	$http({
+		  method:'GET',
+		  url:base_url+'/product',
+		  params:{
+			  maincategory:"home and living",
+			  limit:10
+		  }
+		}).then(function(respones){
+			$scope.home=respones.data.DATA;
 		},function(respones){
 			
 		});
@@ -76,10 +110,9 @@ function web_source(){
 		});
 }
 
-
 /*sub categories items*/
 var paging={
-		limit:12,
+		limit:24,
 		page:1,
 		subcategoryname:""
 };
@@ -91,7 +124,7 @@ $rootScope.subcategory=function(url){
 		  url:base_url+'/product?',
 		  params:paging
 		}).then(function(respones){
-			$scope.subitems=respones.data.DATA;
+			$scope.subitems = shuffleArray(respones.data.DATA);
 			$scope.total=respones.data.PAGE.TOTAL_PAGES;
 			paging.page = respones.data.PAGE.PAGE;
 			$('#page-selection').bootpag({
@@ -166,6 +199,47 @@ $scope.updateUser=function(){
 	
 }
 
+/*login*/
+$scope.login=function(user,psw){
+	$http({
+		url:base_url+'/user',
+		method:'POST',
+		data:{
+			"user_name":user,
+			"email":$scope.email,
+			"password":psw
+		}
+	}).then(function(respones){
+		message("User has been update","Update","success");
+		clear();
+	},function(errors){
+		message("User has been faild","Update Faild","error");
+	});
+}
+
+
+/*savelist*/
+$scope.savelist=function(elments){
+	console.log(elments.item.product_id);
+	$http({
+		url:base_url+'/savelist',
+		method:'POST',
+		data:{
+			"product":{
+				     "product_id":elments.item.product_id
+				    },
+		    "user":{
+		    	    "user_id":4
+		    }		    
+		}
+	}).then(function(response){
+		alert("sucess");
+	},function(erorr){
+		alert("erorr");
+	});
+	
+}
+
 /*message success*/
 function message(title,status,type){
   swal(title,status,type)
@@ -178,10 +252,32 @@ function clear(){
    $scope.c_password="";
    $('#register').trigger('click');
 }
+
+/***************/
+function shuffleArray(array) {
+  var m = array.length, t, i;
+
+  // While there remain elements to shuffle
+  while (m) {
+    // Pick a remaining element…
+    i = Math.floor(Math.random() * m--);
+
+    // And swap it with the current element.
+    t = array[m];
+    array[m] = array[i];
+    array[i] = t;
+  }
+
+  return array;
+}
+/****************/
+
 new_fashion();	
+new_jewelry();
 new_phone();
 new_computer();
 allcategory();	
+new_home();
 web_source();
 });
 
@@ -213,8 +309,7 @@ application.directive('abc', [function() {
         },
         link: function(scope,element, attr) {
         	scope.$root.subcategory(attr.cname);
-        	
-            scope.$root.search(attr.title,attr.value);
+            /*scope.$root.search(attr.title,attr.value);*/
         }
     };
   

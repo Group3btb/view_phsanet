@@ -7,7 +7,7 @@
 <title>Categories | phsanet.com</title>
 <%@ include file="include/include-head.jsp"%>
 </head>
-<body ng-app="app">
+<body ng-app="app" ng-cloak>
 	<div id="body"  ng-controller="ctrl">
 
 		<!-- header -->
