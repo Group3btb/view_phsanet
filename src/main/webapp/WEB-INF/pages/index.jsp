@@ -10,7 +10,7 @@
 <script src="/resources/views/js/jssor.slider.min.js"></script>
 <script src="/resources/views/js/slider.js"></script>
 </head>
-<body ng-app="app">
+<body ng-app="app" ng-cloak>
       <div id="body" ng-controller="ctrl">
       
 <!--header -->

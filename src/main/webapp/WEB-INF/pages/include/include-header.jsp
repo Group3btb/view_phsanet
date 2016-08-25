@@ -8,7 +8,6 @@
 				<button type="button" class="navbar-toggle button"
 					data-toggle="collapse" data-target=".navbar-ex1-collapse">
 					<i class="fa fa-bars" aria-hidden="true"></i>
-					
 				</button>
 				
 				 <img alt="" src="/resources/views/logo/logo.png">

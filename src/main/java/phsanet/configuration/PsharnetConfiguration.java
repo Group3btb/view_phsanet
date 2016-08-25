@@ -45,7 +45,6 @@ public class PsharnetConfiguration extends WebMvcConfigurerAdapter{
 	
 	
 	
-	
 	@Bean
 	public DataSourceTransactionManager transactionManager() {
 		return new DataSourceTransactionManager(dataSource);
