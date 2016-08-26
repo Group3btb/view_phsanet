@@ -1,4 +1,4 @@
-package phsanet.controllers.admin;
+package phsanet.controllers.view;
 
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
