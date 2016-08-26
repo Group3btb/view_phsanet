@@ -200,14 +200,14 @@ $scope.updateUser=function(){
 }
 
 /*login*/
-$scope.login=function(user,psw){
+$scope.login=function(email,psw){
+	console.log(email+" "+psw)
 	$http({
-		url:base_url+'/user',
+		url:"http://192.168.178.180:1111/authentication",
 		method:'POST',
 		data:{
-			"user_name":user,
-			"email":$scope.email,
-			"password":psw
+			email:email,
+			password:psw
 		}
 	}).then(function(respones){
 		message("User has been update","Update","success");

@@ -30,6 +30,7 @@
 					</div>
 				</form>
 
+               
 				<ul class="nav navbar-nav navbar-right">
 					<li><a class="account" href="" data-toggle="modal" data-target="#login"><i class="fa fa-sign-in"></i> Sign In</a></li>
 					<li><a class="account" href="" data-toggle="modal" data-target="#register"><i class="fa fa-users"></i> Register</a></li> 
