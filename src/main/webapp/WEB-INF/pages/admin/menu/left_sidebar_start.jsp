@@ -30,7 +30,9 @@
                              <li class="has_sub">
                                 <a href="#" class="waves-effect"><i class="ti-harddrives"></i><span>Manage Scrape</span> </a>
                                 <ul class="list-unstyled">
-                                    <li><a href="site">URL Scrape</a></li>
+                                    <li><a href="scrap">URL Scrape</a></li>
+                                    <li><a href="test">Test Scrape</a></li>
+                                    <li><a href="temporary">Temporary Items</a></li>
                                 </ul>
                             </li>
                         </ul>

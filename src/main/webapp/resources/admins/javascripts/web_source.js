@@ -2,7 +2,7 @@
  * 
  */
 
-var app = angular.module("Myapp", []);
+var app = angular.module("Myapp", ['angularUtils.directives.dirPagination']);
 app.controller("controller_web_source", function($http, $scope){
 
 	 $scope.findall_web_sources = function(){
