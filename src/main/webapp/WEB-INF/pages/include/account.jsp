@@ -11,7 +11,8 @@
 				</h4>
 			</div>
 			<div class="modal-body">
-				<div class="form-group">
+			  
+				<!-- <div class="form-group">
 
 					<span><i class="fa fa-user" aria-hidden="true"></i> Username</span><input
 						type="email" class="form-control" ng-model="email" placeholder="jonh"> <br>
@@ -26,6 +27,24 @@
 						<i class="fa fa-facebook-official" aria-hidden="true"></i>
 						Facebook
 					</button>
+				</div> -->
+				
+				<div class="form-group">
+					<form action="/login" method="post">
+						<span><i class="fa fa-user" aria-hidden="true"></i> Username</span><input
+							type="email" class="form-control" name="username" ng-model="email" placeholder="jonh"> <br>
+						<span><i class="fa fa-eye" aria-hidden="true"></i>
+							Password</span><input type="password" name="password" ng-model="password" class="form-control"
+							placeholder="Enter password"> <br>
+						<button type="submit" ng-disabled="!email || !password" class="btn btn-primary btn-block">
+							<i class="fa fa-power-off" aria-hidden="true"></i> Login
+						</button>
+						<span>Or</span>
+						<button type="submit" class="btn btn-primary btn-block">
+							<i class="fa fa-facebook-official" aria-hidden="true"></i>
+							Facebook
+						</button>
+					</form>
 				</div>
 			</div>
 

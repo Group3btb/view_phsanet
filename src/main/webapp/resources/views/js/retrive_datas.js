@@ -169,7 +169,8 @@ $scope.saveUser=function(){
 		data:{
 			"user_name":$scope.user_name,
 			"email":$scope.email,
-			"password":$scope.password
+			"password":$scope.password,
+			"role":"USER"
 		}
 	}).then(function(respones){
 		message("User has been save","Login","success");
@@ -203,16 +204,18 @@ $scope.updateUser=function(){
 $scope.login=function(email,psw){
 	console.log(email+" "+psw)
 	$http({
-		url:"http://192.168.178.180:1111/authentication",
+		url:"http://localhost:1111/authentication",
 		method:'POST',
 		data:{
 			email:email,
 			password:psw
 		}
 	}).then(function(respones){
+		console.log(respones);
 		message("User has been update","Update","success");
 		clear();
 	},function(errors){
+		console.log(errors);
 		message("User has been faild","Update Faild","error");
 	});
 }
@@ -229,7 +232,7 @@ $scope.savelist=function(elments){
 				     "product_id":elments.item.product_id
 				    },
 		    "user":{
-		    	    "user_id":4
+		    	    "user_id":USERID
 		    }		    
 		}
 	}).then(function(response){
@@ -309,7 +312,7 @@ application.directive('abc', [function() {
         },
         link: function(scope,element, attr) {
         	scope.$root.subcategory(attr.cname);
-            /*scope.$root.search(attr.title,attr.value);*/
+            scope.$root.search(attr.title,attr.value);
         }
     };
   

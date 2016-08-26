@@ -26,8 +26,17 @@
 						<div class="producttitle">{{item.product_name | myFilter}}</div>
 						<div class="productprice">
 							<div class="pull-right">
-								<a href="" data-toggle="modal" data-target="#login"  title="រក្សាទុក" class="pricetext"> <i
-									class="fa fa-bookmark-o"></i></a>
+							
+							   <sec:authorize access="!isAuthenticated()">
+						            <a href="" data-toggle="modal" data-target="#login"  title="រក្សាទុក" class="pricetext"><i class="fa fa-bookmark-o"></i></a>
+					           </sec:authorize>
+					           
+					            <sec:authorize access="isAuthenticated()">
+						            <a href="/user/savelist"   title="រក្សាទុក" class="pricetext"><i class="fa fa-bookmark-o"></i></a>
+					           </sec:authorize>
+					           
+					           
+								
 							</div>
 							<div class="pricetext">{{item.price}}</div>
 						</div>

@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%> 
-        
+   
+	<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+      
+     
+      
 <%@include file="account.jsp" %>
 <nav class="navbar navbar-fixed-top  nav-header" role="navigation">
 		<div class="container">
@@ -29,11 +33,27 @@
 						</a>
 					</div>
 				</form>
-
-               
+                
 				<ul class="nav navbar-nav navbar-right">
-					<li><a class="account" href="" data-toggle="modal" data-target="#login"><i class="fa fa-sign-in"></i> Sign In</a></li>
-					<li><a class="account" href="" data-toggle="modal" data-target="#register"><i class="fa fa-users"></i> Register</a></li> 
+				
+					
+					
+				 	<sec:authorize access="!isAuthenticated()">
+						<li><a class="account" href="" data-toggle="modal" data-target="#login"><i class="fa fa-sign-in"></i> Sign In</a></li>	
+						<li><a class="account" href="" data-toggle="modal" data-target="#register"><i class="fa fa-users"></i> Register</a></li> 	
+					</sec:authorize>
+					
+					<sec:authorize access="isAuthenticated()">
+						<script>
+				     		var USERID = '<sec:authentication property="principal.user_id"/>';
+				     		
+				     	</script> 
+						<sec:authentication property="principal" var="user"/>
+						<li><a>${user.user_name}</a></li>	
+						<li><a href="logout">Logout</a></li>	
+					</sec:authorize> 
+					
+					
 				</ul>
                     
 			</div>
