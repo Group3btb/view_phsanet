@@ -19,6 +19,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
 
 import phsanet.entitys.User;
@@ -40,6 +41,7 @@ public class LoginController {
 	}
 	
 	@RequestMapping(value="/authentication", method=RequestMethod.POST)
+	@ResponseBody
 	public String authenticationCustomer(@RequestBody User user){
 		
 		HttpEntity<String> requestEntity = new HttpEntity<String>(header);
@@ -67,6 +69,7 @@ public class LoginController {
 			    Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 			    
 			    String redirectURL = determineTargetUrl(authentication);
+			    System.out.println("admin ....... ");
 			    return redirectURL;
 			}
 		}
@@ -88,8 +91,10 @@ public class LoginController {
 		}
 		
 		if (roles.contains("ROLE_ADMIN")) {
+			System.out.println("/admin/dashboard");
 			return "/admin/dashboard";
 		}else if(roles.contains("ROLE_USER")){
+			System.out.println("index");
 			return "/index";
 		}else{
 			return "/accessDenied";

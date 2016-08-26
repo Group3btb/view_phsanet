@@ -9,6 +9,7 @@ import phsanet.entitys.User;
 
 @Controller
 public class SaveListController {
+	
 	@RequestMapping(value={"/savelist"})
 	public String mainPage(@AuthenticationPrincipal User user){
 		System.out.println("USER SESION INFORMATION  ===> " + user);
