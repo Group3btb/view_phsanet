@@ -12,6 +12,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -95,6 +96,23 @@ public class TemporaryItemController {
 		HttpEntity<Object> request = new HttpEntity<Object>(allid,new HttpHeaders());
 		ResponseEntity<Map> respone = resttemplate.exchange(http,
 				HttpMethod.POST,
+				request,
+				Map.class);
+		
+		return new ResponseEntity<Map<String,Object>>(map,HttpStatus.OK);
+	}
+	
+	@SuppressWarnings({ "unused", "rawtypes" })
+	@RequestMapping(value={"/temporary/{id}"},method = RequestMethod.DELETE)
+	public ResponseEntity<Map<String,Object>> deltetemporary(@PathVariable("id") int id){
+		
+		String http="http://localhost:2222/api/temporary/"+id;
+		
+		Map<String,Object> map = new HashMap<String,Object>();
+		RestTemplate resttemplate = new RestTemplate();
+		HttpEntity<Object> request = new HttpEntity<Object>(new HttpHeaders());
+		ResponseEntity<Map> respone = resttemplate.exchange(http,
+				HttpMethod.DELETE,
 				request,
 				Map.class);
 		

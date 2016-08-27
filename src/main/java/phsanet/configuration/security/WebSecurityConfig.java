@@ -23,10 +23,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-		/*auth.inMemoryAuthentication()
-			.withUser("admin")
-			.password("admin")
-			.roles("ADMIN");*/
 		auth.userDetailsService(userDetailsService)
 			.passwordEncoder(new BCryptPasswordEncoder());
 		
@@ -40,9 +36,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 			.loginPage("/login")
 			.usernameParameter("username")
 			.passwordParameter("password")
-			//.defaultSuccessUrl("/admin/dashboard", true)
 			.successHandler(successHandler)
 			.permitAll();
+		    
 		
 		http
 			.authorizeRequests()
@@ -52,7 +48,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 		http.exceptionHandling().accessDeniedPage("/access-denied");
 	}
 	
-//	public static void main(String args[]){
-//		System.out.println(new BCryptPasswordEncoder().encode("12345"));
-//	}
+	/*public static void main(String args[]){
+		System.out.println(new BCryptPasswordEncoder().encode("12345"));
+	}*/
 }

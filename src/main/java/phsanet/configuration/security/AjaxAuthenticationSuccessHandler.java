@@ -20,20 +20,8 @@ public class AjaxAuthenticationSuccessHandler implements AuthenticationSuccessHa
 	@Override
 	public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication auth)
 			throws IOException, ServletException {
-	
-//			Map<String , Object> map = new HashMap<String , Object>();
-//			map.put("APIUser", getAPIUser());
-//			map.put("targetUrl", determineTargetUrl(auth));
-//			
-//			String json = new Gson().toJson(map);
-			
-/*			response.getWriter().print(determineTargetUrl(auth));
-	        response.getWriter().flush();*/
-	        
-			//response.sendRedirect("/admin/dashboard");
-		
 			String url = determineTargetUrl(auth);
-			
+			System.out.println(url);
 			response.sendRedirect(url);
 	}
 	
@@ -42,9 +30,11 @@ public class AjaxAuthenticationSuccessHandler implements AuthenticationSuccessHa
 	 * appropriate URL according to his/her role.
 	 */
 	private String determineTargetUrl(Authentication authentication) {
-
+		
+		System.out.println("user principal : " + authentication.getPrincipal());
+		
 		Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
-
+			
 		List<String> roles = new ArrayList<String>();
 
 		for (GrantedAuthority authority : authorities) {
@@ -59,9 +49,8 @@ public class AjaxAuthenticationSuccessHandler implements AuthenticationSuccessHa
 			return "/admin/dashboard";
 		}else if(roles.contains("ROLE_USER")){
 			return "/index";
-		}else{
-			return "/accessDenied";
 		}
+		return "/index";
 
 	}
 

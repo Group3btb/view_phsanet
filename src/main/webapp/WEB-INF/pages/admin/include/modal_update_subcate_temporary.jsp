@@ -8,7 +8,7 @@
                <form role="form">
                         <div class="form-group">
                             <label for="name">Sub Category Name</label>
-                            <input ng-model="subcate_name_update" type="text" class="form-control" id="cate_name" placeholder="Enter site name">
+                            <input ng-model="subcate_name_update" type="text" class="form-control" id="cate_name" placeholder="Search">
                             <input type="hidden" value="{{subcate_id_update}}">
                         </div> 
                         
