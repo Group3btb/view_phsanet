@@ -10,29 +10,29 @@
                         <ul>
                           <li class="text-muted menu-title">Admin PhsarNet</li>
                             <li>
-                                <a href="admin" class="waves-effect active"><i class="ti-home"></i> <span> Dashboard </span></a>
+                                <a href="/admin" class="waves-effect active"><i class="ti-home"></i> <span> Dashboard </span></a>
                             </li>
                             <li class="has_sub">
                                 <a href="#" class="waves-effect"><i class="ti-menu-alt"></i><span>Manage Categories</span> </a>
                                 <ul class="list-unstyled">
-                                    <li><a href="maincategory">Main Category</a></li>
-                                    <li><a href="category">Category</a></li>
-                                    <li><a href="subcategory">Sub Category</a></li>
+                                    <li><a href="/maincategory">Main Category</a></li>
+                                    <li><a href="/category">Category</a></li>
+                                    <li><a href="/subcategory">Sub Category</a></li>
                                 </ul>
                             </li>
                              <li class="has_sub">
                                 <a href="#" class="waves-effect"><i class="ti-layers"></i><span>Manage Site</span> </a>
                                 <ul class="list-unstyled">
-                                    <li><a href="site">Site Management</a></li>
-                                    <li><a href="sitedetail">Site Detail</a></li>
+                                    <li><a href="/site">Site Management</a></li>
+                                    <li><a href="/sitedetail">Site Detail</a></li>
                                 </ul>
                             </li>
                              <li class="has_sub">
                                 <a href="#" class="waves-effect"><i class="ti-harddrives"></i><span>Manage Scrape</span> </a>
                                 <ul class="list-unstyled">
-                                    <li><a href="scrap">URL Scrape</a></li>
-                                    <li><a href="test">Test Scrape</a></li>
-                                    <li><a href="temporary">Temporary Items</a></li>
+                                    <li><a href="/scrap">URL Scrape</a></li>
+                                    <li><a href="/test">Test Scrape</a></li>
+                                    <li><a href="/temporary">Temporary Items</a></li>
                                 </ul>
                             </li>
                         </ul>

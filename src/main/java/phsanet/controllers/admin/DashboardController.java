@@ -8,7 +8,7 @@ import phsanet.entitys.User;
 
 @Controller
 public class DashboardController {
-	@RequestMapping(value={"/admin/dashboard"})
+	@RequestMapping(value={"/admin/dashboard", "/admin"})
 	public String mainPage(@AuthenticationPrincipal User user){
 		System.out.println("USER SESION INFORMATION  ===> " + user);
 		return "/admin/dashboard";
