@@ -26,12 +26,12 @@
 						<div class="productprice">
 							<div class="pull-right">
 							
-							   <sec:authorize access="!isAuthenticated()">
+							 <!--   <sec:authorize access="!isAuthenticated()">
 						            <a href="" data-toggle="modal" data-target="#login"   title="រក្សាទុក" class="pricetext"><i class="fa fa-bookmark-o"></i></a>
-					           </sec:authorize>
+					           </sec:authorize> -->
 					           
 					            <sec:authorize access="isAuthenticated()">
-						            <a href=""  ng-click="addsavelist(this)"  title="រក្សាទុក" class="pricetext"><i class="fa fa-bookmark-o"></i></a>
+						            <a href=""  ng-click="deleteSaved(this)"  title="រក្សាទុក" class="pricetext"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
 					           </sec:authorize>
 					           
 					           

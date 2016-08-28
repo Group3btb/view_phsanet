@@ -37,6 +37,9 @@
 					
 					
 				 	<sec:authorize access="!isAuthenticated()">
+				 	    <script>
+				     		var USERID;
+				     	</script> 
 						<li><a class="account" href="" data-toggle="modal" data-target="#login"><i class="fa fa-sign-in"></i> Sign In</a></li>	
 						<li><a class="account" href="" data-toggle="modal" data-target="#register"><i class="fa fa-users"></i> Register</a></li> 	
 					</sec:authorize>

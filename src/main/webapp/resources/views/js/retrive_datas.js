@@ -239,7 +239,16 @@ function getsavelist(userid){
 	 });
 }
 
-
+$scope.deleteSaved=function(listid){
+	console.log(listid);
+	$http({
+		url:base_url+'/savelist/'+listid.item.list_id,
+		method:'DELETE'
+	}).then(function(respones){
+		alert("success");
+	},function(){});
+	
+}
 
 /*message success*/
 function message(title,status,type){
@@ -280,7 +289,13 @@ new_computer();
 allcategory();	
 new_home();
 web_source();
-getsavelist(USERID);
+
+if(USERID==null){
+	return ;
+}else{
+	getsavelist(USERID);
+}
+
 });
 
 
