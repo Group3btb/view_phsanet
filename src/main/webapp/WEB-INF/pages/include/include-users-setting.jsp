@@ -20,10 +20,10 @@
                         <img  src="https://cdn1.iconfinder.com/data/icons/mix-color-4/502/Untitled-1-512.png" class="img-circle" width="150" height="150">
                         <p>Welcome!</p>
                     </div>
-        
+                   
 					<span><i class="fa fa-user" aria-hidden="true"></i>​ Username <span
 						class="invalid" ng-show="!user_name"> *</span></span><input type="text"
-						name="user_name" class="form-control" placeholder="jonh"
+						name="user_name" class="form-control"  placeholder="username"
 						ng-model="user_name" ng-pattern="/^[a-zA-Z_ ]{1,19}$/"> <br>
 						
 					<span><i class="fa fa-envelope" aria-hidden="true"></i>

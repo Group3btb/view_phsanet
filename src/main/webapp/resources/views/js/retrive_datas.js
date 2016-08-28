@@ -155,7 +155,7 @@ $rootScope.search=function(main,sub){
     	  }
       }).then(function(respones){
     	  $scope.search_items=respones.data.DATA;
-    	 console.log($scope.search_items);
+    	
       },function(error){
     	  alert("error");
       });      	
@@ -194,14 +194,30 @@ $scope.updateUser=function(){
 	}).then(function(respones){
 		message("User has been update","Update","success");
 		clear();
+		getUserprofile(USERID);
 	},function(errors){
 		message("User has been faild","Update Faild","error");
 	});
 	
 }
 
-
-
+/*get user*/
+function getUserprofile(userid){
+	
+	 $http({
+		 url:base_url+'/user/'+userid,
+		 method:'GET'
+	 }).then(function(respones){
+	   $scope.userprofile=respones.data.DATA;
+	   $scope.user_name=$scope.userprofile[0].user_name;
+	   $scope.email=$scope.userprofile[0].email;
+	   $scope.password=$scope.userprofile[0].password;
+	   $scope.c_password=$scope.userprofile[0].password;
+	 },function(){
+		
+	 });
+	
+}
 
 /*savelist*/
 $scope.addsavelist=function(elments){
@@ -297,6 +313,7 @@ if(USERID==null){
 	return ;
 }else{
 	getsavelist(USERID);
+	getUserprofile(USERID);
 }
 
 });

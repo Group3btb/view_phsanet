@@ -50,7 +50,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 		http
 			.authorizeRequests()
 			.antMatchers("/admin/**").hasAnyRole("ADMIN")
-			.antMatchers("/user/**").hasAnyRole("USER");
+			.antMatchers("/user/**").hasAnyRole("USER","ADMIN");
 		
 		http.logout().logoutUrl("/logout").logoutSuccessUrl("/");
 			
