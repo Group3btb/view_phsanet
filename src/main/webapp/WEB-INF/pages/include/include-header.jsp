@@ -12,7 +12,7 @@
 					<i class="fa fa-bars" aria-hidden="true"></i>
 				</button>
 				
-				 <img alt="" src="/resources/views/logo/logo.png">
+				 <a href="/index"><img alt="" src="/resources/views/logo/logo.png"></a>
 				
 			</div>
 

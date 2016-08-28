@@ -5,7 +5,7 @@
 
 <ul class="nav nav-stacked"​​>
 	<li class="active"><a href=""><i class="fa fa-user"></i> Your Information</a></li>
-	<li><a href="/user/savelist"><i class="fa fa-bookmark-o"></i> All product saved</a></li>
-	<li><a href="/user/edit"><i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+	<li><a href="/user/saved"><i class="fa fa-bookmark-o"></i> All product saved</a></li>
+	<li><a href="/user/profile"><i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
 </ul>
 

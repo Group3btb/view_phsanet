@@ -240,13 +240,16 @@ function getsavelist(userid){
 }
 
 $scope.deleteSaved=function(listid){
-	console.log(listid);
+	
 	$http({
 		url:base_url+'/savelist/'+listid.item.list_id,
-		method:'DELETE'
+		method:'DELETE',
+		headers:{
+			"Access-Control-Allow-Origin":"*"
+		}
 	}).then(function(respones){
-		alert("success");
-	},function(){});
+		getsavelist(USERID);
+	},function(error){});
 	
 }
 
