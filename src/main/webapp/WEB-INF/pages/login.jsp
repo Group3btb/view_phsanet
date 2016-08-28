@@ -63,7 +63,7 @@
 							</div>
 						</div>
 						
-						<div class="form-group m-t-20 m-b-0">
+						<!-- <div class="form-group m-t-20 m-b-0">
 							<div class="col-sm-12 text-center">
 								<h4><b>Sign in with</b></h4>
 							</div>
@@ -83,18 +83,18 @@
 		                           <i class="fa fa-google-plus m-r-5"></i> Google+
 		                        </button>
 							</div>
-						</div>
+						</div> -->
 					</form>
 
 				</div>
 			</div>
-			<div class="row">
+			<!-- <div class="row">
 				<div class="col-sm-12 text-center">
 					<p>
 						Don't have an account? <a href="register.html" class="text-primary m-l-5"><b>Sign Up</b></a>
 					</p>
 				</div>
-			</div>
+			</div> -->
 
 		</div>
 
