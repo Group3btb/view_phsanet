@@ -7,8 +7,12 @@ i{color:#fff;}
 ul.nav li a:hover,ul.nav li a:visited.account{
    background-color:#428BCA;
    color:#fff;
-   text-decoration:underline;
+   
 }
+.user{height:40px; margin-top:-10px;}
+.user a.account{height:50px;}
+.user a img{height:40px;}
+.i{color:#428BCA; }
 .option {color:#428BCA;}
 .btn-search,.btn-search i{background-color:#F1F1F1; color:#428BCA; }
 form.navbar-form{margin-left:0px;}

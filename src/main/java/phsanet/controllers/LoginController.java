@@ -33,7 +33,7 @@ public class LoginController {
 	@Autowired
 	private RestTemplate restTemplate;
 	
-	String url = "http://localhost:2222/api/useremail";
+	String url = "http://192.168.178.175:2222/api/useremail";
 	
 	@RequestMapping(value="/login", method=RequestMethod.GET)
 	public String loginPage(){

@@ -200,30 +200,13 @@ $scope.updateUser=function(){
 	
 }
 
-/*login*/
-$scope.login=function(email,psw){
-	console.log(email+" "+psw)
-	$http({
-		url:"http://localhost:1111/authentication",
-		method:'POST',
-		data:{
-			email:email,
-			password:psw
-		}
-	}).then(function(respones){
-		console.log(respones);
-		message("User has been update","Update","success");
-		clear();
-	},function(errors){
-		console.log(errors);
-		message("User has been faild","Update Faild","error");
-	});
-}
+
 
 
 /*savelist*/
-$scope.savelist=function(elments){
+$scope.addsavelist=function(elments){
 	console.log(elments.item.product_id);
+	console.log(USERID);
 	$http({
 		url:base_url+'/savelist',
 		method:'POST',
@@ -236,12 +219,27 @@ $scope.savelist=function(elments){
 		    }		    
 		}
 	}).then(function(response){
-		alert("sucess");
+		
 	},function(erorr){
-		alert("erorr");
+	
 	});
 	
 }
+
+
+/*get item from savelist*/
+function getsavelist(userid){
+	 $http({
+		 url:base_url+'/savelist/'+userid,
+		 method:'GET'
+	 }).then(function(respones){
+	$scope.saveditem=respones.data.DATA;
+	 },function(){
+		
+	 });
+}
+
+
 
 /*message success*/
 function message(title,status,type){
@@ -282,6 +280,7 @@ new_computer();
 allcategory();	
 new_home();
 web_source();
+getsavelist(USERID);
 });
 
 
@@ -317,4 +316,5 @@ application.directive('abc', [function() {
     };
   
 }]);
+
 

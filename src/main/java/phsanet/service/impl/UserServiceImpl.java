@@ -24,7 +24,7 @@ public class UserServiceImpl implements UserDetailsService{
 	@Autowired
 	private RestTemplate restTemplate;
 	
-	String url = "http://localhost:2222/api/useremail";
+	String url = "http://192.168.178.175:2222/api/useremail";
 	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

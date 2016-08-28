@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-
 <div class="row">
 	<div class="col-md-12">
 		<div class="location">
@@ -13,200 +12,38 @@
 
 
 <div class="row" style="min-height:630px">
-	<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 column productbox">
+	<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 column productbox" ng-repeat="item in saveditem">
 
 		<div class="item-box">
-			<div class="product-source">
-				<span class="source-img"> <a href=""> <img
-						class="img-circle" src="/resources/views/resourceimg/khbuy.png"> khbuy
-				</a>
-				</span>
-
-
-			</div>
-			<a href=""><img src="/resources/views/electronic/1.jpg"
-				class="img-responsive"></a>
-			<div class="producttitle">Product 2</div>
-			<div class="productprice">
-				<div class="pull-right">
-					<a href="#" title="ធ្វើការលុប" class="pricetext"> <i
-						class="fa fa-trash-o"></i></a>
-				</div>
-				<div class="pricetext">$8.95</div>
-			</div>
-		</div>
+						<div class="product-source">
+							<span class="source-img"> <a href="{{item.web.url}}" target="_blank"><img
+									class="img-circle" src="{{item.web.logo}}"> {{item.web.website}}
+							</a>
+							</span>
+						</div>
+						<a href="{{item.description}}" target="_blank" title="{{item.product.product_name}}"><img src="{{item.product.product_image}}" class="img-responsive"></a>
+						<div class="producttitle">{{item.product.product_name | myFilter}}</div>
+						<div class="productprice">
+							<div class="pull-right">
+							
+							   <sec:authorize access="!isAuthenticated()">
+						            <a href="" data-toggle="modal" data-target="#login"   title="រក្សាទុក" class="pricetext"><i class="fa fa-bookmark-o"></i></a>
+					           </sec:authorize>
+					           
+					            <sec:authorize access="isAuthenticated()">
+						            <a href=""  ng-click="addsavelist(this)"  title="រក្សាទុក" class="pricetext"><i class="fa fa-bookmark-o"></i></a>
+					           </sec:authorize>
+					           
+					           
+								
+							</div>
+							<div class="pricetext">{{item.product.price}}</div>
+						</div>
+	</div>
 
 	</div>
 
-	<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 column productbox">
 
-		<div class="item-box">
-			<div class="product-source">
-				<span class="source-img"> <a href=""> <img
-						class="img-circle" src="/resources/views/resourceimg/amazone.jpg"> amazone
-				</a>
-				</span>
-
-			</div>
-			<a href=""><img src="/resources/views/electronic/2.jpg"
-				class="img-responsive"></a>
-			<div class="producttitle">Product 2</div>
-			<div class="productprice">
-				<div class="pull-right">
-					<a href="#" title="ធ្វើការលុប" class="pricetext"> <i
-						class="fa fa-trash-o"></i></a>
-				</div>
-				<div class="pricetext">$8.95</div>
-			</div>
-		</div>
-
-	</div>
-
-	<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 column productbox">
-
-		<div class="item-box">
-			<div class="product-source">
-				<span class="source-img"> <a href=""> <img
-						class="img-circle" src="/resources/views/resourceimg/chantra.jpg"> chantra
-				</a>
-				</span>
-
-			</div>
-			<a href=""><img src="/resources/views/electronic/3.jpg"
-				class="img-responsive"></a>
-			<div class="producttitle">Product 2</div>
-			<div class="productprice">
-				<div class="pull-right">
-					<a href="#" title="ធ្វើការលុប" class="pricetext"> <i
-						class="fa fa-trash-o"></i></a>
-				</div>
-				<div class="pricetext">$8.95</div>
-			</div>
-		</div>
-
-	</div>
-
-	<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 column productbox">
-
-		<div class="item-box">
-			<div class="product-source">
-				<span class="source-img"> <a href=""> <img
-						class="img-circle" src="/resources/views/resourceimg/kaymu.jpg"> kaymu
-				</a>
-				</span>
-
-			</div>
-			<a href=""><img src="/resources/views/electronic/4.jpg"
-				class="img-responsive"></a>
-			<div class="producttitle">Product 2</div>
-			<div class="productprice">
-				<div class="pull-right">
-					<a href="#" title="ធ្វើការលុប" class="pricetext"> <i
-						class="fa fa-trash-o"></i></a>
-				</div>
-				<div class="pricetext">$8.95</div>
-			</div>
-		</div>
-
-	</div>
-
-	<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 column productbox">
-
-		<div class="item-box">
-			<div class="product-source">
-				<span class="source-img"> <a href=""> <img
-						class="img-circle" src="/resources/views/resourceimg/khmer24.png"> khmer24
-				</a>
-				</span>
-
-			</div>
-			<a href=""><img src="/resources/views/electronic/5.jpg"
-				class="img-responsive"></a>
-			<div class="producttitle">Product 2</div>
-			<div class="productprice">
-				<div class="pull-right">
-					<a href="#" title="ធ្វើការលុប" class="pricetext"> <i
-						class="fa fa-trash-o"></i></a>
-				</div>
-				<div class="pricetext">$8.95</div>
-			</div>
-		</div>
-
-	</div>
-	
-	
-	<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 column productbox">
-
-		<div class="item-box">
-			<div class="product-source">
-				<span class="source-img"> <a href=""> <img
-						class="img-circle" src="/resources/views/resourceimg/khmer24.png"> khmer24
-				</a>
-				</span>
-
-			</div>
-			<a href=""><img src="/resources/views/electronic/6.jpg"
-				class="img-responsive"></a>
-			<div class="producttitle">Product 2</div>
-			<div class="productprice">
-				<div class="pull-right">
-					<a href="#" title="ធ្វើការលុប" class="pricetext"> <i
-						class="fa fa-trash-o"></i></a>
-				</div>
-				<div class="pricetext">$8.95</div>
-			</div>
-		</div>
-
-	</div>
-	
-	<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 column productbox">
-
-		<div class="item-box">
-			<div class="product-source">
-				<span class="source-img"> <a href=""> <img
-						class="img-circle" src="/resources/views/resourceimg/amazone.jpg"> amazone
-				</a>
-				</span>
-
-			</div>
-			<a href=""><img src="/resources/views/electronic/7.jpg"
-				class="img-responsive"></a>
-			<div class="producttitle">Product 2</div>
-			<div class="productprice">
-				<div class="pull-right">
-					<a href="#" title="ធ្វើការលុប" class="pricetext"> <i
-						class="fa fa-trash-o"></i></a>
-				</div>
-				<div class="pricetext">$8.95</div>
-			</div>
-		</div>
-
-	</div>
-	
-	
-	<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 column productbox">
-
-		<div class="item-box">
-			<div class="product-source">
-				<span class="source-img"> <a href=""> <img
-						class="img-circle" src="/resources/views/resourceimg/khmer24.png"> khmer24
-				</a>
-				</span>
-
-			</div>
-			<a href=""><img src="/resources/views/electronic/8.jpg"
-				class="img-responsive"></a>
-			<div class="producttitle">Product 2</div>
-			<div class="productprice">
-				<div class="pull-right">
-					<a href="#" title="ធ្វើការលុប" class="pricetext"> <i
-						class="fa fa-trash-o"></i></a>
-				</div>
-				<div class="pricetext">$8.95</div>
-			</div>
-		</div>
-
-	</div>
 	
 	
 </div>

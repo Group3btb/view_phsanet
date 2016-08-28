@@ -20,12 +20,12 @@ public class ViewController {
 	}
 
 	
-	@RequestMapping(value={"/user/savelist"})
+	@RequestMapping(value={"/user/saved"})
 	public String savelist(){
 		return "users/index";
 	}
 
-	@RequestMapping(value={"/user/edit"})
+	@RequestMapping(value={"/user/profile"})
 	public String user(){
 		return "users/users";
 	}

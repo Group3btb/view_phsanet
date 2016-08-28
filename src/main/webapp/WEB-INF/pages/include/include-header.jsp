@@ -1,10 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%> 
-   
-	<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+   <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
       
-     
-      
+        
 <%@include file="account.jsp" %>
 <nav class="navbar navbar-fixed-top  nav-header" role="navigation">
 		<div class="container">
@@ -46,11 +44,22 @@
 					<sec:authorize access="isAuthenticated()">
 						<script>
 				     		var USERID = '<sec:authentication property="principal.user_id"/>';
-				     		
 				     	</script> 
 						<sec:authentication property="principal" var="user"/>
-						<li><a>${user.user_name}</a></li>	
-						<li><a href="logout">Logout</a></li>	
+						 
+							<li class="user drowdown">
+							    <a class="account dropdown-toggle" data-toggle="dropdown" href="" >
+							       <img  src="https://upload.wikimedia.org/wikipedia/commons/d/d3/User_Circle.png"> ${user.user_name}
+							    </a>
+							    
+							    <ul class="dropdown-menu" style="margin-top:20px;">
+							        <li><a href="/user/profile"><i class="i fa fa-user"></i> Profile</a></li>
+							        <li><a href="/user/saved"><i class="i fa fa-bookmark-o"></i> Saved List</a></li>
+							        <li><a href="/logout"><i class="i fa fa-sign-out"></i>Logout</a></li>
+							        
+							    </ul>
+							</li>  
+					
 					</sec:authorize> 
 					
 					
