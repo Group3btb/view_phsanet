@@ -52,11 +52,11 @@
 						 
 							<li class="user drowdown">
 							    <a class="account dropdown-toggle" data-toggle="dropdown" href="" >
-							       <img  src="https://upload.wikimedia.org/wikipedia/commons/d/d3/User_Circle.png"> ${user.user_name}
+							       <img  src="https://upload.wikimedia.org/wikipedia/commons/d/d3/User_Circle.png"> 
 							    </a>
 							    
 							    <ul class="dropdown-menu" style="margin-top:20px;">
-							        <li><a href="/user/profile"><i class="i fa fa-user"></i> Profile</a></li>
+							        <li><a href="/user/profile"><i class="i fa fa-user"></i>  ${user.user_name}</a></li>
 							        <li><a href="/user/saved"><i class="i fa fa-bookmark-o"></i> Saved List</a></li>
 							        <li><a href="/logout"><i class="i fa fa-sign-out"></i>Logout</a></li>
 							        
