@@ -53,7 +53,7 @@
                                         <i class="md ion-ios7-world-outline text-info"></i>
                                     </div>
                                     <div class="text-right">
-                                        <h3 class="text-dark"><b class="counter">10</b></h3>
+                                        <h3 class="text-dark"><b class="counter">5</b></h3>
                                         <p class="text-muted">Total Web Source</p>
                                     </div>
                                     <div class="clearfix"></div>
@@ -66,7 +66,7 @@
                                         <i class="md icon-layers text-pink"></i>
                                     </div>
                                     <div class="text-right">
-                                        <h3 class="text-dark"><b class="counter">50</b></h3>
+                                        <h3 class="text-dark"><b class="counter">15</b></h3>
                                         <p class="text-muted">Total Category</p>
                                     </div>
                                     <div class="clearfix"></div>
@@ -79,7 +79,7 @@
                                         <i class="md ion-android-contacts text-purple"></i>
                                     </div>
                                     <div class="text-right">
-                                        <h3 class="text-dark"><b class="counter">1500</b></h3>
+                                        <h3 class="text-dark"><b class="counter">15</b></h3>
                                         <p class="text-muted">Total Visitors</p>
                                     </div>
                                     <div class="clearfix"></div>
@@ -92,7 +92,7 @@
                                         <i class="md md-remove-red-eye text-success"></i>
                                     </div>
                                     <div class="text-right">
-                                        <h3 class="text-dark"><b class="counter">250</b></h3>
+                                        <h3 class="text-dark"><b class="counter">10</b></h3>
                                         <p class="text-muted">Today's Visits</p>
                                     </div>
                                     <div class="clearfix"></div>

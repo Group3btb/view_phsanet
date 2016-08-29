@@ -63,9 +63,9 @@
                                             <thead>
                                                 <tr>
                                                     <th style="max-width: 20px; text-align: center" >ID</th>
-                                                    <th style="text-align: center">NAME</th>
-                                                    <th style="text-align: center">URL</th>
-                                                    <th style="width: 30px;">LOGO</th>
+                                                    <th>SITE NAME</th>
+                                                    <th>URL</th>
+                                                    <th>LOGO</th>
                                                     <th style="text-align: center">ACTION</th>
                                                     
                                                 </tr>
@@ -83,7 +83,7 @@
                                                     
                                                     <td style="text-align: center">
                                                     
-                                                    	<a href="#"  class="btn btn-info btn-md waves-effect waves-light" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="200" data-overlaycolor="#36404a"><i class="glyphicon glyphicon-eye-open"></i></a>
+                                                    	<!-- <a href="#"  class="btn btn-info btn-md waves-effect waves-light" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="200" data-overlaycolor="#36404a"><i class="glyphicon glyphicon-eye-open"></i></a> -->
 
                                                     	<a href="javascript:" ng-click="getAllData(this)" class="btn btn-warning btn-md waves-effect waves-light call-modal"><i class="glyphicon glyphicon-edit"></i></a>
 

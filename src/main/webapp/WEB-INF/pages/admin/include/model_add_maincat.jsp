@@ -12,7 +12,7 @@
                <form role="form">
                         <div class="form-group">
                             <label for="name">Main Category Name</label>
-                            <input type="text" class="form-control" id="cate_name" placeholder="Enter site name" ng-model="MainCategory_name">
+                            <input type="text" class="form-control" id="cate_name" placeholder="Enter main catetegory name" ng-model="MainCategory_name">
                         </div> 
                         
                         <!-- <div class="form-group">

@@ -61,7 +61,7 @@
                   
     
                     <div class="form-group">
-                      <label for="userName">URL Wedsite*</label>
+                      <label for="userName">URL Wedsite</label>
                       <input ng-model="test_url" type="text" name="nick" parsley-trigger="change" required placeholder="Enter URL Wedsite" class="form-control" id="url_wedsite">
                     </div>
                     <div class="form-group">
@@ -69,16 +69,16 @@
                       <input ng-model="test_row" type="text" parsley-trigger="change" required placeholder="Enter Row Selector" class="form-control" id="row_selector">
                     </div>
                     <div class="form-group">
-                      <label for="selector_product_name">Selector ឈ្មោះទំនិញ</label>
-                      <input  ng-model="test_name"  type="text" placeholder="Enter Selector ឈ្មោះទំនិញ" required class="form-control">
+                      <label for="selector_product_name">Product Name Selector</label>
+                      <input  ng-model="test_name"  type="text" placeholder="Enter Product Name Selector" required class="form-control">
                     </div>
 
                     <div class="form-group">
-                      <label for="selector_price">Selector តម្លៃ</label>
-                      <input  ng-model="test_price" type="text" required placeholder="Enter Selector តម្លៃ" class="form-control" id="selector_price">
+                      <label for="selector_price">Price Selector</label>
+                      <input  ng-model="test_price" type="text" required placeholder="Enter Price Selector" class="form-control" id="selector_price">
                     </div>
                     <div class="form-group">
-                      <label for="passWord2">Selector Image</label>
+                      <label for="passWord2">Image Selector</label>
                       <input  ng-model="test_image" type="text" required placeholder="Enter Selector Image" class="form-control" id="selector_image">
                     </div>
                     <div class="form-group">

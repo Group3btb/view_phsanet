@@ -11,13 +11,12 @@
           <div class="custom-modal-text text-left">
                <form role="form">
                         <div class="form-group">
-                            <label for="name">SITE NAME</label>                    
                             <label for="name">SITE NAME</label>
                                 <select class="form-control"
                                       ng-model="web_selected" 
                                       ng-change="webSiteChange(web_selected)" 
                                       data-ng-options="web as web.website for web in webs">
-                                      <option value="">---selected site---</option>
+                                      <option value="">---Select Site---</option>
                                 </select>
                         </div> 
                         
@@ -28,7 +27,7 @@
                                       ng-model="sub" 
                                       ng-change="subcategoryChange(sub)" 
                                       data-ng-options="sub as sub.subcategory_name for sub in subs">
-                                      <option value="">---Subcategory---</option>
+                                      <option value="">---Select Subcategory---</option>
                             </select>
 
                         </div> 

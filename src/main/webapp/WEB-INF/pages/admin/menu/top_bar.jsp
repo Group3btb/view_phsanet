@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
     
  <!-- Top Bar Start -->
             <div class="topbar">
@@ -32,10 +32,12 @@
                                 </li> -->
                                 <li class="dropdown">
                                     <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><i class="ti-user"></i></a>
+                                    <sec:authentication property="principal" var="user"/>
+                                    
                                     <ul class="dropdown-menu">
-                                        <li><a href="javascript:void(0)"><i class="ti-user m-r-5"></i> Profile</a></li>
-                                        <li><a href="javascript:void(0)"><i class="ti-settings m-r-5"></i> Settings</a></li>
-                                        <li><a href="javascript:void(0)"><i class="ti-lock m-r-5"></i> Lock screen</a></li>
+                                        <li><a href="javascript:void(0)"><i class="ti-user m-r-5"></i>${user.user_name}</a></li>
+                                       <!--  <li><a href="javascript:void(0)"><i class="ti-settings m-r-5"></i> Settings</a></li>
+                                        <li><a href="javascript:void(0)"><i class="ti-lock m-r-5"></i> Lock screen</a></li> -->
                                         <li><a href="/logout"><i class="ti-power-off m-r-5"></i> Logout</a></li>
                                     </ul>
                                 </li>

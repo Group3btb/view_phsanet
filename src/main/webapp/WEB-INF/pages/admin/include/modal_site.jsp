@@ -11,16 +11,16 @@
           <div class="custom-modal-text text-left">
                <form role="form">
                         <div class="form-group">
-                            <label for="name">Name</label>
+                            <label for="name">Site Name</label>
                             <input ng-model="site_name" type="text" class="form-control" id="searchcategory" placeholder="Enter site name">
                         </div> 
                         
                         <div class="form-group">
-                            <label for="name">URL</label>
+                            <label for="name">Site URL</label>
                             <input ng-model="site_url" type="text" class="form-control" id="categoryid" placeholder="Enter site url">
                         </div>   
                          <div class="form-group">
-                            <label for="name">Prefix Path(image)</label>
+                            <label for="name">Site Logo URL</label>
                             <input ng-model="path_image" type="text" class="form-control" id="categoryid" placeholder="Enter site basepath">
                         </div>  
                          <div class="form-group">

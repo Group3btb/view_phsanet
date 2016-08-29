@@ -67,9 +67,9 @@
 									        <table class="table table-actions-bar m-b-0"><!-- <table class="table table-actions-bar m-b-0"> -->
                                             <thead>
                                                 <tr>
-                                                    <th style="max-width: 20px; text-align: center" ng-click="sort('category_id')">ID</th>
-                                                    <th style="text-align: center" ng-click="sort('category_name')">Category Name</th>
-                                                    <th style="text-align: center" ng-click="sort('main_category.category_name')">Main Category Name</th>
+                                                    <th ng-click="sort('category_id')">ID</th>
+                                                    <th ng-click="sort('category_name')">Category Name</th>
+                                                    <th ng-click="sort('main_category.category_name')">Main Category Name</th>
                                                     <th style="text-align: center">ACTION</th>
                                                 </tr>
                                             </thead>
@@ -81,7 +81,7 @@
                                                     <td>{{cate.category_name}}<input type="hidden" value="{{cate.description}}"></td>
                                                     <td>{{cate.main_category.category_name}}<input type="hidden" value="{{cate.main_category.main_category_id}}"></td>
                                                     <td style="text-align: center">
-                                                    	<a href="#"  class="btn btn-info btn-md waves-effect waves-light" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="200" data-overlaycolor="#36404a"><i class="glyphicon glyphicon-eye-open"></i></a>
+                                                    	<!-- <a href="#"  class="btn btn-info btn-md waves-effect waves-light" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="200" data-overlaycolor="#36404a"><i class="glyphicon glyphicon-eye-open"></i></a> -->
                                                     	<a href="javascript:" ng-click="getData(this)" class="btn btn-primary btn-md waves-effect waves-light call-modal_update"><i class="glyphicon glyphicon-pencil"></i></a>
                                                     	<a href="#" id="btnclose" ng-click="deleteCate(cate.category_id)" class="btn btn-danger btn-md waves-effect"><i class="glyphicon glyphicon-trash"></i></a>
                                                     </td>
