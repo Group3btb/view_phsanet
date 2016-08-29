@@ -113,18 +113,16 @@ function web_source(){
 /*sub categories items*/
 var paging={
 		limit:24,
-		page:1,
-		subcategoryname:""
+		page:1
 };
 
-$rootScope.subcategory=function(url,main=0,key=0){
+$rootScope.subcategory=function(url=0,main=0,key=0){
 	
 	if(main==0 && key==0 ){
-		alert(url);
-		paging.subcategoryname=url;
+	
 		$http({
 			  method:'GET',
-			  url:base_url+'/product?',
+			  url:base_url+'/product?subcategoryname'+url,
 			  params:paging
 			}).then(function(respones){
 				$scope.subitems = shuffleArray(respones.data.DATA);
@@ -143,66 +141,63 @@ $rootScope.subcategory=function(url,main=0,key=0){
 		
 		
 	}else if(main==0){
-		alert(key);
-		/*paging.subcategoryname=url;*/
+		
 		$http({
 			  method:'GET',
 			  url:base_url+'/product?productname='+key,
-			/*  params:paging*/
+			  params:paging
 			}).then(function(respones){
 				$scope.subitems = shuffleArray(respones.data.DATA);
-				/*$scope.total=respones.data.PAGE.TOTAL_PAGES;
+				$scope.total=respones.data.PAGE.TOTAL_PAGES;
 				paging.page = respones.data.PAGE.PAGE;
 				$('#page-selection').bootpag({
 				    total:$scope.total,
 				    page:paging.page,
 				    maxVisible: 5
 				    
-				});*/
+				});
 				
 			},function(respones){
 				
 		});
 		
 	}else if(key==0){
-		alert(main+' '+key);
-		/*paging.subcategoryname=url;*/
+	
+		paging.maincategory=main;
 		$http({
 			  method:'GET',
-			  url:base_url+'/product?maincategory='+main,
-			/*  params:paging*/
+			  url:base_url+'/product?',
+			  params:paging
 			}).then(function(respones){
 				$scope.subitems = shuffleArray(respones.data.DATA);
-				/*$scope.total=respones.data.PAGE.TOTAL_PAGES;
+				$scope.total=respones.data.PAGE.TOTAL_PAGES;
 				paging.page = respones.data.PAGE.PAGE;
 				$('#page-selection').bootpag({
 				    total:$scope.total,
 				    page:paging.page,
 				    maxVisible: 5
 				    
-				});*/
+				});
 				
 			},function(respones){
 				
 		});
 	}else{
-		
-		alert(main+' '+key);
-		/*paging.subcategoryname=url;*/
+	
 		$http({
 			  method:'GET',
 			  url:base_url+'/product?maincategory='+main+"&productname="+key,
-			/*  params:paging*/
+			  params:paging
 			}).then(function(respones){
 				$scope.subitems = shuffleArray(respones.data.DATA);
-				/*$scope.total=respones.data.PAGE.TOTAL_PAGES;
+				$scope.total=respones.data.PAGE.TOTAL_PAGES;
 				paging.page = respones.data.PAGE.PAGE;
 				$('#page-selection').bootpag({
 				    total:$scope.total,
 				    page:paging.page,
 				    maxVisible: 5
 				    
-				});*/
+				});
 				
 			},function(respones){
 				
