@@ -6,45 +6,25 @@
 			<div class='col-md-12'>
 				<div class="carousel slide media-carousel" id="media">
 					<div class="carousel-inner">
+					
 						<div class="item  active">
 							<div class="row">
-								<div class="col-md-2 col-sm-4">
-									<a class="thumbnail" href="#"><img alt=""
-										src="/resources/views/resourceimg/amazone.jpg"></a>
+								<div class="col-md-2 col-sm-4" ng-repeat="item in web">
+									<a class="thumbnail" title="{{item.website}}" target="_blank" href="{{item.url}}"><img src="{{item.logo}}"></a>
 								</div>
-								<div class="col-md-2 col-sm-4">
-									<a class="thumbnail" href="#"><img alt=""
-										src="/resources/views/resourceimg/chantra.jpg"></a>
-								</div>
-								<div class="col-md-2 col-sm-4">
-									<a class="thumbnail" href="#"><img alt=""
-										src="/resources/views/resourceimg/kaymu.jpg"></a>
-								</div>
-								<div class="col-md-2 col-sm-4">
-									<a class="thumbnail" href="#"><img alt=""
-										src="/resources/views/resourceimg/khbuy.png"></a>
-								</div>
-								<div class="col-md-2 col-sm-4">
-									<a class="thumbnail" href="#"><img alt=""
-										src="/resources/views/resourceimg/khmer24.png"></a>
-								</div>
-								<div class="col-md-2 col-sm-4">
-									<a class="thumbnail" href="#"><img alt=""
-										src="/resources/views/resourceimg/nika.jpg"></a>
-								</div>
-
-
 							</div>
 						</div>
+						
+						
 
-						<div class="item">
+						<!-- <div class="item">
 							<div class="row">
 								<div class="col-md-2 col-sm-4">
 									<a class="thumbnail" href="#"><img alt=""
 										src="/resources/views/resourceimg/psc.png"></a>
 								</div>
 							</div>
-						</div>
+						</div> -->
 
 					</div>
 					<a data-slide="prev" href="#media" class="left carousel-control">‹</a>

@@ -105,6 +105,7 @@ function web_source(){
 		  url:base_url+'/web',
 		}).then(function(respones){
 			$scope.web=respones.data.DATA;
+			console.log($scope.web);
 		},function(respones){
 			
 		});
@@ -288,8 +289,6 @@ function getUserprofile(userid){
 
 /*savelist*/
 $scope.addsavelist=function(elments){
-	console.log(elments.item.product_id);
-	console.log(USERID);
 	$http({
 		url:base_url+'/savelist',
 		method:'POST',
@@ -386,7 +385,6 @@ if(USERID==null){
 
 });
 
-
 /*sub string*/
 application.filter('myFilter', function() {
 	  return function(input) {
@@ -414,7 +412,7 @@ application.directive('abc', [function() {
         },
         link: function(scope,element, attr) {
         	scope.$root.subcategory(attr.cname,attr.title,attr.value);
-            /*scope.$root.search(attr.title,attr.value);*/
+        
         }
     };
   

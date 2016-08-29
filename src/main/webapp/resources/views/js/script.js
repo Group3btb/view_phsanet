@@ -6,6 +6,8 @@ $(document).ready(function() {
     
      } else{$("#scrolltop").fadeOut(300);}
      }); 
+     
+     
      $('#media').carousel({
     	    pause: true,
     	  });	  
