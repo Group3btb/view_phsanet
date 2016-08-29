@@ -117,26 +117,98 @@ var paging={
 		subcategoryname:""
 };
 
-$rootScope.subcategory=function(url){
-	paging.subcategoryname=url;
-	$http({
-		  method:'GET',
-		  url:base_url+'/product?',
-		  params:paging
-		}).then(function(respones){
-			$scope.subitems = shuffleArray(respones.data.DATA);
-			$scope.total=respones.data.PAGE.TOTAL_PAGES;
-			paging.page = respones.data.PAGE.PAGE;
-			$('#page-selection').bootpag({
-			    total:$scope.total,
-			    page:paging.page,
-			    maxVisible: 5
-			    
-			});
-			
-		},function(respones){
-			
-	});
+$rootScope.subcategory=function(url,main=0,key=0){
+	
+	if(main==0 && key==0 ){
+		alert(url);
+		paging.subcategoryname=url;
+		$http({
+			  method:'GET',
+			  url:base_url+'/product?',
+			  params:paging
+			}).then(function(respones){
+				$scope.subitems = shuffleArray(respones.data.DATA);
+				$scope.total=respones.data.PAGE.TOTAL_PAGES;
+				paging.page = respones.data.PAGE.PAGE;
+				$('#page-selection').bootpag({
+				    total:$scope.total,
+				    page:paging.page,
+				    maxVisible: 5
+				    
+				});
+				
+			},function(respones){
+				
+		});
+		
+		
+	}else if(main==0){
+		alert(key);
+		/*paging.subcategoryname=url;*/
+		$http({
+			  method:'GET',
+			  url:base_url+'/product?productname='+key,
+			/*  params:paging*/
+			}).then(function(respones){
+				$scope.subitems = shuffleArray(respones.data.DATA);
+				/*$scope.total=respones.data.PAGE.TOTAL_PAGES;
+				paging.page = respones.data.PAGE.PAGE;
+				$('#page-selection').bootpag({
+				    total:$scope.total,
+				    page:paging.page,
+				    maxVisible: 5
+				    
+				});*/
+				
+			},function(respones){
+				
+		});
+		
+	}else if(key==0){
+		alert(main+' '+key);
+		/*paging.subcategoryname=url;*/
+		$http({
+			  method:'GET',
+			  url:base_url+'/product?maincategory='+main,
+			/*  params:paging*/
+			}).then(function(respones){
+				$scope.subitems = shuffleArray(respones.data.DATA);
+				/*$scope.total=respones.data.PAGE.TOTAL_PAGES;
+				paging.page = respones.data.PAGE.PAGE;
+				$('#page-selection').bootpag({
+				    total:$scope.total,
+				    page:paging.page,
+				    maxVisible: 5
+				    
+				});*/
+				
+			},function(respones){
+				
+		});
+	}else{
+		
+		alert(main+' '+key);
+		/*paging.subcategoryname=url;*/
+		$http({
+			  method:'GET',
+			  url:base_url+'/product?maincategory='+main+"&productname="+key,
+			/*  params:paging*/
+			}).then(function(respones){
+				$scope.subitems = shuffleArray(respones.data.DATA);
+				/*$scope.total=respones.data.PAGE.TOTAL_PAGES;
+				paging.page = respones.data.PAGE.PAGE;
+				$('#page-selection').bootpag({
+				    total:$scope.total,
+				    page:paging.page,
+				    maxVisible: 5
+				    
+				});*/
+				
+			},function(respones){
+				
+		});
+	}
+	
 }
 $('#page-selection').on("page", function(event, num){
     paging.page = num;
@@ -345,8 +417,8 @@ application.directive('abc', [function() {
         	title: '@'
         },
         link: function(scope,element, attr) {
-        	scope.$root.subcategory(attr.cname);
-            scope.$root.search(attr.title,attr.value);
+        	scope.$root.subcategory(attr.cname,attr.title,attr.value);
+            /*scope.$root.search(attr.title,attr.value);*/
         }
     };
   
