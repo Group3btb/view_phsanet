@@ -15,7 +15,7 @@ app.controller("controller_site_detail",function($http , $scope){
 	 		$scope.webs = respone.data.DATA;
 	 		
 	 	},function(respone){
-	 		alert("Error");
+	 		swal("Failed", "Failed to Load Site Detail!", "error");
 	 	});
 	 }// eng method site
 	 $scope.findall_web_sources();
@@ -32,7 +32,7 @@ app.controller("controller_site_detail",function($http , $scope){
 	 		$scope.subs = respone.data.DATA;
 
 	 	},function(respone){
-	 		alert("Error");
+	 		swal("Failed", "Failed to Load Subcategories!", "error");
 	 	});
 	 }// end method find all subcategory
 	  $scope.findall_subcategory();

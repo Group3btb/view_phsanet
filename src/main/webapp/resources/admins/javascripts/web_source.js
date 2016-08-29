@@ -12,7 +12,7 @@ app.controller("controller_web_source", function($http, $scope){
 	 	}).then(function(respone){
 	 		$scope.webs = respone.data.DATA;
 	 	},function(respone){
-	 		alert("Error");
+	 		swal("Failed", "Failed to Load Web Source!", "error");
 	 	});
 	 }// eng method site
 
@@ -55,7 +55,7 @@ app.controller("controller_web_source", function($http, $scope){
 		 		$scope.findall_web_sources();
 		 		$scope.clearField();
 		 	},function(respone){
-		 		alert("Error");
+		 		swal("Failed", "Failed to Save Site!", "error");
 		 	});
 	 }
 

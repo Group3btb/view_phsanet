@@ -17,7 +17,7 @@
 	  			console.log($scope.scraps);
 
 	  		},function(respone){
-	  			alert("error");	
+	  			swal("Failed", "Failed to Load Sites!", "error");
 	  		});
 	  }
 
@@ -68,7 +68,7 @@
 
 
 	  $scope.start_scraping_all = function(){
-	  		alert("Hello");
+	  		//alert("Hello");
 	  	$http({
 
 	  			url:'/startscrap',

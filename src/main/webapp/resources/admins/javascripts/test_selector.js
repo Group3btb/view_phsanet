@@ -23,7 +23,7 @@ app.controller('controller_test_selector',function($http , $scope){
 	 		$scope.scrap_products = respone.data;
 	 		console.log($scope.scrap_product);
 	 	},function(respone){
-	 		alert("Faild");
+	 		swal("Failed", "Failed!", "error");
 	 	});
 
 	 }
