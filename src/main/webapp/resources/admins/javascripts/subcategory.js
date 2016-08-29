@@ -7,7 +7,8 @@ app.controller("controller_subcate", function($http, $scope){
  		}).then(function(respone){
  			$scope.subcates = respone.data.DATA;
  		},function(respone){
- 			alert("Failed to load Subcategories");
+ 			//alert("Failed to load Subcategories");
+ 			swal("Failed!", "Failed to load Subcategories!", "error");
  		});
  	};//end find all sub category
  	
@@ -18,7 +19,8 @@ app.controller("controller_subcate", function($http, $scope){
  		}).then(function(respone){
  			$scope.categories = respone.data.DATA;
  		},function(respone){
- 			alert("Failed to Load Category");
+ 			//alert("Failed to Load Category");
+ 			swal("Failed!", "Failed to Load Categories!", "error");
  		});
  	};//end find all category
  	
@@ -38,7 +40,8 @@ app.controller("controller_subcate", function($http, $scope){
  			$socpe.subcate_name = " ";
  			$scope.subcate_desc = " ";
  		}, function(response){
- 			alert("Failed to Add Subcategory!");
+ 			//alert("Failed to Add Subcategory!");
+ 			swal("Failed!", "Failed to Add Subcategory!", "error");
  		});
  	};//end add sub category
  	

@@ -8,7 +8,8 @@
  		}).then(function(respone){
  			$scope.categories = respone.data.DATA;
  		},function(respone){
- 			alert("Failed to Load data from the Database");
+ 			//alert("Failed to Load data from the Database");
+ 			swal("Failed", "Failed to Load Categories!", "error");
  		});
  	};//end findall category
 
@@ -19,7 +20,8 @@
  		}).then(function(response){
  			$scope.maincates = response.data.DATA;
  		},function(response){
- 			alert("Failed to Load Main Category");
+ 			//alert("Failed to Load Main Category");
+ 			swal("Failed", "Failed to Load Main Categories!", "error");
  		});
  	};//end findAllMainCate
  	
@@ -37,7 +39,8 @@
  			$socpe.cate_name = " ";
  			$scope.cate_desc = " ";
  		}, function(response){
- 			alert("Failed to Add Category");
+ 			//alert("Failed to Add Category");
+ 			swal("Failed", "Failed to Add Category!", "error");
  		});
  	};//end add category
  	

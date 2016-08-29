@@ -8,7 +8,8 @@
  		}).then(function(respone){
  			$scope.meain_category = respone.data.DATA;
  		},function(respone){
- 			alert("Failed to Load data from the Database");
+ 			//alert("Failed to Load data from the Database");
+ 			swal("Failed!", "Failed to Load Main Category!", "error");  
  		});
  	};//end findall category
 
@@ -38,7 +39,8 @@
  			$scope.clear_data();
  			
  		}, function(response){
- 			alert("Add failed!");
+ 			//alert("Add failed!");
+ 			swal("Failed!", "Failed to add Main Category!", "error");  
  		});
  	};//end add category
  	
