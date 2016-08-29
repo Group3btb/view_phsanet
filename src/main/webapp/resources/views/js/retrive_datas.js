@@ -302,7 +302,7 @@ $scope.addsavelist=function(elments){
 		    }		    
 		}
 	}).then(function(response){
-		
+		message("The product has been saved!","Saved","success");
 	},function(erorr){
 	
 	});
@@ -331,6 +331,7 @@ $scope.deleteSaved=function(listid){
 			"Access-Control-Allow-Origin":"*"
 		}
 	}).then(function(respones){
+		message("The product has been deleted!","Deleted","success");
 		getsavelist(USERID);
 	},function(error){});
 	
