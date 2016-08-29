@@ -87,6 +87,7 @@ li.dropdown.mega-dropdown a:hover{background-color:#428BCA}
         .jssora22r:hover { background-position: -190px -31px; }
         .jssora22l.jssora22ldn { background-position: -250px -31px; }
         .jssora22r.jssora22rdn { background-position: -310px -31px; }
+        .slider_height{}
 
 /*end Silder */
 
@@ -95,7 +96,7 @@ li.dropdown.mega-dropdown a:hover{background-color:#428BCA}
 .list-itmes{width:100%;margin-top: -10px;}
 .items{width:100%;}
 .border{clear:both; border-bottom: 1px solid #ccc;}
-.box-main{background-color: #EC407A;height:40px;}
+.box-main{background-color: #428BCA;height:40px;}
 .span{font-size:20px; color:#fff; margin-left:13px; line-height: 40px;}
 .productbox {
     background-color:#ffffff;
