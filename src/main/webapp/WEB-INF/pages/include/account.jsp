@@ -22,11 +22,7 @@
 						<button type="submit" ng-disabled="!email || !password" class="btn btn-primary btn-block">
 							<i class="fa fa-power-off" aria-hidden="true"></i> Login
 						</button>
-						<span>Or</span>
-						<button type="submit" class="btn btn-primary btn-block">
-							<i class="fa fa-facebook-official" aria-hidden="true"></i>
-							Facebook
-						</button>
+						
 					</form>
 				</div>
 			</div>
