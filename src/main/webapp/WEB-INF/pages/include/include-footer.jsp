@@ -40,15 +40,3 @@
  });
 
 </script>
-
-<!-- <script type="text/javascript"> var continueSite = "http://localhost:2222"</script>
-<script src="http://120.136.24.174:13300/static/script/knongdai_login.js"></script> -->
-
-<%-- <sec:authorize access="isAnonymous()" >
-	<a href="http://120.136.24.174:13300/login?continue-site=http://120.136.24.174:13400">Login</a>
- 	<script type="text/javascript"> isAnonymous(continueSite);  </script>
-</sec:authorize>
-
-<sec:authorize access="isAuthenticated()" >
-	<a href="/logout">Logout</a>
-</sec:authorize> --%>

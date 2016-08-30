@@ -116,9 +116,10 @@ var paging={
 		page:1
 };
 
-$rootScope.subcategory=function(url=0,main=0,key=0){
+$rootScope.subcategory=function(url,main=0,key=0){
 	$scope.u=url; $scope.m=main; $scope.k=key;
 	if(main==0 && key==0 ){
+		alert("cate:"+ $scope.u);
 		$http({
 			  method:'GET',
 			  url:base_url+'/product?subcategoryname='+url,
@@ -208,7 +209,7 @@ $rootScope.subcategory=function(url=0,main=0,key=0){
 }
 $('#page-selection').on("page", function(event, num){
     paging.page = num;
-    $rootScope.subcategory($scope.u=0,$scope.m,$scope.k=0);
+    $rootScope.subcategory($scope.u,$scope.m,$scope.k=0);
 
 });
 
@@ -222,7 +223,7 @@ $scope.saveUser=function(){
 			"user_name":$scope.user_name,
 			"email":$scope.email,
 			"password":$scope.password,
-			"role":"USER"
+			"role":"user"
 		}
 	}).then(function(respones){
 		message("User has been save","Login","success");
