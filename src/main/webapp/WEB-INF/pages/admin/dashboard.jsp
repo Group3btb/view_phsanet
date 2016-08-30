@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<html  ng-app="Myapp">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +17,7 @@
     <body class="fixed-left">
 
         <!-- Begin page -->
-        <div id="wrapper">
+        <div id="wrapper"  ng-controller="controller_temporary_item">
 			 <!-- Top Bar Start -->
            	<jsp:include page="/WEB-INF/pages/admin/menu/top_bar.jsp"></jsp:include>
             <!-- Top Bar End -->
@@ -125,100 +125,49 @@
 							<div class="col-sm-12">
 								<div class="card-box">
                    <h3>Temporary Items Scraped</h3><br>
-									        <table id="datatable" class="table table-striped table-bordered table-actions-bar"><!-- <table class="table table-actions-bar m-b-0"> -->
+									        <table class="table table-actions-bar m-b-0"><!-- <table class="table table-actions-bar m-b-0"> -->
                                             <thead>
                                                 <tr>
-                                                    <th style="max-width: 20px;">Image</th>
-                                                    <th>Item Name</th>
-                                                    <th>Category</th>
-                                                    <th>Price</th>
-                                                    <th>Action</th>
+                                                    <th>ID</th>
+                                                    <th>Image</th>
+                                                    <th>Product Name</th>
+                                                    <th>Sub Category</th>
+                                                    <th></th>
+                                                    <th style="text-align: center">ACTION</th>
                                                 </tr>
                                             </thead>
-
-
                                             <tbody>
-                                                <tr>
-                                                    <td><img src="assets/images/products/lumia.jpg" class="thumb-sm pull-left m-r-10" alt=""></td>
-                                                    <td>Nokia LUMIA</td>
-                                                    <td>Phone</td>
-                                                    <td>$ 150</td>
-                                                    <td><a href="#" class="table-action-btn"><i class="md md-edit"></i></a>
-                                                      <!-- <a href="#" class="table-action-btn"><i class="md md-close"></i></a> -->
-                                                      <input type="checkbox" class="table-action-btn" id="checkbox5" ></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img src="assets/images/products/imac.jpg" class="thumb-sm pull-left m-r-10" alt=""></td>
-                                                    <td>iMac 2016</td>
-                                                    <td>Computer</td>
-                                                    <td>$ 700</td>
-                                                    <td><a href="#" class="table-action-btn"><i class="md md-edit"></i></a>
-                                                      <!-- <a href="#" class="table-action-btn"><i class="md md-close"></i></a> -->
-                                                      <input type="checkbox" class="table-action-btn" id="checkbox5" ></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img src="assets/images/products/iphone.jpg" class="thumb-sm pull-left m-r-10" alt=""></td>
-                                                    <td>iPhone6 plus</td>
-                                                    <td>Phone</td>
-                                                    <td>$ 500</td>
-                                                    <td><a href="#" class="table-action-btn"><i class="md md-edit"></i></a>
-                                                      <!-- <a href="#" class="table-action-btn"><i class="md md-close"></i></a> -->
-                                                      <input type="checkbox" class="table-action-btn" id="checkbox5" ></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img src="assets/images/products/samsung.jpg" class="thumb-sm pull-left m-r-10" alt=""></td>
-                                                    <td>Samsung Galaxy Note5</td>
-                                                    <td>Phone</td>
-                                                    <td>$ 450</td>
-                                                    <td><a href="#" class="table-action-btn"><i class="md md-edit"></i></a>
-                                                      <!-- <a href="#" class="table-action-btn"><i class="md md-close"></i></a> -->
-                                                      <input type="checkbox" class="table-action-btn" id="checkbox5" ></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img src="assets/images/products/iphone.jpg" class="thumb-sm pull-left m-r-10" alt=""></td>
-                                                    <td>iPhone 5s</td>
-                                                    <td>Phone</td>
-                                                    <td>$ 330</td>
-                                                    <td><a href="#" class="table-action-btn"><i class="md md-edit"></i></a>
-                                                      <!-- <a href="#" class="table-action-btn"><i class="md md-close"></i></a> -->
-                                                      <input type="checkbox" class="table-action-btn" id="checkbox5" ></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img src="assets/images/products/macbook.jpg" class="thumb-sm pull-left m-r-10" alt=""></td>
-                                                    <td>MacBook Pro 2016</td>
-                                                    <td>Computer</td>
-                                                    <td>$ 1200</td>
-                                                    <td><a href="#" class="table-action-btn"><i class="md md-edit"></i></a>
-                                                      <!-- <a href="#" class="table-action-btn"><i class="md md-close"></i></a> -->
-                                                      <input type="checkbox" class="table-action-btn" id="checkbox5" ></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img src="assets/images/products/iphone.jpg" class="thumb-sm pull-left m-r-10" alt=""></td>
-                                                    <td>iPhone 6</td>
-                                                    <td>Phone</td>
-                                                    <td>$ 400</td>
-                                                    <td><a href="#" class="table-action-btn"><i class="md md-edit"></i></a>
-                                                      <!-- <a href="#" class="table-action-btn"><i class="md md-close"></i></a> -->
-                                                      <input type="checkbox" class="table-action-btn" id="checkbox5" ></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img src="assets/images/products/iphone.jpg" class="thumb-sm pull-left m-r-10" alt=""></td>
-                                                    <td>iPhone 6s Plush</td>
-                                                    <td>Phone</td>
-                                                    <td>$ 700</td>
-                                                    <td><!-- <a href="#" class="table-action-btn"><i class="md md-edit"></i></a> -->
-                                                       <a href="#custom-modal" class=" table-action-btn" data-animation="fadein" data-plugin="custommodal" 
-                                                            data-overlaySpeed="200" data-overlayColor="#36404a"><i class="md md-edit"></i></a>
-                                                      <!-- <a href="#" class="table-action-btn"><i class="md md-close"></i></a> -->
-                                                      <input type="checkbox" class="table-action-btn" id="checkbox5" ></td>
-                                                </tr>
-                                                
-                                        </table>
+                                             
+                                                <tr dir-paginate="item in items | itemsPerPage:20" id="x">
+                                               <!--  <tr ng-repeat="item in items"> -->
+                                                    <td>{{item.product_id}}</td>   
+
+                                                     <td><img style="width:150px ; height:100px " src={{item.product_image}} class="thumb-sm pull-left m-r-5" alt="">
+
+                                                    </td>
+
+                                                    <td>{{item.product_name}}</td>
+                                                    <td>{{item.subcategory.subcategory_name}}</td> 
+                                                    <td><div class="checkbox checkbox-info">
+                                                    <input id="" type="checkbox" ng-click="selected_items($event,this)"
+                                                    >
+                                                    <label for="checkbox4">
+                                                        
+                                                    </label>
+                                                </div></td>
+                                                    <td style="text-align: center">
+                                                        
+                                                        <a href="javascript:" ng-click="getData(item.product_id)" class="btn btn-primary btn-md waves-effect waves-light call-modal_update"><i class="glyphicon glyphicon-pencil"></i></a>
+                                                        <a href="#" id="btnclose" ng-click="delte_temporary_item(item.product_id)" class="btn btn-danger btn-md waves-effect"><i class="glyphicon glyphicon-trash"></i></a>
+                                                    </td>
+                                                </tr>   
+                                            </table>
                                      <!--  </div>   -->            
-                                      <div class="form-group text-right m-b-0" style="margin-top: 5px">
+                                         <div class="form-group text-right m-b-0" style="margin-top: 5px">
                                         <!--  <button type="button" class="btn btn-success btn-custom waves-effect waves-light">Table Product</button>
                                         <button type="button" class="btn btn-warning btn-custom waves-effect waves-light">Table</button> -->
-                                         <button class="btn btn-info waves-effect waves-light btn-sm" id="sa-success">Add</button>
+                                        <button class="btn btn-info waves-effect waves-light btn-sm" id="updateAll" ng-click="updateAll()">Table Product</button> 
+
                                             <button class="btn btn-info waves-effect waves-light btn-sm" id="mybtn" >Select all</button>
                                             <button class="btn btn-info waves-effect waves-light btn-sm" id="mybtn1" >Deselect all</button>
                                         
@@ -251,6 +200,7 @@
         </script>
 
         <jsp:include page="/WEB-INF/pages/admin/include/headscript.jsp"></jsp:include>
+         <script src="/resources/admins/javascripts/temporary_item.js"></script>
         <script type="text/javascript">
             jQuery(document).ready(function($) {
                 $('.counter').counterUp({
@@ -259,6 +209,29 @@
                 });
 
                 $(".knob").knob();
+                   
+                $('form').parsley();
+                    $('#datatable').dataTable( );
+
+                   
+                    $("#mybtn").click(function(){
+
+                        $("input[type='checkbox']").prop("checked","true");
+                     });
+                    $("#mybtn1").click(function(){
+
+                        $("input[type='checkbox']").removeAttr("checked");
+                     });
+
+                    $(document).on('click', '.call-modal_update', function(){
+                    Custombox.open({
+                        target: '#update_model_subcate',
+                        effect: 'fadein',
+                        overlaySpeed: '200',
+                        overlayColor: '#36404a'
+                    });
+                });
+
 
             });
         </script>
