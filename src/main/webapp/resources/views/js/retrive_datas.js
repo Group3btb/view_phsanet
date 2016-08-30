@@ -119,7 +119,6 @@ var paging={
 $rootScope.subcategory=function(url,main=0,key=0){
 	$scope.u=url; $scope.m=main; $scope.k=key;
 	if(main==0 && key==0 ){
-		alert("cate:"+ $scope.u);
 		$http({
 			  method:'GET',
 			  url:base_url+'/product?subcategoryname='+url,
