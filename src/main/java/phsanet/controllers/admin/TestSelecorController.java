@@ -12,7 +12,6 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
-import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,9 +19,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
 
-import phsanet.entitys.Products;
-import phsanet.entitys.Site_Detail_Managerment;
-import phsanet.entitys.SubCategory;
 import phsanet.entitys.Temporary_Item;
 import phsanet.entitys.Web_Source;
 
@@ -67,7 +63,7 @@ public class TestSelecorController {
 			Document document = Jsoup.connect(url).timeout(10000).get();
 			Elements main_selector = document.select(row_selector);
 			
-			System.out.println("URL "+web.getUrl());
+			//System.out.println("URL "+web.getUrl());
 			/*Connection con = HttpConnection.connect(url)
 					.method(Method.POST)
 					.da*/
@@ -76,7 +72,7 @@ public class TestSelecorController {
 			Elements e_product_name =main_selector.select(selector_product_name);
 			for(Element e : e_product_name){
 				
-				System.out.println(e.text());
+				//System.out.println(e.text());
 				all_name.add(e.text());
 				
 			}
@@ -86,12 +82,12 @@ public class TestSelecorController {
 				/*System.out.println(e.attr("data-layzr"));
 				all_image.add(e.attr("data-layzr"));*/
 				String img = e.attr("data-layzr").toString().trim();
-				System.out.println("Boolean "+img.compareTo(""));
+				//System.out.println("Boolean "+img.compareTo(""));
 				if(img.compareTo("")!=0){
 					all_image.add(e.attr("data-layzr"));
-					System.out.println(e.attr("data-layzr"));
+					//System.out.println(e.attr("data-layzr"));
 				}else{
-					System.out.println(e.attr("src"));
+					//System.out.println(e.attr("src"));
 					all_image.add(e.attr("src"));
 				}
 				
@@ -100,14 +96,14 @@ public class TestSelecorController {
 			//ArrayList<String> price = new ArrayList<String>();
 			Elements e_price = main_selector.select(selector_price);
 			for(Element e:e_price){
-				 System.out.println(e.text());
+				// System.out.println(e.text());
 				all_price.add(e.text());
 			}
 			
 		
 			Elements e_descride = main_selector.select(selector_descride);
 			for(Element e : e_descride){
-				System.out.println("Detail "+e.attr("href"));
+				//System.out.println("Detail "+e.attr("href"));
 				all_describe.add(e.attr("href"));
 			}
 		
@@ -136,11 +132,13 @@ public class TestSelecorController {
 		return all;
 	}
 		
+	@SuppressWarnings("unchecked")
 	@ResponseBody
 	public ResponseEntity<Map<String,Object>> save_items(Temporary_Item item){
 		
 		RestTemplate restTemplate = new RestTemplate();
 		HttpEntity<Object> request = new HttpEntity<Object>(item,new HttpHeaders());
+		@SuppressWarnings("rawtypes")
 		ResponseEntity<Map> response = restTemplate.exchange(
 					"http://localhost:2222/api/producttemporary", 
 					HttpMethod.POST, 

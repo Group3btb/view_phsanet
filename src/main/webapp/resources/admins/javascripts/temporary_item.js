@@ -89,7 +89,7 @@ $('#page-selection').on("page", function(event, num){
 
 
 	$scope.temporary_item_filter = function(respone){
-		alert(respone.subcategory_name);
+		
  		$http({
  			url 	:'/temporaryitem?subcategoryname='+respone.subcategory_name,
  			method 	:'GET'
@@ -111,6 +111,36 @@ $('#page-selection').on("page", function(event, num){
  		},function(respone){
  			alert("Error");
  		});
+ 	}
+
+
+ 	$scope.delte_temporary_item = function(id){
+ 		swal({   
+			title: "Are you sure to delete this record?",   
+			text: "You will not be able to recover this record!",   
+			type: "warning",   
+			showCancelButton: true,   
+			confirmButtonColor: "#ED0909",   
+			confirmButtonText: "Yes",   
+			cancelButtonText: "No",   
+			closeOnConfirm: false,   
+			closeOnCancel: false }, 
+		function(isConfirm){   
+			if (isConfirm) {     
+				$http({
+ 					url 	:'/temporaryitem/'+id,
+ 					method 	:'delete'
+ 				}).then(function(respone){
+ 					swal("Deleted!", "Your record deleted!", "success"); 
+ 					$scope.find_all_temporary_item();
+ 				},function(respone){
+ 					swal("Failed!", "Delete Failed!", "error");	
+ 				});	
+			} else {     
+				swal("Cancelled", "Your record has not been deleted", "error");   
+			} 
+		});
+ 				
  	}
  	
  	$scope.selected_items = function(event,record){
@@ -137,6 +167,7 @@ $('#page-selection').on("page", function(event, num){
 
 
  	}).then(function(respone){
+ 		alert("success");
  		$scope.find_all_temporary_item();
  	},function(respone){
  		alert("Error");

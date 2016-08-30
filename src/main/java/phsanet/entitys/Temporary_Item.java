@@ -11,8 +11,7 @@ public class Temporary_Item {
 		private String 			link;
 		private String 			product_image;
 		private Web_Source 		web_source;
-		
-			
+
 		public int getProduct_id() {
 			return product_id;
 		}

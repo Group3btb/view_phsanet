@@ -1,6 +1,5 @@
 package phsanet.controllers.admin;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -87,13 +86,13 @@ public class TemporaryItemController {
 	
 	@SuppressWarnings({ "unused", "rawtypes" })
 	@RequestMapping(value={"/temporary/status"},method = RequestMethod.POST)
-	public ResponseEntity<Map<String,Object>> temporary_into_product(@RequestBody List<Object> allid){
-		System.out.println("all ID " + allid);
+	public ResponseEntity<Map<String,Object>> temporary_into_product(@RequestBody List<Object> id){
+		System.out.println("all ID " + id);
 		String http="http://localhost:2222/api/temporary/status";
 		
 		Map<String,Object> map = new HashMap<String,Object>();
 		RestTemplate resttemplate = new RestTemplate();
-		HttpEntity<Object> request = new HttpEntity<Object>(allid,new HttpHeaders());
+		HttpEntity<Object> request = new HttpEntity<Object>(id,new HttpHeaders());
 		ResponseEntity<Map> respone = resttemplate.exchange(http,
 				HttpMethod.POST,
 				request,
@@ -103,8 +102,9 @@ public class TemporaryItemController {
 	}
 	
 	@SuppressWarnings({ "unused", "rawtypes" })
-	@RequestMapping(value={"/temporary/{id}"},method = RequestMethod.DELETE)
+	@RequestMapping(value={"/temporaryitem/{id}"},method = RequestMethod.DELETE)
 	public ResponseEntity<Map<String,Object>> deltetemporary(@PathVariable("id") int id){
+		System.out.println("delete items "+id);
 		
 		String http="http://localhost:2222/api/temporary/"+id;
 		
