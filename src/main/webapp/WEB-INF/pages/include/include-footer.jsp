@@ -23,6 +23,23 @@
 <div id="scrolltop">
 	<a href=""><img src="/resources/views/logo/back-to-top.png" /></a>
 </div> 
+<script>
+ $(document).ready(function(){
+	 $(window).scroll(function(){
+		    if($(this).scrollTop()>200){
+		    $("#scrolltop").fadeIn(100);
+		 
+		  } else{$("#scrolltop").fadeOut(100);}
+		  }); 
+		  
+		  $("#scrolltop img").click(function(){
+		 	 $("html, body").animate({scrollTop:0},800);
+		  });
+	 
+	 
+ });
+
+</script>
 
 <!-- <script type="text/javascript"> var continueSite = "http://localhost:2222"</script>
 <script src="http://120.136.24.174:13300/static/script/knongdai_login.js"></script> -->
