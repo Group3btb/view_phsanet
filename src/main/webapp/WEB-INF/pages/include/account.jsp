@@ -33,7 +33,7 @@
 					<i class="fa fa-times" aria-hidden="true"></i> Cancel
 				</button>
 				<p>
-					not account? <a href=""  class="register"  data-toggle="modal"
+					don't have account? <a href=""  class="register"  data-toggle="modal"
 						data-target="#register">click here!</a>
 				</p>
 			</div>
