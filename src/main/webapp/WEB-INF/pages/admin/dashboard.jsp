@@ -18,8 +18,10 @@
 
         <!-- Begin page -->
         <div id="wrapper"  ng-controller="controller_temporary_item">
+             <jsp:include page="/WEB-INF/pages/admin/include/modal_update_subcate_temporary.jsp"></jsp:include>
 			 <!-- Top Bar Start -->
            	<jsp:include page="/WEB-INF/pages/admin/menu/top_bar.jsp"></jsp:include>
+
             <!-- Top Bar End -->
 
             <!-- ========== Left Sidebar Start ========== -->
@@ -201,16 +203,12 @@
 
         <jsp:include page="/WEB-INF/pages/admin/include/headscript.jsp"></jsp:include>
          <script src="/resources/admins/javascripts/temporary_item.js"></script>
-        <script type="text/javascript">
-            jQuery(document).ready(function($) {
-                $('.counter').counterUp({
-                    delay: 100,
-                    time: 1200
-                });
+          <script type="text/javascript" src="assets/plugins/isotope/dist/isotope.pkgd.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
 
-                $(".knob").knob();
-                   
-                $('form').parsley();
+       <script type="text/javascript">
+                $(document).ready(function() {
+                    $('form').parsley();
                     $('#datatable').dataTable( );
 
                    
@@ -232,9 +230,13 @@
                     });
                 });
 
+                });
 
-            });
+
+
+
         </script>
+
       <!--  End jQuery for dashboard -->
 	</body>
 </html>
