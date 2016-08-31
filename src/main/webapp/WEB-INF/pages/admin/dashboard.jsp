@@ -166,7 +166,7 @@
                                          <div class="form-group text-right m-b-0" style="margin-top: 5px">
                                         <!--  <button type="button" class="btn btn-success btn-custom waves-effect waves-light">Table Product</button>
                                         <button type="button" class="btn btn-warning btn-custom waves-effect waves-light">Table</button> -->
-                                        <button class="btn btn-info waves-effect waves-light btn-sm" id="updateAll" ng-click="updateAll()">Table Product</button> 
+                                        <button class="btn btn-info waves-effect waves-light btn-sm" id="updateAll" ng-click="updateAll()">Add To Production</button> 
 
                                             <button class="btn btn-info waves-effect waves-light btn-sm" id="mybtn" >Select all</button>
                                             <button class="btn btn-info waves-effect waves-light btn-sm" id="mybtn1" >Deselect all</button>
